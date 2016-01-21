@@ -3,22 +3,19 @@ package premiereapplication.testautomation.quiz.helpers;
 import java.io.Serializable;
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.objects.Category;
 import premiereapplication.testautomation.quiz.objects.Question;
 
 public class QuizHelper implements Serializable{
 
     private String name;
     private Integer sec;
-    private Category category;
     private String imageUrl;
 
 
     private List<Question> questions;
 
 
-    public QuizHelper(Category category, String name, Integer millis) {
-        this.category = category;
+    public QuizHelper(String name, Integer millis) {
         this.name = name;
         this.sec = millis;
     }
@@ -29,14 +26,6 @@ public class QuizHelper implements Serializable{
 
     public void setSec(Integer sec) {
         this.sec = sec;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public String getName() {

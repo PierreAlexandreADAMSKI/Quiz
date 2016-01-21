@@ -12,7 +12,7 @@ public enum Category implements Serializable {
     LITTERATURE,
     ACTUALITE;
 
-    public String parse(Category category){
+    public static String parse(Category category){
         if (category == CULTURE_GENERALE){
             return "Culture Générale";
         }

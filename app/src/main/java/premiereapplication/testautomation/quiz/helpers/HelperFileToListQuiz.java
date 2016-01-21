@@ -1,4 +1,4 @@
-/*
+
 package premiereapplication.testautomation.quiz.helpers;
 
 
@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+
+import premiereapplication.testautomation.quiz.objects.Question;
 
 public class HelperFileToListQuiz {
 
@@ -57,13 +59,14 @@ public class HelperFileToListQuiz {
         for (int i = 0; i < arryofQuizs.length; i++) {
             String quizName = arryofQuizs[i].split("//")[0];
             int quizDuration = Integer.parseInt(arryofQuizs[i].split("//")[1]);
-            List<QuestionPropositionsAnswers> listeQuestionPropositionsAnsewers = new ArrayList<QuestionPropositionsAnswers>();
+            List<Question> listQuestion = new ArrayList<Question>();
 
-            String arrayQuestionPropositionsAnsewers[] = arryofQuizs[i].split("//")[2].split(">");
-            for (int j = 0; j < arrayQuestionPropositionsAnsewers.length; j++) {
-                String enonceQuestion = arrayQuestionPropositionsAnsewers[j].split("<")[0];
-                List<String> listePropositions = new ArrayList<>();
-                List<String> listeAnsewers = new ArrayList<>();
+            String arrayQuestion[] = arryofQuizs[i].split("//")[2].split(">");
+            for (int j = 0; j < arrayQuestion.length; j++) {
+                String enonceQuestion = arrayQuestion[j].split("<")[0];
+                //List<String> listePropositions = new ArrayList<>();
+                //List<String> listeAnsewers = new ArrayList<>();
+                
 
                 String propositionsAnsewers = arrayQuestionPropositionsAnsewers[j].split("<")[1];
                 String arrayPropositions[] = propositionsAnsewers.split("/")[0].split(",");
@@ -98,7 +101,7 @@ public class HelperFileToListQuiz {
 
 
 
-    */
+
 /*static public void display(List <ObjectQuiz> listOfQuizs) {
 
         for (int i = 0; i < listOfQuizs.size(); i++) {

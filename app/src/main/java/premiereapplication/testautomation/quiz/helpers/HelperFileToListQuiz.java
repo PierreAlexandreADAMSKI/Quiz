@@ -1,3 +1,4 @@
+/*
 
 package premiereapplication.testautomation.quiz.helpers;
 
@@ -102,6 +103,7 @@ public class HelperFileToListQuiz {
 
 
 
+*/
 /*static public void display(List <ObjectQuiz> listOfQuizs) {
 
         for (int i = 0; i < listOfQuizs.size(); i++) {
@@ -161,62 +163,6 @@ public class HelperFileToListQuiz {
                     System.out.println(listReponses.get(k));
                 }
             }
-        }*//*
-
-
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */

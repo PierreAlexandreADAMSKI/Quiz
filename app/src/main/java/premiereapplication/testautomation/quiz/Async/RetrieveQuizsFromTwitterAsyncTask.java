@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;

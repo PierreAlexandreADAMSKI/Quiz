@@ -12,7 +12,6 @@ import android.widget.TextView;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 
 
 public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements Chronometer.OnChronometerTickListener,ChronoAndHeaderQuizFragmentListener {

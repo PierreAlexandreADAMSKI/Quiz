@@ -10,7 +10,6 @@ import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.QuizFragment;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 
 public class QuizActivity extends Activity  implements QuizActivityListener {
 

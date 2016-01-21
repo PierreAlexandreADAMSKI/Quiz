@@ -13,7 +13,6 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.AnswersAdapter;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 import premiereapplication.testautomation.quiz.objects.Question;
 
 

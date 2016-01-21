@@ -14,7 +14,6 @@ import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActi
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizListClickListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
 
 public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActivityListener, QuizListClickListener {

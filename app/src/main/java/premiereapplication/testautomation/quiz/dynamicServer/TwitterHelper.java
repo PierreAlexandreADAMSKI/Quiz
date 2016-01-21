@@ -21,9 +21,6 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
-import premiereapplication.testautomation.quiz.objects.QuestionPropositionsAnswers;
-
 public class TwitterHelper {
 
 	// Proxy stuff

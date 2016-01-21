@@ -21,30 +21,28 @@ import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyn
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
-import premiereapplication.testautomation.quiz.decoration.SpacesItemDecoration;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
-import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 
 
-public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListener {
+public class ListOfQuizFragment extends Fragment implements QuizRetrievedListener {
 
     private static final int DIVIDER_HEIGHT = 40;
 
     private QuizHomeActivityListener mListener;
     private RecyclerView recyclerView;
     private boolean isDynamicQuiz;
-    private RetrieveQuizFromTwitterAsyncTask mDynamicQuizsAsynTask;
-    private RetrieveQuizFromLocalServerAsyncTask mStaticQuizsAsyntask;
+    private RetrieveQuizFromTwitterAsyncTask mDynamicQuizAsyncTask;
+    private RetrieveQuizFromLocalServerAsyncTask mStaticQuizAsyncTask;
 
-    public ListOfQuizsFragment(){}
+    public ListOfQuizFragment(){}
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-        if (activity instanceof QuizActivityListener){
+        if (activity instanceof QuizHomeActivityListener){
             mListener = (QuizHomeActivityListener) activity;
         }
     }
@@ -58,9 +56,9 @@ public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListen
 
         isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
         recyclerView = (RecyclerView) rootView.findViewById(R.id.quizsListView);// change id.quizsListView to <RecyclerView>
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext());
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext()); //, LinearLayoutManager.HORIZONTAL, false);
         this.recyclerView.setLayoutManager(layoutManager);
-        this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
+        //this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
 
         // Set a Progress Bar as empty view, and display it (set adapter with no elements))
         final ProgressBar progressBar = new ProgressBar(getActivity());
@@ -76,12 +74,12 @@ public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListen
         super.onStart();
 
         if(isDynamicQuiz) {
-            mDynamicQuizsAsynTask = new RetrieveQuizFromTwitterAsyncTask(this);
-            mDynamicQuizsAsynTask.execute("@madaniachraf2");
+            mDynamicQuizAsyncTask = new RetrieveQuizFromTwitterAsyncTask(this);
+            mDynamicQuizAsyncTask.execute("@madaniachraf2");
         }
         else{
-            mStaticQuizsAsyntask= new RetrieveQuizFromLocalServerAsyncTask(this);
-            mStaticQuizsAsyntask.execute();
+            mStaticQuizAsyncTask = new RetrieveQuizFromLocalServerAsyncTask(this);
+            mStaticQuizAsyncTask.execute();
 
         }
     }
@@ -103,14 +101,14 @@ public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListen
                 Toast.makeText(QuizApplication.getContext(), "Un probleme est survenu dans le serveur statique", Toast.LENGTH_SHORT).show();
             }
         }
-        mDynamicQuizsAsynTask = null;
-        mStaticQuizsAsyntask = null;
+        mDynamicQuizAsyncTask = null;
+        mStaticQuizAsyncTask = null;
 
     }
 
-    public static ListOfQuizsFragment getInstance(boolean isDynamicQuiz){
+    public static ListOfQuizFragment getInstance(boolean isDynamicQuiz){
 
-        ListOfQuizsFragment listOfQuizsFragmentquizFragment =new ListOfQuizsFragment();
+        ListOfQuizFragment listOfQuizsFragmentquizFragment =new ListOfQuizFragment();
         Bundle bundle=new Bundle();
         bundle.putBoolean("IsDynamicQuiz",isDynamicQuiz);
         listOfQuizsFragmentquizFragment.setArguments(bundle);

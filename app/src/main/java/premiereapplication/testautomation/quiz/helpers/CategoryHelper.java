@@ -20,18 +20,6 @@ public class CategoryHelper {
         return quizOfCathegory;
     }
 
-    public void addAllQuiz(List<QuizHelper> quizOfCathegory) {
-        this.quizOfCathegory.addAll(quizOfCathegory);
-    }
-
-    public QuizHelper get(int index) {
-        return quizOfCathegory.get(index);
-    }
-
-    public void add(QuizHelper quiz) {
-        this.quizOfCathegory.add(quiz);
-    }
-
     public String getTitle() {
         return Category.parse(title);
     }

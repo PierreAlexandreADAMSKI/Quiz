@@ -1,3 +1,4 @@
+/*
 package premiereapplication.testautomation.quiz.dynamicServer;
 
 import android.graphics.Bitmap;
@@ -215,3 +216,4 @@ public class TwitterHelper {
 
 
 }
+*/

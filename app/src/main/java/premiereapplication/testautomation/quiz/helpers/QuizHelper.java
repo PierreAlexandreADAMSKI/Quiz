@@ -1,6 +1,7 @@
 package premiereapplication.testautomation.quiz.helpers;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.objects.Question;
@@ -18,6 +19,7 @@ public class QuizHelper implements Serializable{
     public QuizHelper(String name, Integer sec) {
         this.name = name;
         this.sec = sec;
+        this.questions = new ArrayList<>();
     }
 
     public Integer getSec() {
@@ -47,14 +49,4 @@ public class QuizHelper implements Serializable{
     public List<Question> getQuestions() {
         return this.questions;
     }
-
-    public void addQuestion(Question question) {
-        questions.add(question);
-    }
-
-    public void addAllQuestions(List<Question> questions) {
-        questions.addAll(questions);
-    }
-
-
 }

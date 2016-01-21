@@ -7,18 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
-import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.ListOfQuizsFragment;
+import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.ListOfQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.ListOfResultsFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.PrincipalMenuFragment;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
-import premiereapplication.testautomation.quiz.interfaces.QuizListClickListener;
 import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
 
-public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActivityListener, QuizListClickListener {
-
-
+public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActivityListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +65,13 @@ public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActiv
     @Override
     public void moveToListOfStaticQuizFragment() {
 
-        ListOfQuizsFragment frag=ListOfQuizsFragment.getInstance(false);
+        ListOfQuizFragment frag= ListOfQuizFragment.getInstance(false);
         getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
     }
 
     @Override
     public void moveToListOfDynamicQuizFragment() {
-        ListOfQuizsFragment frag=ListOfQuizsFragment.getInstance(true);
+        ListOfQuizFragment frag= ListOfQuizFragment.getInstance(true);
         getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
     }
 
@@ -88,7 +84,7 @@ public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActiv
 
     @Override
     public void onQuizSelected(QuizHelper quiz) {
-        final Intent intent = new Intent(QuizApplication.getContext(), QuizActivity.class);
+        final Intent intent = new Intent(this, QuizActivity.class);
         final Bundle extras = new Bundle();
         extras.putSerializable("QuizToLaunch", quiz);
         intent.putExtras(extras);

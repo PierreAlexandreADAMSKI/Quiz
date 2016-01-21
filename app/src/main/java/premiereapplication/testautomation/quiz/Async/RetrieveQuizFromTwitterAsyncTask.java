@@ -7,7 +7,6 @@ import java.util.List;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
-import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
 
 public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, List<QuizHelper>> {
 
@@ -22,7 +21,7 @@ public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, Li
 	protected List<QuizHelper> doInBackground(String... params) {
 		if ((null != params) && (params.length > 0)){
 
-			List<Tweet> tweets= TwitterHelper.getTweetsOfUser(params[0]);
+			List<Tweet> tweets = null;//TwitterHelper.getTweetsOfUser(params[0]);
 			String quizFromTwitter ="";
 			int index=tweets.size()-1;
 

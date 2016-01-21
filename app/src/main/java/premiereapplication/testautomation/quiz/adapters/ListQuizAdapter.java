@@ -1,5 +1,6 @@
 package premiereapplication.testautomation.quiz.adapters;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,7 @@ import java.util.List;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
-import premiereapplication.testautomation.quiz.interfaces.QuizListClickListener;
+import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 
 
 public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHolder> {
@@ -20,17 +21,18 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
     public final List<QuizHelper> listOfQuiz;
     private LayoutInflater mLayoutInflater;
     private ViewHolder verticalHolder;
-    private QuizListClickListener clickListener;
+    private QuizHomeActivityListener clickListener;
 
 
 
-    public ListQuizAdapter(List<QuizHelper> ListOfQuiz, QuizListClickListener clickListener) {
-        this.listOfQuiz =ListOfQuiz;
+    public ListQuizAdapter(List<QuizHelper> ListOfQuiz, QuizHomeActivityListener clickListener) {
+        this.listOfQuiz = ListOfQuiz;
         this.clickListener = clickListener;
         mLayoutInflater = LayoutInflater.from(QuizApplication.getContext());
 
     }
 
+    @SuppressLint("InflateParams")
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View convertView = parent.getChildAt(getItemCount());
@@ -69,7 +71,7 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private QuizListClickListener listener;
+        private QuizHomeActivityListener listener;
         private QuizHelper quiz;
         private TextView nameQuiz;
         private TextView timerQuiz;
@@ -81,9 +83,10 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             nameQuiz = (TextView) view.findViewById(R.id.nomQuizLaunchedTextView);
             timerQuiz = (TextView) view.findViewById(R.id.dureeQuizLaunchedTextView);
             imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+            view.setOnClickListener(this);
         }
 
-        public void setListener(QuizListClickListener listener) {
+        public void setListener(QuizHomeActivityListener listener) {
             this.listener = listener;
         }
 

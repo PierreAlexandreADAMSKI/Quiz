@@ -24,7 +24,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
 
     private LayoutInflater mLayoutInflater;
 
-    private ViewHolder propositionsAnswersListHolder;
+    private ViewHolder answerViewHolder;
 
     private QuizActivityListener activityListener;
 
@@ -44,14 +44,14 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
         View convertView = parent.getChildAt(getItemCount());
         if(null == convertView){
             convertView=mLayoutInflater.inflate(R.layout.items_of_propositions,null);
-            propositionsAnswersListHolder = new ViewHolder(convertView);
-            propositionsAnswersListHolder.setListener(activityListener);
-            convertView.setTag(propositionsAnswersListHolder);
+            answerViewHolder = new ViewHolder(convertView);
+            answerViewHolder.setListener(activityListener);
+            convertView.setTag(answerViewHolder);
         }
         else{
-            propositionsAnswersListHolder = (ViewHolder) convertView.getTag();
+            answerViewHolder = (ViewHolder) convertView.getTag();
         }
-        return propositionsAnswersListHolder;
+        return answerViewHolder;
     }
 
     @Override
@@ -80,6 +80,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
         public ViewHolder(View view){
             super(view);
             answerText = (TextView) view.findViewById(R.id.propositionTextView);
+            view.setOnClickListener(this);
         }
 
         public void setAnswer(Answer answer) {

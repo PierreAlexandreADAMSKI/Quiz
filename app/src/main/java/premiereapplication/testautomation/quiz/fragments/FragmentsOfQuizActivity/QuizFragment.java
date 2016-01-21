@@ -3,6 +3,7 @@ package premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivit
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,16 @@ import android.widget.TextView;
 
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.AnswersAdapter;
+import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.decoration.SpacesItemDecoration;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 import premiereapplication.testautomation.quiz.objects.Question;
 
 
 public class QuizFragment extends Fragment {
+
+    private static final int DIVIDER_HEIGHT = 40;
 
     private QuizActivityListener activityListener;
 
@@ -39,6 +44,11 @@ public class QuizFragment extends Fragment {
         TextView questionTextView = (TextView) rootView.findViewById(R.id.questionTextView);
         //TODO change id to recyclerview
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.propositionsListView);
+
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
+
         recyclerView.setAdapter(new AnswersAdapter(currentQuestion.getAnswers(), activityListener));
 
         questionTextView.setText(currentQuestion.getQuestion());

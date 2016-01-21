@@ -22,13 +22,13 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 import premiereapplication.testautomation.quiz.decoration.SpacesItemDecoration;
+import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
-import premiereapplication.testautomation.quiz.interfaces.QuizsRetrievedListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
+import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 
 
-public class ListOfQuizsFragment extends Fragment implements QuizsRetrievedListener {
+public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListener {
 
     private static final int DIVIDER_HEIGHT = 40;
 
@@ -88,10 +88,10 @@ public class ListOfQuizsFragment extends Fragment implements QuizsRetrievedListe
 
 
     @Override
-    public void onQuizRetrieved(List<ObjectQuiz> listOfQuiz) {
+    public void onQuizRetrieved(List<QuizHelper> listOfQuiz) {
 
         try {
-            final ListQuizAdapter listQuizAdapter = new ListQuizAdapter(listOfQuiz);
+            final ListQuizAdapter listQuizAdapter = new ListQuizAdapter(listOfQuiz, mListener);
             recyclerView.setAdapter(listQuizAdapter);
 
         }catch(Exception e){

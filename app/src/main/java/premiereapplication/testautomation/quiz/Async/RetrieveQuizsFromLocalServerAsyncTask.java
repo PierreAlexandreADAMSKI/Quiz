@@ -6,29 +6,29 @@ import java.util.List;
 
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
-import premiereapplication.testautomation.quiz.interfaces.QuizsRetrievedListener;
-import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
+import premiereapplication.testautomation.quiz.helpers.QuizHelper;
+import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 
 /**
  * Created by User on 19/01/2016.
  */
-public class RetrieveQuizsFromLocalServerAsyncTask extends AsyncTask<String, Void, List<ObjectQuiz>> {
+public class RetrieveQuizsFromLocalServerAsyncTask extends AsyncTask<String, Void, List<QuizHelper>> {
 
 
-    private QuizsRetrievedListener mListener;
+    private QuizRetrievedListener mListener;
 
-    public RetrieveQuizsFromLocalServerAsyncTask(QuizsRetrievedListener listener){
+    public RetrieveQuizsFromLocalServerAsyncTask(QuizRetrievedListener listener){
         mListener = listener;
     }
 
     @Override
-    protected List<ObjectQuiz> doInBackground(String... params) {
+    protected List<QuizHelper> doInBackground(String... params) {
 
-        return HelperFileToListQuiz.getListOfQuizsFromFile(QuizApplication.getContext());
+        return HelperFileToListQuiz.getListOfQuizFromFile(QuizApplication.getContext());
     }
 
     @Override
-    protected void onPostExecute(List<ObjectQuiz> result) {
+    protected void onPostExecute(List<QuizHelper> result) {
 
 
         if (null != mListener && null != result){

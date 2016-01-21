@@ -4,7 +4,7 @@
     android:background="@android:color/background_light"
     android:id="@+id/quizRelativeLayout">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/quizsListView"

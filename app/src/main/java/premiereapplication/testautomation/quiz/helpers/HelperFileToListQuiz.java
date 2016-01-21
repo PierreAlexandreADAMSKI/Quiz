@@ -45,12 +45,12 @@ public class HelperFileToListQuiz {
     }
 
 
-    static public List<ObjectQuiz> getListOfQuizsFromFile(Context context) {
+    static public List<QuizHelper> getListOfQuizFromFile(Context context) {
 
         String fileContent = readFile(context);
 
 
-        List<ObjectQuiz> listObjetQuiz = new ArrayList<ObjectQuiz>();
+        List<QuizHelper> listOfQuiz = new ArrayList<>();
 
 
 
@@ -64,8 +64,8 @@ public class HelperFileToListQuiz {
             String arrayQuestionPropositionsAnsewers[] = arryofQuizs[i].split("//")[2].split(">");
             for (int j = 0; j < arrayQuestionPropositionsAnsewers.length; j++) {
                 String enonceQuestion = arrayQuestionPropositionsAnsewers[j].split("<")[0];
-                List<String> listePropositions = new ArrayList<String>();
-                List<String> listeAnsewers = new ArrayList<String>();
+                List<String> listePropositions = new ArrayList<>();
+                List<String> listeAnsewers = new ArrayList<>();
 
                 String propositionsAnsewers = arrayQuestionPropositionsAnsewers[j].split("<")[1];
                 String arrayPropositions[] = propositionsAnsewers.split("/")[0].split(",");
@@ -82,18 +82,18 @@ public class HelperFileToListQuiz {
 
             }
 
-            ObjectQuiz oq = new ObjectQuiz(quizName, quizDuration, listeQuestionPropositionsAnsewers);
-            listObjetQuiz.add(oq);
+            QuizHelper oq = new QuizHelper(quizName, quizDuration, listeQuestionPropositionsAnsewers);
+            listOfQuiz.add(oq);
         }
 
-    return listObjetQuiz;
+    return listOfQuiz;
     }
 
 
 
     static public ObjectQuiz getQuiz(Context context,int position) {
 
-        return getListOfQuizsFromFile(context).get(position);
+        return getListOfQuizFromFile(context).get(position);
 
     }
 

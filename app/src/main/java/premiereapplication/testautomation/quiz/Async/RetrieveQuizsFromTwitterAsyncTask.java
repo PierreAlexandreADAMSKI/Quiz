@@ -6,15 +6,15 @@ import java.util.List;
 
 import premiereapplication.testautomation.quiz.objects.ObjectQuiz;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
-import premiereapplication.testautomation.quiz.interfaces.QuizsRetrievedListener;
+import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
 
 public class RetrieveQuizsFromTwitterAsyncTask extends AsyncTask<String, Void, List<ObjectQuiz>> {
 
 	// A reference to the listener
-	private QuizsRetrievedListener mListener;
+	private QuizRetrievedListener mListener;
 	
-	public RetrieveQuizsFromTwitterAsyncTask(QuizsRetrievedListener listener){
+	public RetrieveQuizsFromTwitterAsyncTask(QuizRetrievedListener listener){
 		mListener = listener;
 	}
 	

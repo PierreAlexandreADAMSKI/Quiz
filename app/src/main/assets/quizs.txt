@@ -1,0 +1,81 @@
+Capitals//
+30//
+Capital Algerie ? <Oran,Alger,Annaba/Alger>
+Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/Rabat>
+Capital Tunisie ? <Sousse,Tunis,Hamamet/Tunis>
+Capital Espagne ? <Barcelone,Madrid,Malaga/Madrid>
+Capital Brésil ? <Rio,Brazilia,Sao Paulo/Brazilia>
+
+
+Quiz
+Voitures//
+15//
+marque allemande ? <mercedes,renault/mercedes>
+marque americaine ?<opel,renault,audi,ford/ford>
+marque Francaise ?<opel,renault,fiat/renault>
+marque Japonaise ?<opel,toyota,fiat/toyota>
+
+Quiz
+Geographie//
+30//
+pays riche ? <USA,France/USA>
+pays paauvre ?<Senegal,Nigeria/Senegal>
+
+
+
+Quiz
+Culture Generale//
+10//
+vide<,/,>
+
+Quiz
+Math//
+15//
+vide<,/,>
+
+Quiz
+Chimie//
+15//
+vide<,/,>
+
+
+Quiz
+Politique//
+20//
+vide<,/,>
+
+Quiz
+Calcul mental//
+15//
+vide<,/,>
+
+Quiz
+Cinema//
+15//
+vide<,/,>
+
+Quiz
+Strategie//
+15//
+vide<,/,>
+
+Quiz
+Histoire//
+15//
+vide<,/,>
+
+Quiz
+Art//
+15//
+vide<,/,>
+
+Quiz
+Langue//
+15//
+vide<,/,>
+
+
+Quiz
+android//
+50//
+monaie europ<euro,dolars,yen/euros>

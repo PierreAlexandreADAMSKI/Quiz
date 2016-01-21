@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:text="Static Quizs"
+        android:id="@+id/staticQuizsButton"
+        android:textColor="@android:color/background_dark"
+        android:background="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/resultsQuizsButton"
+        android:layout_marginTop="101dp" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:text="List Of results"
+        android:layout_gravity="right"
+        android:id="@+id/resultsQuizsButton"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:text="Quizs On Line"
+        android:id="@+id/dynamicQuizsButton"
+        android:textColor="@android:color/background_dark"
+        android:background="@android:color/background_light"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/staticQuizsButton" />
+
+</RelativeLayout>

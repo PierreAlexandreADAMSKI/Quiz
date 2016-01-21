@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentsOfQuizActivity.ChronoAndHeaderQuizFragment"
+    android:background="#60fb0c">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nom Quiz"
+        android:id="@+id/nomQuizLaunchedTextView"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Duree"
+        android:id="@+id/dureeQuizLaunchedTextView"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/nomQuizLaunchedTextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <Chronometer
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:id="@+id/chronometer"
+        android:gravity="center_vertical|fill_vertical"
+        android:textColor="#f30b0b"
+        android:textSize="20dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/dureeQuizLaunchedTextView"
+        android:src="@drawable/chronometer"
+        android:layout_alignEnd="@+id/dureeQuizLaunchedTextView" />
+
+</RelativeLayout>

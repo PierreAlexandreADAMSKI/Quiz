@@ -8,6 +8,7 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.ChronoAndHeaderQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.EndQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.QuizFragment;
+import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 
@@ -16,7 +17,7 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
 
     private static  int indexQuestion;
     private static  int score;
-    private static ObjectQuiz quizToLaunch;
+    private static QuizHelper quizToLaunch;
     private ChronoAndHeaderQuizFragmentListener mlistener;
 
 
@@ -29,9 +30,9 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
 
         indexQuestion =0;
         score=0;
-        quizToLaunch = (ObjectQuiz)getIntent().getExtras().getSerializable("QuizToLaunch");
+        quizToLaunch = (QuizHelper)getIntent().getExtras().getSerializable("QuizToLaunch");
 
-        QuizFragment quizFragment =QuizFragment.getInstance(quizToLaunch,0);
+        QuizFragment quizFragment = QuizFragment.getInstance(quizToLaunch,0);
         ChronoAndHeaderQuizFragment chronoAndHeaderQuizFragment = ChronoAndHeaderQuizFragment.getInstance(quizToLaunch);
         mlistener= chronoAndHeaderQuizFragment;
 
@@ -51,7 +52,7 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
     @Override
     public void nextQuestion() {
         indexQuestion++;
-        if(indexQuestion <quizToLaunch.listQuestionPropositionsAnswers.size()){
+        if(indexQuestion <quizToLaunch.getQuestions().size()){
             QuizFragment quizFragment =QuizFragment.getInstance(quizToLaunch, indexQuestion);
             getFragmentManager().beginTransaction().replace(R.id.container, quizFragment).commit();
         }
@@ -66,8 +67,8 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
 
     public void onQuizEnd(String time,boolean isTimeOut) {
 
-        String yourScore=Integer.toString(score)+"/"+Integer.toString(quizToLaunch.listQuestionPropositionsAnswers.size());
-        EndQuizFragment endQuizFragment=EndQuizFragment.getInstance(isTimeOut,quizToLaunch.nameOfQuiz,yourScore,time);
+        String yourScore=Integer.toString(score)+"/"+Integer.toString(quizToLaunch.getQuestions().size());
+        EndQuizFragment endQuizFragment=EndQuizFragment.getInstance(isTimeOut,quizToLaunch.getName(),yourScore,time);
         getFragmentManager().beginTransaction().replace(R.id.container,endQuizFragment).commit();
 
     }

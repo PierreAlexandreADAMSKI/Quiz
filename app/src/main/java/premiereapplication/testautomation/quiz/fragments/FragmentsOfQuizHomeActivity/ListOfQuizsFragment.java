@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.Async.RetrieveQuizsFromLocalServerAsyncTask;
-import premiereapplication.testautomation.quiz.Async.RetrieveQuizsFromTwitterAsyncTask;
+import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromLocalServerAsyncTask;
+import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyncTask;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
@@ -35,8 +35,8 @@ public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListen
     private QuizHomeActivityListener mListener;
     private RecyclerView recyclerView;
     private boolean isDynamicQuiz;
-    private RetrieveQuizsFromTwitterAsyncTask mDynamicQuizsAsynTask;
-    private RetrieveQuizsFromLocalServerAsyncTask mStaticQuizsAsyntask;
+    private RetrieveQuizFromTwitterAsyncTask mDynamicQuizsAsynTask;
+    private RetrieveQuizFromLocalServerAsyncTask mStaticQuizsAsyntask;
 
     public ListOfQuizsFragment(){}
 
@@ -76,11 +76,11 @@ public class ListOfQuizsFragment extends Fragment implements QuizRetrievedListen
         super.onStart();
 
         if(isDynamicQuiz) {
-            mDynamicQuizsAsynTask = new RetrieveQuizsFromTwitterAsyncTask(this);
+            mDynamicQuizsAsynTask = new RetrieveQuizFromTwitterAsyncTask(this);
             mDynamicQuizsAsynTask.execute("@madaniachraf2");
         }
         else{
-            mStaticQuizsAsyntask= new RetrieveQuizsFromLocalServerAsyncTask(this);
+            mStaticQuizsAsyntask= new RetrieveQuizFromLocalServerAsyncTask(this);
             mStaticQuizsAsyntask.execute();
 
         }

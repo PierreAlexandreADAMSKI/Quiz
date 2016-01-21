@@ -10,6 +10,7 @@ import android.widget.Chronometer;
 import android.widget.TextView;
 
 import premiereapplication.testautomation.quiz.R;
+import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 
@@ -22,7 +23,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     private Chronometer chronometer;
     private String timeOut;
 
-    private static ObjectQuiz quizToLaunch;
+    private static QuizHelper quizToLaunch;
     private QuizActivityListener mListener;
 
     public ChronoAndHeaderQuizFragment() {}
@@ -40,14 +41,14 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_chrono_and_header_quiz, container, false);
-        quizToLaunch = (ObjectQuiz) getArguments().getSerializable("QuizToLaunch");
+        quizToLaunch = (QuizHelper) getArguments().getSerializable("QuizToLaunch");
 
           nameQuizTextView =(TextView) rootView.findViewById(R.id.nomQuizLaunchedTextView);
-          nameQuizTextView.setText("Quiz " + quizToLaunch.nameOfQuiz);
+          nameQuizTextView.setText("Quiz " + quizToLaunch.getName());
 
           timerQuizTextView =(TextView) rootView.findViewById(R.id.dureeQuizLaunchedTextView);
-          timerQuizTextView.setText(quizToLaunch.durationOfQuiz + " sec");
-          timeOut="00:"+quizToLaunch.durationOfQuiz.toString();
+          timerQuizTextView.setText(quizToLaunch.getSec() + " sec");
+          timeOut="00:"+quizToLaunch.getSec().toString();
 
 
          chronometer = (Chronometer) rootView.findViewById(R.id.chronometer);
@@ -68,7 +69,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     public void onChronometerTick(Chronometer chronometer) {
 
         if (timeOut.equals(chronometer.getText())) {
-            mListener.onQuizEnd(Integer.toString(quizToLaunch.durationOfQuiz),true);
+            mListener.onQuizEnd(Integer.toString(quizToLaunch.getSec()),true);
             chronometer.stop();
         }
     }
@@ -85,7 +86,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     }
 
 
-    public static ChronoAndHeaderQuizFragment getInstance(ObjectQuiz quiz){
+    public static ChronoAndHeaderQuizFragment getInstance(QuizHelper quiz){
 
         ChronoAndHeaderQuizFragment chronoAndHeaderQuizFragment =new ChronoAndHeaderQuizFragment();
         Bundle bundle=new Bundle();

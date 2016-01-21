@@ -21,6 +21,8 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.helpers.QuizHelper;
+
 public class TwitterHelper {
 
 	// Proxy stuff
@@ -159,10 +161,10 @@ public class TwitterHelper {
 		return tweets;
 	}
 
-	static public List<ObjectQuiz> getListOfQuizsFromTwitter(String s) {
+	static public List<QuizHelper> getListOfQuizsFromTwitter(String s) {
 
 
-		List<ObjectQuiz> listObjetQuiz = new ArrayList<ObjectQuiz>();
+		List<QuizHelper> listOfQuiz = new ArrayList<>();
 
 		String arrayOfQuizs[] = s.split("Quiz");
 
@@ -192,11 +194,11 @@ public class TwitterHelper {
 
 			}
 
-			ObjectQuiz oq = new ObjectQuiz(quizName, quizDuration, listeQuestionPropositionsAnsewers);
-			listObjetQuiz.add(oq);
+			QuizHelper oq = new QuizHelper(quizName, quizDuration, listeQuestionPropositionsAnsewers);
+			listOfQuiz.add(oq);
 		}
 
-		return listObjetQuiz;
+		return listOfQuiz;
 	}
 
 

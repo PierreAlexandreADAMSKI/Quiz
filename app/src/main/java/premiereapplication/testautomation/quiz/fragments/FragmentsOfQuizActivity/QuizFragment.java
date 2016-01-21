@@ -56,7 +56,7 @@ public class QuizFragment extends Fragment {
     }
 
 
-    public static QuizFragment getInstance(ObjectQuiz quiz,int indexquestion){
+    public static QuizFragment getInstance(QuizHelper quiz,int indexquestion){
 
         QuizFragment quizFragment =new QuizFragment();
         Bundle bundle=new Bundle();

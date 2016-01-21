@@ -15,9 +15,9 @@ public class QuizHelper implements Serializable{
     private List<Question> questions;
 
 
-    public QuizHelper(String name, Integer millis) {
+    public QuizHelper(String name, Integer sec) {
         this.name = name;
-        this.sec = millis;
+        this.sec = sec;
     }
 
     public Integer getSec() {

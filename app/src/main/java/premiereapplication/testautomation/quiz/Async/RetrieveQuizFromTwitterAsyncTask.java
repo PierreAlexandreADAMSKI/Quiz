@@ -1,10 +1,14 @@
 package premiereapplication.testautomation.quiz.Async;
 
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
+import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
+import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 
@@ -21,7 +25,7 @@ public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, Li
 	protected List<QuizHelper> doInBackground(String... params) {
 		if ((null != params) && (params.length > 0)){
 
-			List<Tweet> tweets = null;//TwitterHelper.getTweetsOfUser(params[0]);
+			List<Tweet> tweets = TwitterHelper.getTweetsOfUser(params[0]);
 			String quizFromTwitter ="";
 			int index=tweets.size()-1;
 
@@ -30,9 +34,16 @@ public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, Li
 				index--;
 			}
 
-			//TODO ...
-			return null;
-			/*TwitterHelper.getListOfQuizsFromTwitter(quizFromTwitter);*/
+			List<QuizHelper> listQuizs=null;
+
+			try{
+				listQuizs= TwitterHelper.getListOfQuizsFromTwitter(quizFromTwitter);
+			}
+			catch(Exception e){
+				Toast.makeText(QuizApplication.getContext(), "Check your dynamic server !", Toast.LENGTH_SHORT).show();
+			}
+
+			finally{ return listQuizs;}
 
 		}
 		return null;

@@ -1,10 +1,13 @@
 package premiereapplication.testautomation.quiz.Async;
 
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 import premiereapplication.testautomation.quiz.objects.Answer;
@@ -15,6 +18,7 @@ import premiereapplication.testautomation.quiz.objects.Question;
  */
 public class RetrieveQuizFromLocalServerAsyncTask extends AsyncTask<String, Void, List<QuizHelper>> {
 
+
     private QuizRetrievedListener mListener;
 
     public RetrieveQuizFromLocalServerAsyncTask(QuizRetrievedListener listener){
@@ -23,50 +27,37 @@ public class RetrieveQuizFromLocalServerAsyncTask extends AsyncTask<String, Void
 
     @Override
     protected List<QuizHelper> doInBackground(String... params) {
-        List<QuizHelper> quizHelpers = new ArrayList<>();
-        List<Question> questions1 = new ArrayList<>();
-        List<Question> questions2 = new ArrayList<>();
 
-        questions1.add(new Question("Who is the Tony Stark's personnal assistant?", new Answer("Jarvis", false),
-                new Answer("Pepper Pots", true), new Answer("Alfred", false)));
-        questions1.add(new Question("He is red & blue and he is a member of the Justice League.",
-                new Answer("Spiderman", false), new Answer("Captain America", false), new Answer("Superman", true)));
-        questions1.add(new Question("What is the type of ray that irradiated Bruce Banner?",
-                new Answer("Gamma ray", true), new Answer("X ray", false), new Answer("Blue ray", false)));
-        questions1.add(new Question("What is the other name of Bucky Barnes?", new Answer("The Joker", false),
-                new Answer("Two-Face", false), new Answer("The Winter Soldier", true)));
-        questions1.add(new Question("Billionaire, Playboy and Engineer.", new Answer("Tony Stark", true),
-                new Answer("Your Java2 teacher", false), new Answer("Bruce Wayne", false)));
+        List<QuizHelper> listQuizs=null;
 
-        QuizHelper quizHelper1 = new QuizHelper("test 2", 45);
-        quizHelper1.getQuestions().addAll(questions1);
-        quizHelpers.add(quizHelper1);
+        try{
+            listQuizs= HelperFileToListQuiz.getListOfQuizFromFile(QuizApplication.getContext());
+        }
+        catch(Exception e){
+            Toast.makeText(QuizApplication.getContext(), "Check your local server !", Toast.LENGTH_SHORT).show();
+        }
 
-        questions2.add(new Question("He appears in a cameo in each Marvel's movie.", new Answer("Donald Trump", false),
-                new Answer("Bruce Lee", false), new Answer("Stan Lee", true)));
-        questions2.add(new Question("Who is Steve Rogers?", new Answer("Captain America", true),
-                new Answer("Superman", false), new Answer("Batman", false)));
-        questions2.add(new Question("If you mix Jarvis, an Infinity gem and a robot, what do you get?",
-                new Answer("The Vision", true), new Answer("Iron man", false), new Answer("Extremis", false)));
-        questions2.add(new Question("Where is the asylum where Batman's ennemies are sent?", new Answer("Gotham", false),
-                new Answer("NYC", false), new Answer("Arkham", true)));
-        questions2.add(new Question("This super-hero is pretty fast...", new Answer("HTML5", false),
-                new Answer("Flash", true), new Answer("Unity", false)));
+        finally{ return listQuizs;}
 
-        QuizHelper quizHelper = new QuizHelper("test 1", 60);
-
-        quizHelper.getQuestions().addAll(questions2);
-        quizHelpers.add(quizHelper);
-
-        return quizHelpers;
-        /*HelperFileToListQuiz.getListOfQuizFromFile(QuizApplication.getContext())*/
     }
 
     @Override
     protected void onPostExecute(List<QuizHelper> result) {
+
+
         if (null != mListener && null != result){
             mListener.onQuizRetrieved(result);
 
+
         }
+
     }
+
+
+
+
+
+
+
+
 }

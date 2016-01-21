@@ -1,6 +1,7 @@
-/*
+
 package premiereapplication.testautomation.quiz.dynamicServer;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
+import premiereapplication.testautomation.quiz.objects.Answer;
+import premiereapplication.testautomation.quiz.objects.Question;
 
 public class TwitterHelper {
 
@@ -34,7 +37,7 @@ public class TwitterHelper {
 	private static final String PROXY_USERNAME = "training10";
 	private static final String PROXY_PASSWORD = "Student10/";
 
-	public static List<Tweet> getTweetsOfUser(String userName){
+	public static List<Tweet> getTweetsOfUser(String userName) {
 		try {
 			// Step 1: Encode consumer key and secret
 			final String urlApiKey = URLEncoder.encode(Constants.Twitter.API_KEY, "UTF-8");
@@ -57,7 +60,7 @@ public class TwitterHelper {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 		return getFakeTweets();
 	}
 
@@ -69,7 +72,7 @@ public class TwitterHelper {
 		final int responseCode = connection.getResponseCode();
 
 		// If success
-		if (responseCode == 200){
+		if (responseCode == 200) {
 			final Bitmap bitmap = BitmapFactory.decodeStream(connection.getInputStream());
 			return bitmap;
 		}
@@ -87,9 +90,10 @@ public class TwitterHelper {
 		final int responseCode = connection.getResponseCode();
 
 		// If success
-		if (responseCode == 200){
+		if (responseCode == 200) {
 			// Build our Tweet list
-			final Type type = new TypeToken<ArrayList<Tweet>>() {}.getType();
+			final Type type = new TypeToken<ArrayList<Tweet>>() {
+			}.getType();
 			return new Gson().fromJson(new JsonReader(new InputStreamReader(connection.getInputStream(), "UTF-8")), type);
 		}
 
@@ -98,7 +102,7 @@ public class TwitterHelper {
 
 	private static TwitterAuthenticated getTwitterAuthentication(String base64Encoded) throws Exception {
 		// Create a HTTP Post to twitter platform
-		final HttpURLConnection conn =  getHTTPUrlConnection(Constants.Twitter.URL_TOKEN);
+		final HttpURLConnection conn = getHTTPUrlConnection(Constants.Twitter.URL_TOKEN);
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("User-Agent", "Mozilla/5.0");
 		conn.setRequestProperty("Authorization", "Basic " + base64Encoded);
@@ -113,7 +117,7 @@ public class TwitterHelper {
 
 		final int responseCode = conn.getResponseCode();
 		// If success
-		if (responseCode == 200){
+		if (responseCode == 200) {
 			// Read the response, and build the TwitterAuthenticated object
 			final TwitterAuthenticated authenticated = new Gson().fromJson(new JsonReader(new InputStreamReader(conn.getInputStream(), "UTF-8")), TwitterAuthenticated.class);
 			return authenticated;
@@ -124,10 +128,10 @@ public class TwitterHelper {
 
 
 	private static HttpURLConnection getHTTPUrlConnection(String url) throws Exception {
-		if (USE_PROXY){
+		if (USE_PROXY) {
 			final Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_HOST, PROXY_PORT));
 
-			if (USE_PROXY_AUTHENTICATION){
+			if (USE_PROXY_AUTHENTICATION) {
 				Authenticator authenticator = new Authenticator() {
 					public PasswordAuthentication getPasswordAuthentication() {
 						return (new PasswordAuthentication(PROXY_USERNAME, PROXY_PASSWORD.toCharArray()));
@@ -153,7 +157,7 @@ public class TwitterHelper {
 		user.profileImageUrl = "";
 
 		// Build 20 Tweets
-		for(int i=0; i<20; i++) {
+		for (int i = 0; i < 20; i++) {
 			final Tweet tweet = new Tweet();
 			tweet.text = "Tweet #" + i;
 			tweet.user = user;
@@ -166,36 +170,39 @@ public class TwitterHelper {
 
 
 		List<QuizHelper> listOfQuiz = new ArrayList<>();
-
 		String arrayOfQuizs[] = s.split("Quiz");
-
 		for (int i = 0; i < arrayOfQuizs.length; i++) {
 			String quizName = arrayOfQuizs[i].split("//")[0];
 			int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[1]);
-			List<QuestionPropositionsAnswers> listeQuestionPropositionsAnsewers = new ArrayList<QuestionPropositionsAnswers>();
 
-			String arrayQustionPropositionsAnsewers[] = arrayOfQuizs[i].split("//")[2].split("&gt;");
-			for (int j = 0; j < arrayQustionPropositionsAnsewers.length; j++) {
-				String enonceQuestion = arrayQustionPropositionsAnsewers[j].split("&lt;")[0];
-				List<String> listPropositions = new ArrayList<String>();
-				List<String> listAnsewers = new ArrayList<String>();
+			List<Question> listQuestion = new ArrayList<Question>();
+			String arrayQuestion[] = arrayOfQuizs[i].split("//")[2].split("&gt;");
+			for (int j = 0; j < arrayQuestion.length; j++) {
+				String enonceQuestion = arrayQuestion[j].split("&lt;")[0];
 
-				String PropositionsAnsewers = arrayQustionPropositionsAnsewers[j].split("&lt;")[1];
-				String arrayPropositions[] = PropositionsAnsewers.split("/")[0].split(",");
-				String arrayAnsewers[] = PropositionsAnsewers.split("/")[1].split(",");
-				for (int n = 0; n < arrayPropositions.length; n++) {
-					listPropositions.add(arrayPropositions[n]);
+
+				List<Answer> listAnswers = new ArrayList<>();
+				String PA = arrayQuestion[j].split("&lt;")[1];
+				String arrayP[] = PA.split("/")[0].split(",");
+				String arrayA[] = PA.split("/")[1].split(",");
+				for (int n = 0; n < arrayP.length; n++) {
+					if (arrayA[n].equals("true")) {
+						Answer answer = new Answer(arrayP[n], true);
+						listAnswers.add(answer);
+					} else {
+						Answer answer = new Answer(arrayP[n], false);
+						listAnswers.add(answer);
+					}
+
 				}
-				for (int n = 0; n < arrayAnsewers.length; n++) {
-					listAnsewers.add(arrayAnsewers[n]);
-				}
-				QuestionPropositionsAnswers qpr = new QuestionPropositionsAnswers(enonceQuestion, listPropositions, listAnsewers);
-				listeQuestionPropositionsAnsewers.add(qpr);
+
+				Question question = new Question(enonceQuestion, listAnswers);
+				listQuestion.add(question);
 
 
 			}
 
-			QuizHelper oq = new QuizHelper(quizName, quizDuration, listeQuestionPropositionsAnsewers);
+			QuizHelper oq = new QuizHelper(quizName, quizDuration, listQuestion);
 			listOfQuiz.add(oq);
 		}
 
@@ -203,17 +210,5 @@ public class TwitterHelper {
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
-*/
+

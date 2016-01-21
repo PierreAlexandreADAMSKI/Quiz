@@ -1,25 +1,51 @@
+Personalities//
+59//
+
+Who is the Tony Stark's personnal assistant ?
+<Jarvis,Pepper Pots,Alfred/false,true,false>
+He is red & blue and he is a member of the Justice League
+<Spiderman,Captain America,Superman/false,false,true>
+What is the type of ray that irradiated Bruce Banner?
+<Gamma ray,X ray,Blue ray/true,false,false>
+What is the other name of Bucky Barnes
+<The Joker, Two-Face,The Winter Soldier/false,false,true>
+Billionaire, Playboy and Engineer?
+<Tony Stark,Your Java2 teacher,Bruce Wayne/true,false,false>
+He appears in a cameo in each Marvel's movie
+<Donald Trump,Bruce Lee,Stan Lee/false,false,true>
+Who is Steve Rogers?
+<Captain America,Superman,Batman/true,false,false>
+If you mix Jarvis, an Infinity gem and a robot,what do you get?
+<The Vision,Iron man,Extremis/true,false,false>
+Where is the asylum where Batman's ennemies are sent?
+<Gotham,NYC,Arkham/false,false,true>
+This super-hero is pretty fast...
+<HTML5,Flash, Unity/false,true,false>
+
+
+Quiz
 Capitals//
 30//
-Capital Algerie ? <Oran,Alger,Annaba/Alger>
-Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/Rabat>
-Capital Tunisie ? <Sousse,Tunis,Hamamet/Tunis>
-Capital Espagne ? <Barcelone,Madrid,Malaga/Madrid>
-Capital Brésil ? <Rio,Brazilia,Sao Paulo/Brazilia>
+Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
+Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
+Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
+Capital Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
+Capital Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
 
 
 Quiz
 Voitures//
 15//
-marque allemande ? <mercedes,renault/mercedes>
-marque americaine ?<opel,renault,audi,ford/ford>
-marque Francaise ?<opel,renault,fiat/renault>
-marque Japonaise ?<opel,toyota,fiat/toyota>
+marque allemande ? <mercedes,renault/true,false>
+marque americaine ?<opel,renault,audi,ford/false,false,false,true>
+marque Francaise ?<opel,renault,fiat/false,true,false>
+marque Japonaise ?<opel,toyota,fiat/false,true,false>
 
 Quiz
 Geographie//
 30//
-pays riche ? <USA,France/USA>
-pays paauvre ?<Senegal,Nigeria/Senegal>
+pays riche ? <USA,France/true,false>
+pays paauvre ? <Senegal,Nigeria/true,false>
 
 
 
@@ -75,7 +101,3 @@ Langue//
 vide<,/,>
 
 
-Quiz
-android//
-50//
-monaie europ<euro,dolars,yen/euros>

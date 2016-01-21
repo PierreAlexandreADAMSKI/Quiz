@@ -80,30 +80,22 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
         else{
             mStaticQuizAsyncTask = new RetrieveQuizFromLocalServerAsyncTask(this);
             mStaticQuizAsyncTask.execute();
-
         }
+
     }
 
 
     @Override
     public void onQuizRetrieved(List<QuizHelper> listOfQuiz) {
 
-        try {
-            final ListQuizAdapter listQuizAdapter = new ListQuizAdapter(listOfQuiz, mListener);
-            recyclerView.setAdapter(listQuizAdapter);
+            if(listOfQuiz !=null) {
+                final ListQuizAdapter listQuizAdapter = new ListQuizAdapter(listOfQuiz, mListener);
+                recyclerView.setAdapter(listQuizAdapter);
 
-        }catch(Exception e){
 
-            if(isDynamicQuiz) {
-                Toast.makeText(QuizApplication.getContext(), "Un probleme est survenu dans le serveur dynamique", Toast.LENGTH_SHORT).show();
+                mDynamicQuizAsyncTask = null;
+                mStaticQuizAsyncTask = null;
             }
-            else {
-                Toast.makeText(QuizApplication.getContext(), "Un probleme est survenu dans le serveur statique", Toast.LENGTH_SHORT).show();
-            }
-        }
-        mDynamicQuizAsyncTask = null;
-        mStaticQuizAsyncTask = null;
-
     }
 
     public static ListOfQuizFragment getInstance(boolean isDynamicQuiz){

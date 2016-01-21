@@ -1,4 +1,3 @@
-/*
 
 package premiereapplication.testautomation.quiz.helpers;
 
@@ -11,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.objects.Answer;
 import premiereapplication.testautomation.quiz.objects.Question;
 
 public class HelperFileToListQuiz {
@@ -50,119 +50,85 @@ public class HelperFileToListQuiz {
 
         String fileContent = readFile(context);
 
-
         List<QuizHelper> listOfQuiz = new ArrayList<>();
+        String arrayOfQuizs[] = fileContent.split("Quiz");
+        for (int i = 0; i < arrayOfQuizs.length; i++) {
+            String quizName = arrayOfQuizs[i].split("//")[0];
+            int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[1]);
 
-
-
-        String arryofQuizs[] = fileContent.split("Quiz");
-
-        for (int i = 0; i < arryofQuizs.length; i++) {
-            String quizName = arryofQuizs[i].split("//")[0];
-            int quizDuration = Integer.parseInt(arryofQuizs[i].split("//")[1]);
             List<Question> listQuestion = new ArrayList<Question>();
-
-            String arrayQuestion[] = arryofQuizs[i].split("//")[2].split(">");
+            String arrayQuestion[] = arrayOfQuizs[i].split("//")[2].split(">");
             for (int j = 0; j < arrayQuestion.length; j++) {
                 String enonceQuestion = arrayQuestion[j].split("<")[0];
-                //List<String> listePropositions = new ArrayList<>();
-                //List<String> listeAnsewers = new ArrayList<>();
-                
 
-                String propositionsAnsewers = arrayQuestionPropositionsAnsewers[j].split("<")[1];
-                String arrayPropositions[] = propositionsAnsewers.split("/")[0].split(",");
-                String arrayAnsewers[] = propositionsAnsewers.split("/")[1].split(",");
-                for (int n = 0; n < arrayPropositions.length; n++) {
-                    listePropositions.add(arrayPropositions[n]);
+
+                List<Answer> listAnswers = new ArrayList<>();
+                String PA = arrayQuestion[j].split("<")[1];
+                String arrayP[] = PA.split("/")[0].split(",");
+                String arrayA[] = PA.split("/")[1].split(",");
+                for (int n = 0; n <arrayP.length; n++) {
+                    if (arrayA[n].equals("true")) {
+                        Answer answer = new Answer(arrayP[n],true);
+                        listAnswers.add(answer);
+                    } else {
+                        Answer answer = new Answer(arrayP[n],false);
+                        listAnswers.add(answer);
+                    }
+
                 }
-                for (int n = 0; n < arrayAnsewers.length; n++) {
-                    listeAnsewers.add(arrayAnsewers[n]);
-                }
-                QuestionPropositionsAnswers qpr = new QuestionPropositionsAnswers(enonceQuestion, listePropositions, listeAnsewers);
-                listeQuestionPropositionsAnsewers.add(qpr);
+
+                Question question = new Question(enonceQuestion, listAnswers);
+                listQuestion.add(question);
 
 
             }
 
-            QuizHelper oq = new QuizHelper(quizName, quizDuration, listeQuestionPropositionsAnsewers);
+            QuizHelper oq = new QuizHelper(quizName, quizDuration, listQuestion);
             listOfQuiz.add(oq);
         }
 
-    return listOfQuiz;
+        return listOfQuiz;
     }
 
 
-
-    static public ObjectQuiz getQuiz(Context context,int position) {
-
+    static public QuizHelper quiz(Context context, int position) {
         return getListOfQuizFromFile(context).get(position);
-
     }
 
 
 
 
-
-*/
-/*static public void display(List <ObjectQuiz> listOfQuizs) {
+    static public void display(List <QuizHelper> listOfQuizs) {
 
         for (int i = 0; i < listOfQuizs.size(); i++) {
 
             System.out.println("\n\n\nQuiz " + (i + 1));
 
-            String nomQuiz = listOfQuizs.get(i).nameOfQuiz;
-            int dureeQuiz = listOfQuizs.get(i).durationOfQuiz;
-            List<QuestionPropositionsAnswers> listQuestionPropositionsAnswers = listOfQuizs.get(i).listQuestionPropositionsAnswers;
+            String quizName = listOfQuizs.get(i).getName();
+            int quizDuration = listOfQuizs.get(i).getSec();
+            List<Question> listQuestions = listOfQuizs.get(i).getQuestions();
 
-            System.out.println("Nom du Quiz :" + nomQuiz);
-            System.out.println("Duree du Quiz :" + dureeQuiz + "\n");
+            System.out.println("Nom du Quiz :" + quizName);
+            System.out.println("Duree du Quiz :" + quizDuration + "\n");
 
 
-            for (int j = 0; j < listQuestionPropositionsAnswers.size(); j++) {
-                String enonceQuestion = listQuestionPropositionsAnswers.get(j).question;
-                List<String> listPropositions = listQuestionPropositionsAnswers.get(j).propositions;
-                List<String> listReponses = listQuestionPropositionsAnswers.get(j).answers;
+            for (int j = 0; j < listQuestions.size(); j++) {
+                String enonceQuestion = listQuestions.get(j).getQuestion();
+                List<Answer> listAnsewers = listQuestions.get(j).getAnswers();
 
                 System.out.println("question " + (j + 1) + " : " + enonceQuestion);
                 System.out.println("Propositions :");
-                for (int k = 0; k < listPropositions.size(); k++) {
-                    System.out.println(listPropositions.get(k));
+                for (int k = 0; k < listAnsewers.size(); k++) {
+                    System.out.println(listAnsewers.get(k).getText());
                 }
                 System.out.println("Reponses :");
                 System.out.println();
-                for (int k = 0; k < listReponses.size(); k++) {
-                    System.out.println(listReponses.get(k));
+                for (int k = 0; k < listAnsewers.size(); k++) {
+                    System.out.println(listAnsewers.get(k).isGoodAnswer());
                 }
             }
         }
 
     }
-
-    static public void display(ObjectQuiz Quiz) {
-            String nomQuiz = Quiz.nameOfQuiz;
-            int dureeQuiz = Quiz.durationOfQuiz;
-            List<QuestionPropositionsAnswers> listQuestionPropositionsAnswers = Quiz.listQuestionPropositionsAnswers;
-
-            System.out.println("Nom du Quiz :" + nomQuiz);
-            System.out.println("Duree du Quiz :" + dureeQuiz + "\n");
-
-
-            for (int j = 0; j < listQuestionPropositionsAnswers.size(); j++) {
-                String enonceQuestion = listQuestionPropositionsAnswers.get(j).question;
-                List<String> listPropositions = listQuestionPropositionsAnswers.get(j).propositions; //changer nom en list propo
-                List<String> listReponses = listQuestionPropositionsAnswers.get(j).answers;//changer en liste rep
-
-                System.out.println("question " + (j + 1) + " : " + enonceQuestion);
-                System.out.println("Propositions :");
-                for (int k = 0; k < listPropositions.size(); k++) {
-                    System.out.println(listPropositions.get(k));
-                }
-                System.out.println("Reponses :");
-                System.out.println();
-                for (int k = 0; k < listReponses.size(); k++) {
-                    System.out.println(listReponses.get(k));
-                }
-            }
-
 }
-*/
+

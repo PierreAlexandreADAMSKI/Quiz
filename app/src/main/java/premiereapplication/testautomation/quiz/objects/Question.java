@@ -8,16 +8,21 @@ import java.util.List;
  * Created by mb-p_pilou on 21/01/2016.
  */
 
-public class Question implements Serializable{
+public class Question implements Serializable {
 
     private String question;
-
     private List<Answer> answers;
 
-    public Question(String question, Answer answer1, Answer answer2, Answer answer3) {
+    public Question(String question, Answer... answers) {
         super();
         this.question = question;
-        this.answers = Arrays.asList(answer1, answer2, answer3);
+        this.answers = Arrays.asList(answers);
+    }
+
+    public Question(String question,List<Answer> answers) { // I kept the three constructors to avoid conflict
+        super();
+        this.question = question;
+        this.answers =answers;
     }
 
     public Question() {
@@ -28,8 +33,16 @@ public class Question implements Serializable{
         return question;
     }
 
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public List<Answer> getAnswers() {
         return answers;
     }
 
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 }

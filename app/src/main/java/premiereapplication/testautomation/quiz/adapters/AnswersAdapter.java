@@ -1,5 +1,6 @@
 package premiereapplication.testautomation.quiz.adapters;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -96,6 +97,10 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
         public void onClick(View v) {
             if (this.answer.isGoodAnswer()){
                 this.listener.scoreIncrementation();
+                v.setBackgroundColor(Color.GREEN);
+            }
+            else{
+                v.setBackgroundColor(Color.RED);
             }
             this.listener.nextQuestion();
         }

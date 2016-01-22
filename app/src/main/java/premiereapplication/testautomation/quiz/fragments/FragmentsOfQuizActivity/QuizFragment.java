@@ -43,14 +43,14 @@ public class QuizFragment extends Fragment {
         TextView questionTextView = (TextView) rootView.findViewById(R.id.questionTextView);
         //TODO change id to recyclerview
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.propositionsListView);
+        recyclerView.setAdapter(new AnswersAdapter(currentQuestion.getAnswers(), activityListener));
 
-        //
         final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
 
-        final AnswersAdapter answersAdapter=new AnswersAdapter(currentQuestion.getAnswers(), activityListener);
-        recyclerView.setAdapter(answersAdapter);
+
+
 
         questionTextView.setText(currentQuestion.getQuestion());
 

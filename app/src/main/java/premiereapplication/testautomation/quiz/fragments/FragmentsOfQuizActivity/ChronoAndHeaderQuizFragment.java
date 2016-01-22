@@ -13,6 +13,7 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
+import premiereapplication.testautomation.quiz.utils.TimeUtils;
 
 
 public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements Chronometer.OnChronometerTickListener,ChronoAndHeaderQuizFragmentListener {
@@ -21,7 +22,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     private TextView nameQuizTextView;
     private TextView timerQuizTextView;
     private Chronometer chronometer;
-    private String timeOut;
+
 
     private static QuizHelper quizToLaunch;
     private QuizActivityListener mListener;
@@ -48,7 +49,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
 
           timerQuizTextView =(TextView) rootView.findViewById(R.id.dureeQuizLaunchedTextView);
           timerQuizTextView.setText(quizToLaunch.getSec() + " sec");
-          timeOut="00:"+quizToLaunch.getSec().toString();
+
 
 
          chronometer = (Chronometer) rootView.findViewById(R.id.chronometer);
@@ -68,8 +69,8 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
 
     public void onChronometerTick(Chronometer chronometer) {
 
-        if (timeOut.equals(chronometer.getText())) {
-            mListener.onQuizEnd(Integer.toString(quizToLaunch.getSec()),true);
+        if (TimeUtils.timeToSeconds(chronometer.getText().toString())==quizToLaunch.getSec()) {
+            mListener.onQuizEnd(quizToLaunch.getSec(),true);
             chronometer.stop();
         }
     }
@@ -81,8 +82,8 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
     }
 
     @Override
-    public String getTime() {
-        return chronometer.getText().toString();
+    public int getTime() {
+        return TimeUtils.timeToSeconds(chronometer.getText().toString());
     }
 
 

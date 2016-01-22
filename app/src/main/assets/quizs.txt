@@ -1,5 +1,5 @@
 Personalities//
-59//
+60//
 
 Who is the Tony Stark's personnal assistant ?
 <Jarvis,Pepper Pots,Alfred/false,true,false>
@@ -25,7 +25,7 @@ This super-hero is pretty fast...
 
 Quiz
 Capitals//
-30//
+80//
 Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
 Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
 Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
@@ -35,7 +35,7 @@ Capital Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
 
 Quiz
 Voitures//
-15//
+120//
 marque allemande ? <mercedes,renault/true,false>
 marque americaine ?<opel,renault,audi,ford/false,false,false,true>
 marque Francaise ?<opel,renault,fiat/false,true,false>

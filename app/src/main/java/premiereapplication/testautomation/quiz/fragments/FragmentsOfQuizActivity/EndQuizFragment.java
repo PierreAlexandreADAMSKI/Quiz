@@ -29,7 +29,7 @@ public class EndQuizFragment extends Fragment {
     private Boolean isTimeOut;
     private String nameOfQuiz;
     private String score;
-    private String time;
+    private int time;
 
     public EndQuizFragment(){}
 
@@ -51,7 +51,7 @@ public class EndQuizFragment extends Fragment {
         isTimeOut=getArguments().getBoolean("IsTimeOut");
         nameOfQuiz = getArguments().getString("NameOfQuiz");
         score =  getArguments().getString("Score");
-        time =  getArguments().getString("Time");
+        time =  getArguments().getInt("Time");
 
         imageView=(ImageView) rootView.findViewById(R.id.imageView);
         if(isTimeOut){imageView.setImageResource(R.drawable.timeout);}
@@ -85,14 +85,14 @@ public class EndQuizFragment extends Fragment {
     }
 
 
-    public static EndQuizFragment getInstance(Boolean isTimeOut,String nameOfQuiz,String score,String time){
+    public static EndQuizFragment getInstance(Boolean isTimeOut,String nameOfQuiz,String score,int time){
 
         EndQuizFragment endQuizFragment=new EndQuizFragment();
         Bundle bundle =new Bundle();
         bundle.putBoolean("IsTimeOut",isTimeOut);
         bundle.putString("NameOfQuiz",nameOfQuiz);
         bundle.putString("Score", score);
-        bundle.putString("Time", time);
+        bundle.putInt("Time", time);
         endQuizFragment.setArguments(bundle);
         return endQuizFragment;
     }

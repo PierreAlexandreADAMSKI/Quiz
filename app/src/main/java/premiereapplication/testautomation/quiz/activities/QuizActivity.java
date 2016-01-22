@@ -60,12 +60,12 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
         else{
 
             mlistener.stopChronometer();
-            onQuizEnd(mlistener.getTime().split(":")[1],false);
+            onQuizEnd(mlistener.getTime(),false);
         }
     }
 
 
-    public void onQuizEnd(String time,boolean isTimeOut) {
+    public void onQuizEnd(int time,boolean isTimeOut) {
 
         String yourScore=Integer.toString(score)+"/"+Integer.toString(quizToLaunch.getQuestions().size());
         EndQuizFragment endQuizFragment=EndQuizFragment.getInstance(isTimeOut,quizToLaunch.getName(),yourScore,time);

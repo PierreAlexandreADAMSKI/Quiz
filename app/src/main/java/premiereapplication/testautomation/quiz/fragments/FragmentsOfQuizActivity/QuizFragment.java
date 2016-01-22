@@ -44,6 +44,7 @@ public class QuizFragment extends Fragment {
         //TODO change id to recyclerview
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.propositionsListView);
 
+        //
         final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));

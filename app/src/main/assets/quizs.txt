@@ -45,17 +45,17 @@ Quiz
 Geographie//
 30//
 pays riche ? <USA,France/true,false>
-pays paauvre ? <Senegal,Nigeria/true,false>
+pays pauvre ? <Senegal,Nigeria/true,false>
 
 
 
 Quiz
-Culture Generale//
+Culture Générale//
 10//
 vide<,/,>
 
 Quiz
-Math//
+Maths//
 15//
 vide<,/,>
 

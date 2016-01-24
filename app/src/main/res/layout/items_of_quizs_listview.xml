@@ -7,17 +7,16 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+    card_view:cardBackgroundColor="@color/colorPrimary"
+    card_view:cardCornerRadius="0dp"
     card_view:cardElevation="15dp"
     card_view:cardPreventCornerOverlap="false"
-    card_view:cardUseCompatPadding="true"
-    card_view:cardBackgroundColor="@color/colorPrimary"
-    card_view:cardCornerRadius="0dp">
+    card_view:cardUseCompatPadding="true">
 
     <!-- à travailler pour que ce soit bogoss -->
-    <LinearLayout
-        android:id="@+id/movieOverviewContentLayout"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_alignLeft="@+id/card"
         android:layout_alignStart="@+id/card"
         android:layout_below="@+id/card"
@@ -26,28 +25,45 @@
 
         <ImageView
             android:id="@+id/quizImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/quiz" />
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="top"
+            android:src="@drawable/modulars_icon" />
+
 
         <TextView
-            android:id="@+id/launchedQuizNameTextView"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="10dp"
+            android:id="@+id/quizNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quizImageView"
             android:gravity="center"
             android:text="@string/quiz_name"
             android:textColor="#FFFFFF"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
+
 
         <TextView
-            android:id="@+id/launchedQuizDurationTextView"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="10dp"
-            android:text="@string/quiz_name"
-            android:textAlignment="center"
+            android:id="@+id/quizDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quizNameTextView"
+            android:layout_toRightOf="@+id/timerLogo"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/quiz_duration"
+            android:gravity="right"
             android:textColor="#FFFFFF"
-            android:textSize="10dp" />
-    </LinearLayout>
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/timerLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/quizNameTextView"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/timer"/>
+
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

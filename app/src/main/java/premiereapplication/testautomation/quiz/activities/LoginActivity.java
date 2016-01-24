@@ -1,8 +1,6 @@
 package premiereapplication.testautomation.quiz.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {

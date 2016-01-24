@@ -7,6 +7,7 @@ import android.view.View;
 /**
  * Created by mb-p_pilou on 07/01/2016.
  */
+
 public class SpacesItemDecoration extends RecyclerView.ItemDecoration {
     private int spaceHorizontal;
     private int spaceVertical;

@@ -5,10 +5,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
 import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
-import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 

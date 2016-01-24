@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 import premiereapplication.testautomation.quiz.objects.Answer;
 

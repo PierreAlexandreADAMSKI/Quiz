@@ -19,7 +19,7 @@ import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromLocalServer
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyncTask;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 
@@ -80,9 +80,9 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
         public ViewHolder(View view){
             super(view);
-            quizName = (TextView) view.findViewById(R.id.launchedQuizNameTextView);
-            quizTimer = (TextView) view.findViewById(R.id.launchedQuizDurationTextView);
-            imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+            quizName = (TextView) view.findViewById(R.id.quizNameTextView);
+            quizTimer = (TextView) view.findViewById(R.id.quizDurationTextView);
+            //imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
             view.setOnClickListener(this);
         }
 

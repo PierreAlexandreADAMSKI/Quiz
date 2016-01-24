@@ -16,7 +16,7 @@
         android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="quiz name"
+        android:text="@string/category_name"
         android:textStyle="bold"
         android:textAllCaps="true"
         android:textColor="@color/categories"

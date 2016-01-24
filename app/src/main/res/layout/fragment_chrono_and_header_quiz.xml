@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Nom Quiz"
-        android:id="@+id/launchedQuizNameTextView"
+        android:id="@+id/quizNameTextView"
         android:textColor="@android:color/background_dark"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -22,9 +22,9 @@
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Duree"
-        android:id="@+id/launchedQuizDurationTextView"
+        android:id="@+id/quizDurationTextView"
         android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/launchedQuizNameTextView"
+        android:layout_below="@+id/quizNameTextView"
         android:layout_centerHorizontal="true"
         android:textSize="20dp" />
 
@@ -42,8 +42,8 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:id="@+id/imageView"
-        android:layout_below="@+id/launchedQuizDurationTextView"
+        android:layout_below="@+id/quizDurationTextView"
         android:src="@drawable/chronometer"
-        android:layout_alignEnd="@+id/launchedQuizDurationTextView" />
+        android:layout_alignEnd="@+id/quizDurationTextView" />
 
 </RelativeLayout>

@@ -20,9 +20,9 @@ public class EndQuizFragment extends Fragment {
 
 
     private Button exitButton;
-    private  TextView loginTextView;
-    private  TextView scoreTextView;
-    private  TextView timeTextView;
+    private TextView loginTextView;
+    private TextView scoreTextView;
+    private TextView timeTextView;
     private ImageView imageView;
 
     private QuizActivityListener mListener;
@@ -31,13 +31,14 @@ public class EndQuizFragment extends Fragment {
     private String score;
     private int time;
 
-    public EndQuizFragment(){}
+    public EndQuizFragment() {
+    }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-        if (activity instanceof QuizActivityListener){
+        if (activity instanceof QuizActivityListener) {
             mListener = (QuizActivityListener) activity;
         }
     }
@@ -48,49 +49,47 @@ public class EndQuizFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_end_quiz, container, false);
 
-        isTimeOut=getArguments().getBoolean("IsTimeOut");
+        isTimeOut = getArguments().getBoolean("IsTimeOut");
         nameOfQuiz = getArguments().getString("NameOfQuiz");
-        score =  getArguments().getString("Score");
-        time =  getArguments().getInt("Time");
+        score = getArguments().getString("Score");
+        time = getArguments().getInt("Time");
 
-        imageView=(ImageView) rootView.findViewById(R.id.imageView);
-        if(isTimeOut){imageView.setImageResource(R.drawable.timeout);}
+        imageView = (ImageView) rootView.findViewById(R.id.imageView);
+        if (isTimeOut) {
+            imageView.setImageResource(R.drawable.timeout);
+        }
 
 
-        loginTextView =(TextView) rootView.findViewById(R.id.loginTextView);
-        loginTextView.setText("login: " + PreferenceUtils.getStoredLogin());
+        loginTextView = (TextView) rootView.findViewById(R.id.loginTextView);
+        loginTextView.setText("Login: " + PreferenceUtils.getStoredLogin());
 
-        scoreTextView =(TextView) rootView.findViewById(R.id.scoreTextView);
+        scoreTextView = (TextView) rootView.findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + score);
 
-        timeTextView =(TextView) rootView.findViewById(R.id.timeTextView);
-         timeTextView.setText("time: " + time+" sec");
+        timeTextView = (TextView) rootView.findViewById(R.id.timeTextView);
+        timeTextView.setText("Time: " + time + " sec");
 
 
+        exitButton = (Button) rootView.findViewById(R.id.exitButton);
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListener.finishActivity();
+            }
 
-
-
-         exitButton= (Button) rootView.findViewById(R.id.exitButton);
-         exitButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 mListener.finishActivity();
-             }
-
-         });
-
+        });
 
 
         return rootView;
     }
 
 
-    public static EndQuizFragment getInstance(Boolean isTimeOut,String nameOfQuiz,String score,int time){
+    public static EndQuizFragment getInstance(Boolean isTimeOut, String nameOfQuiz, String score, int time) {
 
-        EndQuizFragment endQuizFragment=new EndQuizFragment();
-        Bundle bundle =new Bundle();
-        bundle.putBoolean("IsTimeOut",isTimeOut);
-        bundle.putString("NameOfQuiz",nameOfQuiz);
+        EndQuizFragment endQuizFragment = new EndQuizFragment();
+        Bundle bundle = new Bundle();
+        bundle.putBoolean("IsTimeOut", isTimeOut);
+        bundle.putString("NameOfQuiz", nameOfQuiz);
         bundle.putString("Score", score);
         bundle.putInt("Time", time);
         endQuizFragment.setArguments(bundle);

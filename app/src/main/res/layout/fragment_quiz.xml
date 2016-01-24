@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent" android:layout_height="match_parent"
-android:background="@android:color/background_dark">
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/question_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardBackgroundColor="@color/colorPrimary"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="15dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="false">
 
-    <android.support.v7.widget.RecyclerView
-    android:layout_width="wrap_content"
-    android:layout_height="300dp"
-    android:id="@+id/propositionsListView"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentBottom="true" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="50dp"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="enoncé de la question"
-    android:id="@+id/questionTextView"
-    android:textColor="@android:color/background_light"
-    android:layout_above="@+id/propositionsListView"
-    android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="8dp"
+            android:text="Enoncé de la question"
+            android:textSize="24dp"
+            android:textColor="@android:color/background_light" />
 
-</RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/propositionsListView"
+            android:layout_below="@id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

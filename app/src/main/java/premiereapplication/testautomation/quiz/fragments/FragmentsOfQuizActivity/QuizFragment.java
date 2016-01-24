@@ -21,7 +21,7 @@ import premiereapplication.testautomation.quiz.objects.Question;
 
 public class QuizFragment extends Fragment {
 
-    private static final int DIVIDER_HEIGHT = 40;
+    private static final int DIVIDER_HEIGHT = 10;
     private QuizActivityListener activityListener;
 
     public QuizFragment(){}

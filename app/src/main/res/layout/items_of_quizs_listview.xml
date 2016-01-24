@@ -16,8 +16,8 @@
     <!-- à travailler pour que ce soit bogoss -->
     <LinearLayout
         android:id="@+id/movieOverviewContentLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="150dp"
+        android:layout_height="170dp"
         android:layout_alignLeft="@+id/card"
         android:layout_alignStart="@+id/card"
         android:layout_below="@+id/card"
@@ -26,8 +26,8 @@
 
         <ImageView
             android:id="@+id/quizImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/quiz" />
 
         <TextView

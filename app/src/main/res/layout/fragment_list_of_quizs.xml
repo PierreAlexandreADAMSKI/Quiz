@@ -3,13 +3,24 @@
     android:id="@+id/quizRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light">
+    android:background="#303030">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/quizsListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/categoryTitle"/>
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="quiz name"
+        android:textAllCaps="true"
+        android:textColor="@color/categories"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:id="@+id/categoryTitle"/>
 
 </RelativeLayout>

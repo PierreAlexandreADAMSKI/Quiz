@@ -20,7 +20,6 @@ import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyn
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.aplication.QuizApplication;
-import premiereapplication.testautomation.quiz.decoration.SpacesItemDecoration;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
@@ -56,9 +55,9 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
 
         isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
         recyclerView = (RecyclerView) rootView.findViewById(R.id.quizsListView);// change id.quizsListView to <RecyclerView>
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,true); //, LinearLayoutManager.HORIZONTAL, false);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,false); //, LinearLayoutManager.HORIZONTAL, false);
         this.recyclerView.setLayoutManager(layoutManager);
-        this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
+        //this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
 
         // Set a Progress Bar as empty view, and display it (set adapter with no elements))
         final ProgressBar progressBar = new ProgressBar(getActivity());

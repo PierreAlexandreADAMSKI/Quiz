@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import premiereapplication.testautomation.quiz.R;
+import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.GlobalListOfQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.ListOfQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.ListOfResultsFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.PrincipalMenuFragment;
@@ -65,8 +66,9 @@ public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActiv
     @Override
     public void moveToListOfStaticQuizFragment() {
 
-        ListOfQuizFragment frag= ListOfQuizFragment.getInstance(false);
-        getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
+        //ListOfQuizFragment frag= ListOfQuizFragment.getInstance(false);
+        //getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
+         getFragmentManager().beginTransaction().add(R.id.container, new GlobalListOfQuizFragment()).commit();
     }
 
     @Override

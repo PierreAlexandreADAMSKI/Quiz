@@ -3,15 +3,12 @@ package premiereapplication.testautomation.quiz.Async;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
-import premiereapplication.testautomation.quiz.objects.Answer;
-import premiereapplication.testautomation.quiz.objects.Question;
 
 /**
  * Created by User on 19/01/2016.

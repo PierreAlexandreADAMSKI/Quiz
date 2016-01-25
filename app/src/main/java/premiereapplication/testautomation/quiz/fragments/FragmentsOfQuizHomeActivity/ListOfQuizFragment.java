@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -20,7 +19,7 @@ import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromLocalServer
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyncTask;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
@@ -55,8 +54,8 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
         View rootView = inflater.inflate(R.layout.fragment_list_of_quizs, container, false);
 
         isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizsListView);// change id.quizsListView to <RecyclerView>
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext()); //, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);// change id.quizsListView to <RecyclerView>
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,false); //, LinearLayoutManager.HORIZONTAL, false);
         this.recyclerView.setLayoutManager(layoutManager);
         //this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));
 

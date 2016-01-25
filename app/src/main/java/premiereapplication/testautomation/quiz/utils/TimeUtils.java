@@ -3,7 +3,8 @@ package premiereapplication.testautomation.quiz.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+
+
 
 /**
  * Created by User on 22/01/2016.

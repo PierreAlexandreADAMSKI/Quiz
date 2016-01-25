@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.adapters.AnswersAdapter;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.decoration.SpacesItemDecoration;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
@@ -21,7 +21,7 @@ import premiereapplication.testautomation.quiz.objects.Question;
 
 public class QuizFragment extends Fragment {
 
-    private static final int DIVIDER_HEIGHT = 40;
+    private static final int DIVIDER_HEIGHT = 10;
     private QuizActivityListener activityListener;
 
     public QuizFragment(){}

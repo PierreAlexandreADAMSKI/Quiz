@@ -1,4 +1,4 @@
-package premiereapplication.testautomation.quiz.aplication;
+package premiereapplication.testautomation.quiz.application;
 
 
 import android.app.Application;

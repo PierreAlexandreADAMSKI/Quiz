@@ -24,7 +24,7 @@ This super-hero is pretty fast...
 
 
 Quiz
-Capitals//
+Capitales//
 80//
 Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
 Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
@@ -42,20 +42,20 @@ marque Francaise ?<opel,renault,fiat/false,true,false>
 marque Japonaise ?<opel,toyota,fiat/false,true,false>
 
 Quiz
-Geographie//
+Géographie//
 30//
 pays riche ? <USA,France/true,false>
-pays paauvre ? <Senegal,Nigeria/true,false>
+pays pauvre ? <Senegal,Nigeria/true,false>
 
 
 
 Quiz
-Culture Generale//
+Culture Générale//
 10//
 vide<,/,>
 
 Quiz
-Math//
+Maths//
 15//
 vide<,/,>
 
@@ -81,7 +81,7 @@ Cinema//
 vide<,/,>
 
 Quiz
-Strategie//
+Stratégie//
 15//
 vide<,/,>
 

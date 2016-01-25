@@ -1,13 +1,11 @@
 package premiereapplication.testautomation.quiz.utils;
 
-<<<<<<< HEAD
-=======
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
 
->>>>>>> master
+
+
 /**
  * Created by User on 22/01/2016.
  */

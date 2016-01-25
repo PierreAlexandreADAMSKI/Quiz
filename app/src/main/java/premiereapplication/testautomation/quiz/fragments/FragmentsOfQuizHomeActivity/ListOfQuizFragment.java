@@ -54,7 +54,7 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
         View rootView = inflater.inflate(R.layout.fragment_list_of_quizs, container, false);
 
         isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);// change id.quizsListView to <RecyclerView>
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizRecyclerView);// change id.quizsListView to <RecyclerView>
         final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,false); //, LinearLayoutManager.HORIZONTAL, false);
         this.recyclerView.setLayoutManager(layoutManager);
         //this.recyclerView.addItemDecoration(new SpacesItemDecoration(DIVIDER_HEIGHT));

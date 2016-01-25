@@ -18,11 +18,11 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/propositionTextView"
+            android:id="@+id/propositionButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:gravity="center"
+            android:padding="10dp"
             android:text="Proposition"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/background_light" />

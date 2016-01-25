@@ -3,7 +3,9 @@ package premiereapplication.testautomation.quiz.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 
+import premiereapplication.testautomation.quiz.DataBase.DataBaseManager;
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.ChronoAndHeaderQuizFragment;
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizActivity.EndQuizFragment;
@@ -70,6 +72,9 @@ public class QuizActivity extends Activity  implements QuizActivityListener {
         String yourScore=Integer.toString(score)+"/"+Integer.toString(quizToLaunch.getQuestions().size());
         EndQuizFragment endQuizFragment=EndQuizFragment.getInstance(isTimeOut,quizToLaunch.getName(),yourScore,time);
         getFragmentManager().beginTransaction().replace(R.id.container,endQuizFragment).commit();
+
+        DataBaseManager.makeDB(time, yourScore);
+
 
     }
 

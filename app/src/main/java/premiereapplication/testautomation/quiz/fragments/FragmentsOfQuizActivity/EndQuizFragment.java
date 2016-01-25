@@ -23,7 +23,7 @@ public class EndQuizFragment extends Fragment {
     private TextView loginTextView;
     private TextView scoreTextView;
     private TextView timeTextView;
-    private ImageView imageView;
+    private TextView end_sentence;
 
     private QuizActivityListener mListener;
     private Boolean isTimeOut;
@@ -54,9 +54,9 @@ public class EndQuizFragment extends Fragment {
         score = getArguments().getString("Score");
         time = getArguments().getInt("Time");
 
-        imageView = (ImageView) rootView.findViewById(R.id.imageView);
+        end_sentence = (TextView) rootView.findViewById(R.id.end_sentence);
         if (isTimeOut) {
-            imageView.setImageResource(R.drawable.timeout);
+         end_sentence.setText("Time is out !");
         }
 
 

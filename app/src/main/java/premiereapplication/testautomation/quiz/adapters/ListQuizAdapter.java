@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 
@@ -73,16 +73,16 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
         private QuizHomeActivityListener listener;
         private QuizHelper quiz;
-        private TextView nameQuiz;
-        private TextView timerQuiz;
+        private TextView quizName;
+        private TextView quizTimer;
         private ImageView imageQuiz;
 
 
         public ViewHolder(View view){
             super(view);
-            nameQuiz = (TextView) view.findViewById(R.id.nomQuizLaunchedTextView);
-            timerQuiz = (TextView) view.findViewById(R.id.dureeQuizLaunchedTextView);
-            imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+            quizName = (TextView) view.findViewById(R.id.quizNameTextView);
+            quizTimer = (TextView) view.findViewById(R.id.quizDurationTextView);
+            //imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
             view.setOnClickListener(this);
         }
 
@@ -92,8 +92,8 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
         public void setQuiz(QuizHelper quiz) {
             this.quiz = quiz;
-            this.nameQuiz.setText(quiz.getName());
-            this.timerQuiz.setText(String.valueOf(quiz.getSec()));
+            this.quizName.setText(quiz.getName());
+            this.quizTimer.setText(String.valueOf(quiz.getSec()));
 
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){

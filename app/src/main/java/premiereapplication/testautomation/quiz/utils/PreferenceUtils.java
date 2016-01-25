@@ -3,7 +3,7 @@ package premiereapplication.testautomation.quiz.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 
 
 public class PreferenceUtils {

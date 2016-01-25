@@ -63,5 +63,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginLeft="45dp"
             android:src="@drawable/timer"/>
+
+
     </RelativeLayout>
 </android.support.v7.widget.CardView>

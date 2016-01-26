@@ -32,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="Static Quizs"
-                android:background="#ffffff"
+                android:textColor="@color/applicationBackground"
+                android:background="@color/text"
                 android:layout_below="@+id/static_menu_image"/>
 
 
@@ -59,9 +60,9 @@
                 android:id="@+id/dynamicQuizsButton"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:background="@android:color/background_light"
+                android:background="@color/text"
                 android:text="Quizs On Line"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/applicationBackground"
                 android:layout_below="@+id/dynamic_menu_image"/>
 
             <ImageView
@@ -94,9 +95,9 @@
                 android:id="@+id/resultsQuizsButton"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:background="@android:color/background_light"
+                android:background="@color/text"
                 android:text="List Of results"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/applicationBackground"
                 android:layout_below="@+id/results_menu_image"/>
 
             <ImageView

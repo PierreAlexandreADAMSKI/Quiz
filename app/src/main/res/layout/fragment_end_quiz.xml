@@ -32,7 +32,7 @@
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="Quiz is over !"
-            android:textColor="#ffffff"
+            android:textColor="@color/text"
             android:textSize="40dp" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:padding="8dp"
             android:text="Login:"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/text" />
 
         <TextView
             android:id="@+id/scoreTextView"
@@ -56,7 +56,7 @@
             android:padding="8dp"
             android:text="Score : x/y"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff" />
+            android:textColor="@color/text" />
 
 
         <TextView
@@ -68,7 +68,7 @@
             android:padding="8dp"
             android:text="Time:"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff" />
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/exitButton"

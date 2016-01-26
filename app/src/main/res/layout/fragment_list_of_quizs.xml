@@ -4,7 +4,7 @@
     android:id="@+id/quizRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#303030">
+    android:background="@color/applicationBackground">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/quizRecyclerView"
@@ -20,7 +20,7 @@
         android:text="@string/category_name"
         android:textStyle="bold"
         android:textAllCaps="true"
-        android:textColor="@color/categories"
+        android:textColor="@color/text"
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:id="@+id/categoryTitle"/>

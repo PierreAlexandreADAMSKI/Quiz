@@ -10,7 +10,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.objects.Answer;
+import premiereapplication.testautomation.quiz.objects.Category;
 import premiereapplication.testautomation.quiz.objects.Question;
 
 public class HelperFileToListQuiz {
@@ -53,11 +55,11 @@ public class HelperFileToListQuiz {
         List<QuizHelper> listOfQuiz = new ArrayList<>();
         String arrayOfQuizs[] = fileContent.split("Quiz");
         for (int i = 0; i < arrayOfQuizs.length; i++) {
-            String quizName = arrayOfQuizs[i].split("//")[0];
-            int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[1]);
-
+            String quiCategory=arrayOfQuizs[i].split("//")[0];
+            String quizName = arrayOfQuizs[i].split("//")[1];
+            int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[2]);
             List<Question> listQuestion = new ArrayList<Question>();
-            String arrayQuestion[] = arrayOfQuizs[i].split("//")[2].split(">");
+            String arrayQuestion[] = arrayOfQuizs[i].split("//")[3].split(">");
             for (int j = 0; j < arrayQuestion.length; j++) {
                 String enonceQuestion = arrayQuestion[j].split("<")[0];
 
@@ -83,17 +85,45 @@ public class HelperFileToListQuiz {
 
             }
 
-            QuizHelper oq = new QuizHelper(quizName, quizDuration, listQuestion);
+            QuizHelper oq = new QuizHelper(quiCategory,quizName, quizDuration, listQuestion);
             listOfQuiz.add(oq);
         }
 
-        return listOfQuiz;
+          return listOfQuiz;
+
     }
 
 
     static public QuizHelper quiz(Context context, int position) {
         return getListOfQuizFromFile(context).get(position);
     }
+
+
+    static public CategoryHelper getCategories(){
+
+        List<QuizHelper> listOfAllQuizs=getListOfQuizFromFile(QuizApplication.getContext());
+        List<QuizHelper> listOfCinemaQuiz=new ArrayList<>();
+        List<QuizHelper> listOfCultureGeneraleQuiz=new ArrayList<>();
+        List<QuizHelper> listOfSportQuiz=new ArrayList<>();
+        List<QuizHelper> listOfMusiqueQuiz=new ArrayList<>();
+        List<QuizHelper> listOfLiteratureQuiz=new ArrayList<>();
+        List<QuizHelper> listOfDiversQuiz=new ArrayList<>();
+
+
+        for(int i=0;i<listOfAllQuizs.size();i++){
+        if(listOfAllQuizs.get(i).getCategory().equals("Cinema")){listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
+        else if (listOfAllQuizs.get(i).getCategory().equals("Culture Generale")){listOfCultureGeneraleQuiz.add(listOfAllQuizs.get(i));}
+        else if (listOfAllQuizs.get(i).getCategory().equals("Sport")){listOfSportQuiz.add(listOfAllQuizs.get(i));}
+        else if (listOfAllQuizs.get(i).getCategory().equals("Musique")){listOfMusiqueQuiz.add(listOfAllQuizs.get(i));}
+        else if (listOfAllQuizs.get(i).getCategory().equals("Literature")){listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
+        else if (listOfAllQuizs.get(i).getCategory().equals("Divers")){listOfDiversQuiz.add(listOfAllQuizs.get(i));}
+        }
+        CategoryHelper categoryHelper= new CategoryHelper(listOfCinemaQuiz,listOfCultureGeneraleQuiz,listOfSportQuiz,
+                listOfMusiqueQuiz,listOfLiteratureQuiz,listOfDiversQuiz);
+
+        return categoryHelper;
+    }
+
 
 
 
@@ -104,10 +134,12 @@ public class HelperFileToListQuiz {
 
             System.out.println("\n\n\nQuiz " + (i + 1));
 
+            String quizCategory = listOfQuizs.get(i).getCategory();
             String quizName = listOfQuizs.get(i).getName();
             int quizDuration = listOfQuizs.get(i).getSec();
             List<Question> listQuestions = listOfQuizs.get(i).getQuestions();
 
+            System.out.println("Categorie du Quiz :" + quizCategory);
             System.out.println("Nom du Quiz :" + quizName);
             System.out.println("Duree du Quiz :" + quizDuration + "\n");
 

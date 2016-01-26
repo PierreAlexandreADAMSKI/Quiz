@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/quizRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/applicationBackground">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/quizRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/categoryTitle"/>
+    android:background="#303030">
 
     <TextView
         android:paddingTop="10dp"
@@ -20,9 +12,19 @@
         android:text="@string/category_name"
         android:textStyle="bold"
         android:textAllCaps="true"
-        android:textColor="@color/text"
+        android:textColor="@color/categories"
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:id="@+id/categoryTitle"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/quizListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/categoryTitle"/>
+
+
 
 </RelativeLayout>

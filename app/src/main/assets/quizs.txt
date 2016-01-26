@@ -1,7 +1,5 @@
-Personalities//
-60//
-
-Who is Tony Stark's personnal assistant ?
+Cinema//Personalities//60//
+Who is the Tony Stark's personnal assistant ?
 <Jarvis,Pepper Pots,Alfred/false,true,false>
 He is red & blue and he is a member of the Justice League
 <Spiderman,Captain America,Superman/false,false,true>
@@ -22,82 +20,112 @@ Where is the asylum where Batman's ennemies are sent?
 This super-hero is pretty fast...
 <HTML5,Flash, Unity/false,true,false>
 
-
 Quiz
-Capitales//
-80//
-Capitale de l'Algerie ? <Oran,Alger,Annaba/false,true,false>
-Capitale du Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
-Capitale  de la Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
-Capitale  de l'Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
-Capitale du Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
-
-
-Quiz
-Voitures//
-120//
-Marque allemande ? <mercedes,renault/true,false>
-Marque americaine ?<opel,renault,audi,ford/false,false,false,true>
-Marque francaise ?<opel,renault,fiat/false,true,false>
-Marque japonaise ?<opel,toyota,fiat/false,true,false>
-
-Quiz
-Géographie//
-30//
-pays riche ? <USA,France/true,false>
-pays pauvre ? <Senegal,Nigeria/true,false>
-
-
-
-Quiz
-Culture Générale//
-10//
+Cinema//quiz2//15//
 vide<,/,>
 
 Quiz
-Maths//
-15//
+Cinema//quiz3//20//
 vide<,/,>
 
 Quiz
-Chimie//
-15//
+Cinema//quiz4//20//
+vide<,/,>
+
+
+
+Quiz
+Culture Generale//Capitales//80//
+Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
+Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
+Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
+Capital Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
+Capital Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
+
+Quiz
+Culture Generale//Voitures//120//
+marque allemande ? <mercedes,renault/true,false>
+marque americaine ?<opel,renault,audi,ford/false,false,false,true>
+marque Francaise ?<opel,renault,fiat/false,true,false>
+marque Japonaise ?<opel,toyota,fiat/false,true,false>
+
+
+Quiz
+Culture Generale//quizCG3//20//
+vide<,/,>
+
+Quiz
+Culture Generale//quizCG4//30//
+vide<,/,>
+
+
+
+Quiz
+Sport//quizSpor1//35//
+vide<,/,>
+
+Quiz
+Sport//quizSport2//35//
+vide<,/,>
+
+Quiz
+Sport//quizSport3//35//
+vide<,/,>
+
+Quiz
+Sport//quizSport4//35//
+vide<,/,>
+
+Quiz
+Musique//quizMusique1//35//
+vide<,/,>
+
+Quiz
+Musique//quizMusique2//35//
+vide<,/,>
+
+Quiz
+Musique//quizMusique3//35//
+vide<,/,>
+
+Quiz
+Musique//quizMusique4//35//
 vide<,/,>
 
 
 Quiz
-Politique//
-20//
+Literature//quizLiterature1//35//
 vide<,/,>
 
 Quiz
-Calcul mental//
-15//
+Literature//quizLiterature2//35//
 vide<,/,>
 
 Quiz
-Cinema//
-15//
+Literature//quizLiterature3//35//
 vide<,/,>
 
 Quiz
-Stratégie//
-15//
+Literature//quizLiterature4//35//
+vide<,/,>
+
+
+Quiz
+Divers//quizDivers1//35//
 vide<,/,>
 
 Quiz
-Histoire//
-15//
+Divers//quizDivers2//35//
 vide<,/,>
 
 Quiz
-Art//
-15//
+Divers//quizDivers3//35//
 vide<,/,>
 
 Quiz
-Langue//
-15//
+Divers//quizDivers//35//
 vide<,/,>
+
+
 
 

@@ -6,6 +6,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.application.QuizApplication;
+import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
@@ -13,7 +14,7 @@ import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 /**
  * Created by User on 19/01/2016.
  */
-public class RetrieveQuizFromLocalServerAsyncTask extends AsyncTask<String, Void, List<QuizHelper>> {
+public class RetrieveQuizFromLocalServerAsyncTask extends AsyncTask<String, Void, CategoryHelper> {
 
 
     private QuizRetrievedListener mListener;
@@ -23,23 +24,23 @@ public class RetrieveQuizFromLocalServerAsyncTask extends AsyncTask<String, Void
     }
 
     @Override
-    protected List<QuizHelper> doInBackground(String... params) {
+    protected CategoryHelper doInBackground(String... params) {
 
-        List<QuizHelper> listQuizs=null;
+        CategoryHelper categoryHelper=null;
 
         try{
-            listQuizs= HelperFileToListQuiz.getListOfQuizFromFile(QuizApplication.getContext());
+            categoryHelper= HelperFileToListQuiz.getCategories();
         }
         catch(Exception e){
             Toast.makeText(QuizApplication.getContext(), "Check your local server !", Toast.LENGTH_SHORT).show();
         }
 
-        finally{ return listQuizs;}
+        finally{ return categoryHelper;}
 
     }
 
     @Override
-    protected void onPostExecute(List<QuizHelper> result) {
+    protected void onPostExecute(CategoryHelper result) {
 
 
         if (null != mListener && null != result){

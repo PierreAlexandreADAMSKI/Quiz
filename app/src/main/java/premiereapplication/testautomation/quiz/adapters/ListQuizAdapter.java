@@ -82,7 +82,8 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             super(view);
             quizName = (TextView) view.findViewById(R.id.quizNameTextView);
             quizTimer = (TextView) view.findViewById(R.id.quizDurationTextView);
-            //imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+            imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+
             view.setOnClickListener(this);
         }
 
@@ -94,6 +95,12 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             this.quiz = quiz;
             this.quizName.setText(quiz.getName());
             this.quizTimer.setText(String.valueOf(quiz.getSec()));
+            if(quiz.getCategory().equals("Cinema")){this.imageQuiz.setImageResource(R.drawable.cinema);}
+            if(quiz.getCategory().equals("Culture Generale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
+            if(quiz.getCategory().equals("Sport")){this.imageQuiz.setImageResource(R.drawable.sport);}
+            if(quiz.getCategory().equals("musique")){this.imageQuiz.setImageResource(R.drawable.musique);}
+            if(quiz.getCategory().equals("Literature")){this.imageQuiz.setImageResource(R.drawable.literature);}
+            if(quiz.getCategory().equals("Divers")){this.imageQuiz.setImageResource(R.drawable.divers);}
 
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){

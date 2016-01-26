@@ -13,9 +13,10 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.ChronoAndHeaderQuizFragmentListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
+import premiereapplication.testautomation.quiz.utils.TimeUtils;
 
 
-public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements /*Chronometer.OnChronometerTickListener,*/ChronoAndHeaderQuizFragmentListener {
+public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements Chronometer.OnChronometerTickListener,ChronoAndHeaderQuizFragmentListener {
 
 
     private TextView nameQuizTextView;
@@ -53,7 +54,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
 
          chronometer = (Chronometer) rootView.findViewById(R.id.chronometer);
          //chronometer.setFormat("ss");
-         //chronometer.setOnChronometerTickListener(this);
+         chronometer.setOnChronometerTickListener(this);
 
         return rootView;
 
@@ -65,7 +66,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
         chronometer.setBase(SystemClock.elapsedRealtime());
         chronometer.start();
     }
-/*
+
     public void onChronometerTick(Chronometer chronometer) {
 
         if (TimeUtils.timeToSeconds(chronometer.getText().toString())==quizToLaunch.getSec()) {
@@ -73,7 +74,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
             chronometer.stop();
         }
     }
-*/
+
 
     @Override
     public void stopChronometer() {
@@ -82,7 +83,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
 
     @Override
     public int getTime() {
-        return 0/* TimeUtils.timeToSeconds(chronometer.getText().toString())*/;
+        return TimeUtils.timeToSeconds(chronometer.getText().toString());
     }
 
 

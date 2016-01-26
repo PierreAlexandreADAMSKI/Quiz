@@ -1,40 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/applicationBackground">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Static Quizs"
-        android:id="@+id/staticQuizsButton"
-        android:textColor="@android:color/background_dark"
-        android:background="@android:color/background_light"
-        android:layout_alignStart="@+id/resultsQuizsButton"
-        android:layout_marginTop="101dp" />
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/static_quiz_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="15dp"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="List Of results"
-        android:layout_gravity="right"
-        android:id="@+id/resultsQuizsButton"
-        android:background="@android:color/background_light"
-        android:textColor="@android:color/background_dark"
-        android:layout_marginBottom="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Quizs On Line"
-        android:id="@+id/dynamicQuizsButton"
-        android:textColor="@android:color/background_dark"
-        android:background="@android:color/background_light"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu_icon"
+                android:id="@+id/static_menu_image"/>
+
+            <Button
+                android:id="@+id/staticQuizsButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Static Quizs"
+                android:textColor="@color/applicationBackground"
+                android:background="@color/text"
+                android:layout_below="@+id/static_menu_image"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dynamic_quiz_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/staticQuizsButton" />
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="15dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/dynamicQuizsButton"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@color/text"
+                android:text="Quizs On Line"
+                android:textColor="@color/applicationBackground"
+                android:layout_below="@+id/dynamic_menu_image"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/monde"
+                android:id="@+id/dynamic_menu_image"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/results_list_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="15dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/resultsQuizsButton"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@color/text"
+                android:text="List Of results"
+                android:textColor="@color/applicationBackground"
+                android:layout_below="@+id/results_menu_image"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trophees"
+                android:id="@+id/results_menu_image"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
 
 </RelativeLayout>

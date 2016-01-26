@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">Quiz</string>
+    <string name="app_name">Bear Quiz</string>
     <string name="action_settings">Settings</string>
     <string name="category_name">Intitulé de la catégorie</string>
     <string name="quiz_name">Intitulé du Quiz</string>
     <string name="quiz_duration">Durée du Quiz</string>
     <string name="quiz_result">Résultat du Quiz</string>
+    <string name="search">search a quiz</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

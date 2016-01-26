@@ -8,10 +8,12 @@ import java.util.List;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
 import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
+import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
+import premiereapplication.testautomation.quiz.objects.Category;
 
-public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, List<QuizHelper>> {
+public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, CategoryHelper> {
 
 	// A reference to the listener
 	private QuizRetrievedListener mListener;
@@ -21,7 +23,7 @@ public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, Li
 	}
 	
 	@Override
-	protected List<QuizHelper> doInBackground(String... params) {
+	protected CategoryHelper doInBackground(String... params) {
 		if ((null != params) && (params.length > 0)){
 
 			List<Tweet> tweets = TwitterHelper.getTweetsOfUser(params[0]);
@@ -33,23 +35,23 @@ public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, Li
 				index--;
 			}
 
-			List<QuizHelper> listQuizs=null;
+			CategoryHelper categoryHelper=null;
 
 			try{
-				listQuizs= TwitterHelper.getListOfQuizsFromTwitter(quizFromTwitter);
+				categoryHelper= TwitterHelper.getCategories(quizFromTwitter);
 			}
 			catch(Exception e){
 				Toast.makeText(QuizApplication.getContext(), "Check your dynamic server !", Toast.LENGTH_SHORT).show();
 			}
 
-			finally{ return listQuizs;}
+			finally{ return categoryHelper;}
 
 		}
 		return null;
 	}
 
 	@Override
-	protected void onPostExecute(List<QuizHelper> result) {
+	protected void onPostExecute(CategoryHelper result) {
 
 
 		if (null != mListener && null != result){

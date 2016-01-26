@@ -7,24 +7,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="premiereapplication.testautomation.quiz.activities.LoginActivity">
+    tools:context="premiereapplication.testautomation.quiz.activities.LoginActivity"
+    android:background="@color/applicationBackground">
 
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="Sign in"
         android:id="@+id/SignInButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/loginEditText"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:id="@+id/loginEditText"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:inputType="text"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/text"
         android:textStyle="bold"
-        android:layout_above="@+id/SignInButton"
-        android:layout_alignStart="@+id/SignInButton"
-        android:hint="@string/username" />
+        android:layout_below="@+id/logo"
+        android:hint="@string/username"
+        android:textColorHint="@color/text"
+        android:layout_centerHorizontal="true"
+        android:textColorLink="@color/text"
+        android:shadowColor="@color/text"
+        android:cursorVisible="true"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/quiz"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

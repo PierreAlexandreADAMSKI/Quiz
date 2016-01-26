@@ -37,7 +37,7 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View convertView = parent.getChildAt(getItemCount());
         if(null==convertView){
-            convertView = mLayoutInflater.inflate(R.layout.items_of_quizs_listview,null); //adapter layout
+            convertView = mLayoutInflater.inflate(R.layout.items_of_quizs_recyclerview,null); //adapter layout
             verticalHolder = new ViewHolder(convertView);
             verticalHolder.setListener(this.clickListener);
             convertView.setTag(verticalHolder);

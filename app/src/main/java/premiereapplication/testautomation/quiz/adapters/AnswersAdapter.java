@@ -80,7 +80,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
 
         public ViewHolder(View view){
             super(view);
-            answerText = (TextView) view.findViewById(R.id.propositionTextView);
+            answerText = (TextView) view.findViewById(R.id.propositionButton);
             view.setOnClickListener(this);
         }
 
@@ -98,10 +98,12 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
             if (this.answer.isGoodAnswer()){
                 this.listener.scoreIncrementation();
                 v.setBackgroundColor(Color.GREEN);
+
             }
             else{
                 v.setBackgroundColor(Color.RED);
             }
+
             this.listener.nextQuestion();
         }
     }

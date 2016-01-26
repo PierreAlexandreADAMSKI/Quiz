@@ -1,6 +1,5 @@
 package premiereapplication.testautomation.quiz.adapters;
 
-import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import java.util.List;
 
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
-import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.objects.Score;
 
@@ -63,14 +61,15 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private QuizHomeActivityListener listener;
-        private Score score;
-        private TextView scoreName;
+        private Score score; //in case of click update
+        private TextView quizName;
         private TextView scoreValue;
+
 
 
         public ViewHolder(View view){
             super(view);
-            scoreName = (TextView) view.findViewById(R.id.scoreName);
+            quizName = (TextView) view.findViewById(R.id.scoreName);
             scoreValue = (TextView) view.findViewById(R.id.scoreValue);
 
             view.setOnClickListener(this);
@@ -81,9 +80,13 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> 
         }
 
         public void setScore(Score score) {
+            // TODO adapt time to Stars
+            // TODO change star size (not compilling)
+
             this.score = score;
-            this.scoreName.setText(this.score.getName());
+            this.quizName.setText(this.score.getName());
             this.scoreValue.setText(String.valueOf(score.getScore()));
+
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){
                 Picasso.with(QuizApplication.getContext()).load(quiz.getImageUrl()).into(this.imageQuiz);

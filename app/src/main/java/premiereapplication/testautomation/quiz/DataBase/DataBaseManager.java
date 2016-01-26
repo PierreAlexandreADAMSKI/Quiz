@@ -2,7 +2,6 @@ package premiereapplication.testautomation.quiz.DataBase;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -21,16 +20,18 @@ public class DataBaseManager {
     static final SQLiteOpenHelper sqLiteOpenHelper = new DataBaseHelper(QuizApplication.getContext());
     final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
 
-    public static void  makeDB (int time, String score) {
+    public static void  makeDB (int timeResult, int quizTime, String score, String quizName) {
         //recuperation
         String id = PreferenceUtils.getStoredLogin();
         // writing data base
         final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
         final ContentValues contentValues = new ContentValues();
 
-        contentValues.put(DataBaseContract.ID, id);
-        contentValues.put(DataBaseContract.TIME, time);
+        contentValues.put(DataBaseContract.TIME_RESULT, timeResult);
         contentValues.put(DataBaseContract.SCORE, score);
+        contentValues.put(DataBaseContract.QUIZ_NAME, quizName);
+        contentValues.put(DataBaseContract.QUIZ_TIME, quizTime);
+
 
         resultsDB.insert(DataBaseContract.TABLE_RESULTS, "", contentValues);
 
@@ -40,23 +41,23 @@ public class DataBaseManager {
 
     public static Score scoreFromCursor(Cursor cursor){
 
-        //unused yet
-        String l = "";
-
         Score score = new Score();
         if (null != cursor)
 
         {
             while (cursor.moveToNext()) {
 
-                if (cursor.getColumnIndex(DataBaseContract.ID) >= 0) {
-                    l = cursor.getString(cursor.getColumnIndex(DataBaseContract.ID));
+                if (cursor.getColumnIndex(DataBaseContract.QUIZ_NAME) >= 0) {
+                    score.setName(cursor.getString(cursor.getColumnIndex(DataBaseContract.QUIZ_NAME)));
                 }
-                if (cursor.getColumnIndex(DataBaseContract.TIME) >= 0) {
-                    score.time = cursor.getInt(cursor.getColumnIndex(DataBaseContract.TIME));
+                if (cursor.getColumnIndex(DataBaseContract.QUIZ_TIME) >= 0) {
+                    score.setQuizTime(cursor.getInt(cursor.getColumnIndex(DataBaseContract.QUIZ_TIME)));
+                }
+                if (cursor.getColumnIndex(DataBaseContract.TIME_RESULT) >= 0) {
+                    score.setTimeResult(cursor.getInt(cursor.getColumnIndex(DataBaseContract.TIME_RESULT)));
                 }
                 if (cursor.getColumnIndex(DataBaseContract.SCORE) >= 0) {
-                    score.score = cursor.getString(cursor.getColumnIndex(DataBaseContract.SCORE));
+                    score.setScore(cursor.getString(cursor.getColumnIndex(DataBaseContract.SCORE)));
                 }
             }
             if (!cursor.isClosed()) {

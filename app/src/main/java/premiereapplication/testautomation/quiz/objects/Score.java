@@ -1,17 +1,19 @@
 package premiereapplication.testautomation.quiz.objects;
 
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by isen on 24/01/2016.
  */
 public class Score implements Serializable {
 
-    public String score;
-    public int time;
-    public String name;
+    private String score;
+    private int timeResult;
+
+
+
+    private int quizTime;
+    private String name;
 
 
 
@@ -36,19 +38,27 @@ public class Score implements Serializable {
         this.score = score;
     }
 
-    public int getTime() {
-        return time;
+    public int getQuizTime() {
+        return quizTime;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setQuizTime(int quizTime) {
+        this.quizTime = quizTime;
+    }
+
+    public void setTimeResult(int timeResult) {
+        this.timeResult = timeResult;
+    }
+
+    public int getTimeResult() {
+        return timeResult;
     }
 
     @Override
     public String toString() {
         return "Score{" +
                 "score=" + score +
-                ", time=" + time +
+                ", timeResult=" + timeResult +
                 '}';
     }
 }

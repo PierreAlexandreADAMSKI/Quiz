@@ -7,9 +7,10 @@ import android.provider.BaseColumns;
  */
 public class DataBaseContract implements BaseColumns {
     // Field names
-    public static final String ID = "iD";
-    public static final String TIME = "time";
+    public static final String TIME_RESULT = "time";
     public static final String SCORE = "score";
+    public static final String QUIZ_TIME = "quizTime";
+    public static final String QUIZ_NAME = "quizName";
 
 
     // Table name
@@ -18,8 +19,9 @@ public class DataBaseContract implements BaseColumns {
     // Table scripts creation
     private static final String TABLE_GENERIC_CREATE_SCRIPT_PREFIX = "CREATE TABLE IF NOT EXISTS ";
     private static final String TABLE_IMAGES_CREATE_SCRIPT_SUFFIX = "(" + _ID + " INTEGER PRIMARY KEY, " +
-            ID + " TEXT NOT NULL, "+
-            TIME + " TEXT NOT NULL, "+
+            QUIZ_NAME + " TEXT NOT NULL, "+
+            QUIZ_TIME + " TEXT NOT NULL, "+
+            TIME_RESULT + " TEXT NOT NULL, "+
             SCORE+ " TEXT NOT NULL)";
 
     public static final String TABLE_RESULTS_CREATE_SCRIPT = TABLE_GENERIC_CREATE_SCRIPT_PREFIX +
@@ -27,20 +29,15 @@ public class DataBaseContract implements BaseColumns {
 
     // The projections
     public static final String[] PROJECTION_PART = new String[]{
-            TIME,
-            SCORE
-    };
-    public static final String[] PROJECTION_FULL = new String[]{
-            _ID,
-            ID,
-            TIME,
+            QUIZ_NAME,
+            QUIZ_TIME,
+            TIME_RESULT,
             SCORE
     };
 
+
     // Selections
-    public static final String SELECTION_BY_ID = _ID + "=?";
-    public static final String SELECTION_BY_SCORE = SCORE + "=?";
-    public static final String SELECTION_BY_USER_NAME = ID + "=?";
+    public static final String SELECTION_BY_QUIZ_NAME = QUIZ_NAME + "=?";
 
     // Sort order
     //public static final String ORDER_BY_DATE_CREATED_TIMESTAMP_DESCENDING = DATE_CREATED_TIMESTAMP + " DESC";

@@ -1,24 +1,18 @@
 package premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+
 import java.util.List;
+
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromLocalServerAsyncTask;
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyncTask;
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
-import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
-import premiereapplication.testautomation.quiz.helpers.HelperFileToListQuiz;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
@@ -86,7 +80,7 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
 
     public static GlobalListOfQuizFragment getInstance(boolean isDynamicQuiz){
 
-        GlobalListOfQuizFragment globalListOfQuizsFragmentquizFragment =new GlobalListOfQuizFragment();
+        GlobalListOfQuizFragment globalListOfQuizsFragmentquizFragment = new GlobalListOfQuizFragment();
         Bundle bundle=new Bundle();
         bundle.putBoolean("IsDynamicQuiz",isDynamicQuiz);
         globalListOfQuizsFragmentquizFragment.setArguments(bundle);

@@ -7,6 +7,7 @@ import premiereapplication.testautomation.quiz.objects.Question;
 
 public class QuizHelper implements Serializable{
 
+    private String category;
     private String name;
     private Integer sec;
     private String imageUrl;
@@ -18,11 +19,22 @@ public class QuizHelper implements Serializable{
         this.sec = sec;
     }
 
-    public QuizHelper(String name, Integer sec,List <Question> questions) { // I kept the two constuctors to avoid conflict
+    public QuizHelper(String category,String name, Integer sec,List <Question> questions) { // I kept the two constuctors to avoid conflict
+        this.category=category;
         this.name = name;
         this.sec = sec;
         this.questions = questions;
     }
+
+    public String getCategory() {return category;}
+
+    public void setCategory(String category) {this.category = category;}
+
+
+
+    public String getName() {return name;}
+
+    public void setName(String name) {this.name = name;}
 
     public Integer getSec() {
         return sec;
@@ -30,14 +42,6 @@ public class QuizHelper implements Serializable{
 
     public void setSec(Integer sec) {
         this.sec = sec;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getImageUrl() {

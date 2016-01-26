@@ -23,6 +23,8 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import premiereapplication.testautomation.quiz.application.QuizApplication;
+import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.objects.Answer;
 import premiereapplication.testautomation.quiz.objects.Question;
@@ -172,11 +174,12 @@ public class TwitterHelper {
 		List<QuizHelper> listOfQuiz = new ArrayList<>();
 		String arrayOfQuizs[] = s.split("Quiz");
 		for (int i = 0; i < arrayOfQuizs.length; i++) {
-			String quizName = arrayOfQuizs[i].split("//")[0];
-			int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[1]);
+			String quiCategory=arrayOfQuizs[i].split("//")[0];
+			String quizName = arrayOfQuizs[i].split("//")[1];
+			int quizDuration = Integer.parseInt(arrayOfQuizs[i].split("//")[2]);
 
 			List<Question> listQuestion = new ArrayList<Question>();
-			String arrayQuestion[] = arrayOfQuizs[i].split("//")[2].split("&gt;");
+			String arrayQuestion[] = arrayOfQuizs[i].split("//")[3].split("&gt;");
 			for (int j = 0; j < arrayQuestion.length; j++) {
 				String enonceQuestion = arrayQuestion[j].split("&lt;")[0];
 
@@ -202,12 +205,39 @@ public class TwitterHelper {
 
 			}
 
-			QuizHelper oq = new QuizHelper(quizName, quizDuration, listQuestion);
+			QuizHelper oq = new QuizHelper(quiCategory,quizName, quizDuration, listQuestion);
 			listOfQuiz.add(oq);
 		}
 
 		return listOfQuiz;
 	}
+
+	static public CategoryHelper getCategories(String s){
+
+		List<QuizHelper> listOfAllQuizs=getListOfQuizsFromTwitter(s);
+		List<QuizHelper> listOfCinemaQuiz=new ArrayList<>();
+		List<QuizHelper> listOfCultureGeneraleQuiz=new ArrayList<>();
+		List<QuizHelper> listOfSportQuiz=new ArrayList<>();
+		List<QuizHelper> listOfMusiqueQuiz=new ArrayList<>();
+		List<QuizHelper> listOfLiteratureQuiz=new ArrayList<>();
+		List<QuizHelper> listOfDiversQuiz=new ArrayList<>();
+
+
+		for(int i=0;i<listOfAllQuizs.size();i++){
+			if(listOfAllQuizs.get(i).getCategory().equals("Cinema")){listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
+			else if (listOfAllQuizs.get(i).getCategory().equals("Culture Generale")){listOfCultureGeneraleQuiz.add(listOfAllQuizs.get(i));}
+			else if (listOfAllQuizs.get(i).getCategory().equals("Sport")){listOfSportQuiz.add(listOfAllQuizs.get(i));}
+			else if (listOfAllQuizs.get(i).getCategory().equals("Musique")){listOfMusiqueQuiz.add(listOfAllQuizs.get(i));}
+			else if (listOfAllQuizs.get(i).getCategory().equals("Literature")){listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
+			else if (listOfAllQuizs.get(i).getCategory().equals("Divers")){listOfDiversQuiz.add(listOfAllQuizs.get(i));}
+		}
+		CategoryHelper categoryHelper= new CategoryHelper(listOfCinemaQuiz,listOfCultureGeneraleQuiz,listOfMusiqueQuiz,
+				listOfMusiqueQuiz,listOfLiteratureQuiz,listOfDiversQuiz);
+
+		return categoryHelper;
+	}
+
+
 
 
 }

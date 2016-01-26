@@ -66,14 +66,13 @@ public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActiv
     @Override
     public void moveToListOfStaticQuizFragment() {
 
-        //ListOfQuizFragment frag= ListOfQuizFragment.getInstance(false);
-        //getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
-         getFragmentManager().beginTransaction().add(R.id.container, new GlobalListOfQuizFragment()).commit();
+        GlobalListOfQuizFragment frag= GlobalListOfQuizFragment.getInstance(false);
+         getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
     }
 
     @Override
     public void moveToListOfDynamicQuizFragment() {
-        ListOfQuizFragment frag= ListOfQuizFragment.getInstance(true);
+        GlobalListOfQuizFragment frag= GlobalListOfQuizFragment.getInstance(true);
         getFragmentManager().beginTransaction().add(R.id.container, frag).commit();
     }
 

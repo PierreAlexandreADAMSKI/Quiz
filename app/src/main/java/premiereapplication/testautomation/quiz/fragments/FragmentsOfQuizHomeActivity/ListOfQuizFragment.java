@@ -12,31 +12,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromLocalServerAsyncTask;
 import premiereapplication.testautomation.quiz.Async.RetrieveQuizFromTwitterAsyncTask;
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.adapters.ListCategoriesAdapter;
 import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
-import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
 
 
-public class ListOfQuizFragment extends Fragment implements QuizRetrievedListener {
+public class ListOfQuizFragment extends Fragment  {
 
     private static final int DIVIDER_HEIGHT = 40;
 
     private QuizHomeActivityListener mListener;
-    private RecyclerView verticalRecyclerView;
+    private TextView categoryTitleTextView;
+    private RecyclerView recyclerView;
     private boolean isDynamicQuiz;
-    private RetrieveQuizFromTwitterAsyncTask mDynamicQuizAsyncTask;
-    private RetrieveQuizFromLocalServerAsyncTask mStaticQuizAsyncTask;
+
 
     public ListOfQuizFragment(){}
 
@@ -57,15 +56,19 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
         View rootView = inflater.inflate(R.layout.fragment_list_of_quizs, container, false);
 
         isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
-        this.verticalRecyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);// change id.quizsListView to <RecyclerView>
+        List<QuizHelper> lisOfQuizsForThisFragment= (List<QuizHelper>) getArguments().getSerializable("ListOfQuizOfForThisFragment");
+
+        String categoryTitle = getArguments().getString("CategoryTitle");
+        categoryTitleTextView=(TextView) rootView.findViewById(R.id.categoryTitle);
+        categoryTitleTextView.setText(categoryTitle);
+
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);// change id.quizsListView to <RecyclerView>
         final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,false); //, LinearLayoutManager.HORIZONTAL, false);
         this.verticalRecyclerView.setLayoutManager(layoutManager);
 
-        // Set a Progress Bar as empty view, and display it (set adapter with no elements))
-        final ProgressBar progressBar = new ProgressBar(getActivity());
-        progressBar.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, Gravity.CENTER));
-        progressBar.setIndeterminate(true);
-        //horizontalRecyclerView.setEmptyView(progressBar);
+        final ListQuizAdapter listQuizAdapter = new ListQuizAdapter(lisOfQuizsForThisFragment, mListener);
+        recyclerView.setAdapter(listQuizAdapter);
+
 
         return rootView;
     }
@@ -74,35 +77,19 @@ public class ListOfQuizFragment extends Fragment implements QuizRetrievedListene
     public void onStart() {
         super.onStart();
 
-        if(isDynamicQuiz) {
-            mDynamicQuizAsyncTask = new RetrieveQuizFromTwitterAsyncTask(this);
-            mDynamicQuizAsyncTask.execute("@madaniachraf2");
-        }
-        else{
-            mStaticQuizAsyncTask = new RetrieveQuizFromLocalServerAsyncTask(this);
-            mStaticQuizAsyncTask.execute();
-        }
 
     }
 
 
-    @Override
-    public void onQuizRetrieved(List<CategoryHelper> categoryHelperList) {
 
-            if(categoryHelperList !=null) {
-                final ListCategoriesAdapter listCategoriesAdapter = new ListCategoriesAdapter(categoryHelperList, categoryHelperList.);
-                verticalRecyclerView.setAdapter(listCategoriesAdapter);
 
-                mDynamicQuizAsyncTask = null;
-                mStaticQuizAsyncTask = null;
-            }
-    }
-
-    public static ListOfQuizFragment getInstance(boolean isDynamicQuiz){
+    public static ListOfQuizFragment getInstance(boolean isDynamicQuiz,String categoryTitle,List <QuizHelper> listOfQuizsForThisFragment ){
 
         ListOfQuizFragment listOfQuizsFragmentquizFragment =new ListOfQuizFragment();
         Bundle bundle=new Bundle();
-        bundle.putBoolean("IsDynamicQuiz",isDynamicQuiz);
+        bundle.putBoolean("IsDynamicQuiz", isDynamicQuiz);
+        bundle.putString("CategoryTitle",categoryTitle);
+        bundle.putSerializable("ListOfQuizOfForThisFragment", (Serializable) listOfQuizsForThisFragment);
         listOfQuizsFragmentquizFragment.setArguments(bundle);
 
         return listOfQuizsFragmentquizFragment;

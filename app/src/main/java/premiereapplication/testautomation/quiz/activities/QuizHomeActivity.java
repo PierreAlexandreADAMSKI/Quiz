@@ -12,6 +12,7 @@ import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActi
 import premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity.PrincipalMenuFragment;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
+import premiereapplication.testautomation.quiz.objects.Score;
 import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
 
 public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActivityListener {
@@ -79,6 +80,11 @@ public class QuizHomeActivity extends AppCompatActivity implements QuizHomeActiv
     @Override
     public void moveToListOfResultsFragment() {
         getFragmentManager().beginTransaction().replace(R.id.container, new ListOfResultsFragment()).commit();
+    }
+
+    @Override
+    public void onResultSelected(Score score) {
+
     }
 
 

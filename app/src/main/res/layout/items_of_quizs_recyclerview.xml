@@ -32,7 +32,7 @@
 
 
         <TextView
-            android:id="@+id/quizNameTextView"
+            android:id="@+id/scoreName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quizImageView"
@@ -46,7 +46,7 @@
             android:id="@+id/quizDurationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/quizNameTextView"
+            android:layout_below="@+id/scoreName"
             android:layout_toRightOf="@+id/timerLogo"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="6dp"
@@ -59,7 +59,7 @@
             android:id="@+id/timerLogo"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_below="@+id/quizNameTextView"
+            android:layout_below="@+id/scoreName"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="45dp"
             android:src="@drawable/timer"/>

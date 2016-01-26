@@ -26,6 +26,10 @@ public class DataBaseContract implements BaseColumns {
             TABLE_RESULTS + TABLE_IMAGES_CREATE_SCRIPT_SUFFIX;
 
     // The projections
+    public static final String[] PROJECTION_PART = new String[]{
+            TIME,
+            SCORE
+    };
     public static final String[] PROJECTION_FULL = new String[]{
             _ID,
             ID,

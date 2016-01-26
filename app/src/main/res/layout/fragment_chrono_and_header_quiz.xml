@@ -27,7 +27,7 @@
             android:padding="8dp"
             android:text="@string/quiz_name"
             android:gravity="center"
-            android:id="@+id/quizNameTextView"
+            android:id="@+id/scoreName"
             android:textColor="@color/text"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
@@ -41,7 +41,7 @@
             android:text="@string/quiz_duration"
             android:id="@+id/quizDurationTextView"
             android:textColor="@color/text"
-            android:layout_below="@+id/quizNameTextView"
+            android:layout_below="@+id/scoreName"
             android:layout_centerHorizontal="true"
             android:textSize="20dp" />
 

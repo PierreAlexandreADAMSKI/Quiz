@@ -11,15 +11,24 @@ public class Score implements Serializable {
 
     public String score;
     public int time;
+    public String name;
 
-    public Score(){
+
+
+    public Score() {
 
     }
-    public Score(int time, String yourScore){
 
+
+    public String getName() {
+        return name;
     }
 
-     public String getScore() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getScore() {
         return score;
     }
 

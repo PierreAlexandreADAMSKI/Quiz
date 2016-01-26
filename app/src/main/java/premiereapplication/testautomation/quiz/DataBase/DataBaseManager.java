@@ -2,10 +2,14 @@ package premiereapplication.testautomation.quiz.DataBase;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import premiereapplication.testautomation.quiz.aplication.QuizApplication;
+import java.util.ArrayList;
+import java.util.List;
+
+import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.objects.Score;
 import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
 
@@ -14,13 +18,13 @@ import premiereapplication.testautomation.quiz.utils.PreferenceUtils;
  */
 public class DataBaseManager {
 
-
+    static final SQLiteOpenHelper sqLiteOpenHelper = new DataBaseHelper(QuizApplication.getContext());
+    final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
 
     public static void  makeDB (int time, String score) {
         //recuperation
         String id = PreferenceUtils.getStoredLogin();
         // writing data base
-        final SQLiteOpenHelper sqLiteOpenHelper = new DataBaseHelper(QuizApplication.getContext());
         final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
         final ContentValues contentValues = new ContentValues();
 
@@ -31,14 +35,12 @@ public class DataBaseManager {
         resultsDB.insert(DataBaseContract.TABLE_RESULTS, "", contentValues);
 
         // Now that all values are stored in database, read them  and print
-        final Cursor cursor = resultsDB.query(DataBaseContract.TABLE_RESULTS,
-                DataBaseContract.PROJECTION_FULL,
-                null, null, null, null, null);
-        scoreFromCursor(cursor);
+
     }
 
     public static Score scoreFromCursor(Cursor cursor){
 
+        //unused yet
         String l = "";
 
         Score score = new Score();
@@ -62,6 +64,21 @@ public class DataBaseManager {
             }
         }
         return score;
+    }
+
+
+
+    public static List<Score> scoreHelper() {
+        List<Score> listScore = new ArrayList<>();
+        final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
+        final Cursor cursor = resultsDB.query(DataBaseContract.TABLE_RESULTS,
+                DataBaseContract.PROJECTION_PART,
+                null, null, null, null, null);
+        for (int i = 0; i < cursor.getCount(); i++ ){
+            listScore.add(scoreFromCursor(cursor));
+        }
+
+        return listScore;
     }
 
 }

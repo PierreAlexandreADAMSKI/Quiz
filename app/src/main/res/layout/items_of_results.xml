@@ -4,7 +4,7 @@
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_below="@+id/search_bar"
@@ -16,7 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="match_parent"
             android:layout_alignLeft="@+id/card"
             android:layout_alignStart="@+id/card"
             android:layout_below="@+id/card"
@@ -31,8 +31,8 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true" />
             <TextView
-                android:id="@+id/quizNameTextView"
-                android:layout_width="wrap_content"
+                android:id="@+id/scoreName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/quiz_name"
@@ -44,8 +44,8 @@
                 android:layout_toEndOf="@+id/resultImageView" />
 
             <TextView
-                android:id="@+id/quizResultTextView"
-                android:layout_width="wrap_content"
+                android:id="@+id/scoreValue"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Score : x/y"
@@ -53,10 +53,10 @@
                 android:textSize="15dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/quizNameTextView"
+                android:layout_below="@+id/scoreName"
                 android:layout_toEndOf="@+id/resultImageView" />
 
-            <ImageView
+            <!-- <ImageView
                 android:id="@+id/star1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -102,7 +102,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/star4"
                 android:layout_alignBottom="@+id/resultImageView"/>
-
+-->
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

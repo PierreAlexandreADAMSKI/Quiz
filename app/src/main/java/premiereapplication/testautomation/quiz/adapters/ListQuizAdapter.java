@@ -59,11 +59,6 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
     }
 
     @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
     public int getItemCount() {
         return null!= listOfQuiz ? listOfQuiz.size():0 ;
     }
@@ -80,7 +75,7 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
         public ViewHolder(View view){
             super(view);
-            quizName = (TextView) view.findViewById(R.id.quizNameTextView);
+            quizName = (TextView) view.findViewById(R.id.scoreName);
             quizTimer = (TextView) view.findViewById(R.id.quizDurationTextView);
             imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
 

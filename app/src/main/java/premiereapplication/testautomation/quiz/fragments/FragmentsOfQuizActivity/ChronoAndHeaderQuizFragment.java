@@ -44,7 +44,7 @@ public class ChronoAndHeaderQuizFragment extends android.app.Fragment implements
         View rootView = inflater.inflate(R.layout.fragment_chrono_and_header_quiz, container, false);
         quizToLaunch = (QuizHelper) getArguments().getSerializable("QuizToLaunch");
 
-          nameQuizTextView =(TextView) rootView.findViewById(R.id.quizNameTextView);
+          nameQuizTextView =(TextView) rootView.findViewById(R.id.scoreName);
           nameQuizTextView.setText("Quiz " + quizToLaunch.getName());
 
           timerQuizTextView =(TextView) rootView.findViewById(R.id.quizDurationTextView);

@@ -90,8 +90,8 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             this.quiz = quiz;
             this.quizName.setText(quiz.getName());
             this.quizTimer.setText(String.valueOf(quiz.getSec()));
-            if(quiz.getCategory().equals("Cinéma")){this.imageQuiz.setImageResource(R.drawable.cinema);}
-            if(quiz.getCategory().equals("Culture Générale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
+            if(quiz.getCategory().equals("Cinema")){this.imageQuiz.setImageResource(R.drawable.cinema);}
+            if(quiz.getCategory().equals("Culture Generale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
             if(quiz.getCategory().equals("Sport")){this.imageQuiz.setImageResource(R.drawable.sport);}
             if(quiz.getCategory().equals("Musique")){this.imageQuiz.setImageResource(R.drawable.musique);}
             if(quiz.getCategory().equals("Litterature")){this.imageQuiz.setImageResource(R.drawable.literature);}

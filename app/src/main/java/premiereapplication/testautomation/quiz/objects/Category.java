@@ -28,7 +28,7 @@ public enum Category implements Serializable {
             return "Culture Générale";
         }
         if (category == SPORT){
-            return "Sport";
+            return "Sports";
         }
         if (category == MUSIC){
             return "Musique";

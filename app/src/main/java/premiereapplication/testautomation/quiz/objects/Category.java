@@ -22,22 +22,22 @@ public enum Category implements Serializable {
     public static String parse(Category category){
 
         if (category == CINEMA){
-            return "Cinema";
+            return "Cinéma";
         }
-        if (category == GENERAL_KNOWLEDGE){
-            return "General Knowledge";
+        if (category == CULTURE_GENERALE){
+            return "Culture Générale";
         }
         if (category == SPORT){
             return "Sport";
         }
-        if (category == MUSIC){
-            return "Music";
+        if (category == MUSIQUE){
+            return "Musique";
         }
-        if (category == LITERATURE){
-            return "Literature";
+        if (category == LITTERATURE){
+            return "Littérature";
         }
-        if (category == VARIOUS){
-            return "Various";
+        if (category == DIVERS){
+            return "Divers";
         }
         return null;
     }

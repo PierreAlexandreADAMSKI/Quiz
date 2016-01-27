@@ -20,7 +20,7 @@ public class DataBaseManager {
     static final SQLiteOpenHelper sqLiteOpenHelper = new DataBaseHelper(QuizApplication.getContext());
     final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
 
-    public static void  makeDB (int timeResult, int quizTime, String score, String quizName) {
+    public static void makeDB(int timeResult, int quizTime, String score, String quizName) {
         //recuperation
         String id = PreferenceUtils.getStoredLogin();
         // writing data base
@@ -39,14 +39,16 @@ public class DataBaseManager {
 
     }
 
-    public static Score scoreFromCursor(Cursor cursor){
-
-        Score score = new Score();
-        if (null != cursor)
-
-        {
+    public static List<Score> scoreHelper() {
+        List<Score> listScore = new ArrayList<>();
+        final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
+        //TODO order by best scores query should work but doesn't???
+        final Cursor cursor = resultsDB.query(DataBaseContract.TABLE_RESULTS,
+                DataBaseContract.PROJECTION_PART,
+                null, null, DataBaseContract.QUIZ_NAME, null, DataBaseContract.SCORE);
+        if (null != cursor) {
             while (cursor.moveToNext()) {
-
+                final Score score = new Score();
                 if (cursor.getColumnIndex(DataBaseContract.QUIZ_NAME) >= 0) {
                     score.setName(cursor.getString(cursor.getColumnIndex(DataBaseContract.QUIZ_NAME)));
                 }
@@ -59,27 +61,12 @@ public class DataBaseManager {
                 if (cursor.getColumnIndex(DataBaseContract.SCORE) >= 0) {
                     score.setScore(cursor.getString(cursor.getColumnIndex(DataBaseContract.SCORE)));
                 }
+                listScore.add(score);
             }
             if (!cursor.isClosed()) {
                 cursor.close();
             }
         }
-        return score;
-    }
-
-
-
-    public static List<Score> scoreHelper() {
-        List<Score> listScore = new ArrayList<>();
-        final SQLiteDatabase resultsDB = sqLiteOpenHelper.getWritableDatabase();
-        final Cursor cursor = resultsDB.query(DataBaseContract.TABLE_RESULTS,
-                DataBaseContract.PROJECTION_PART,
-                null, null, null, null, null);
-        for (int i = 0; i < cursor.getCount(); i++ ){
-            listScore.add(scoreFromCursor(cursor));
-        }
-
         return listScore;
     }
-
 }

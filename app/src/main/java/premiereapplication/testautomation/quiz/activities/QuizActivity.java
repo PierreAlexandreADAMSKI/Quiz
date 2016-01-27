@@ -3,7 +3,6 @@ package premiereapplication.testautomation.quiz.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 
 import premiereapplication.testautomation.quiz.DataBase.DataBaseManager;
 import premiereapplication.testautomation.quiz.R;

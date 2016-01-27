@@ -15,10 +15,8 @@ import java.util.List;
 
 import premiereapplication.testautomation.quiz.DataBase.DataBaseManager;
 import premiereapplication.testautomation.quiz.R;
-import premiereapplication.testautomation.quiz.adapters.ListQuizAdapter;
 import premiereapplication.testautomation.quiz.adapters.ScoreAdapter;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
-import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizActivityListener;
 import premiereapplication.testautomation.quiz.objects.Score;

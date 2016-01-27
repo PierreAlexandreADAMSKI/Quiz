@@ -21,24 +21,24 @@ Ce super héro est vraiment rapide...
 <HTML5,Flash, Unity/false,true,false>
 
 Quiz
-Cinéma//quiz1//15//
+Cinéma//Bataman//15//
 vide<,/,>
 
 Quiz
-Cinéma//quiz2//20//
+Cinéma//Kill-Bill//20//
 vide<,/,>
 
 Quiz
-Cinéma//quiz3//20//
+Cinéma//Avatar//20//
 vide<,/,>
 
 Quiz
 Culture Générale//Capitales//80//
-Capital de l'Algérie ? <Oran,Alger,Annaba/false,true,false>
-Capital du Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
-Capital de la Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
-Capital de l'Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
-Capital du Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
+Capitale de l'Algérie ? <Oran,Alger,Annaba/false,true,false>
+Capitale du Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
+Capitale de la Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
+Capitale de l'Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
+Capitale du Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
 
 Quiz
 Culture Générale//Voitures//120//
@@ -48,15 +48,15 @@ Donnez une marque Francaise <Opel,Renault,Fiat/false,true,false>
 Donnez une marque Japonaise <BMW,Toyota,Ferrari/false,true,false>
 
 Quiz
-Culture Generale//quizCG3//20//
+Culture Générale//quizCG3//20//
 vide<,/,>
 
 Quiz
-Culture Generale//quizCG4//30//
+Culture Générale//quizCG4//30//
 vide<,/,>
 
 Quiz
-Sport//quizSpor1//35//
+Sport//quizSport1//35//
 vide<,/,>
 
 Quiz
@@ -68,8 +68,8 @@ Sports//quiz3//35//
 vide<,/,>
 Sport//Football//50//
 Qui a gagné le ballon d'or l'année dernière ? <Messi,Ronaldo/false,true>
-Quel équipe a gagné la Champion's League l'année dernière ? <Barca,Real,Dortmund/true,false,false>
-A quel ville appartient le LOSC ? <Paris,Lille,Lyons/false,true,false>
+Quelle équipe a gagné la Champion's League l'année dernière ? <Barca,Real,Dortmund/true,false,false>
+A quelle ville appartient le LOSC ? <Paris,Lille,Lyons/false,true,false>
 Qui est le numéro 10 du Real Madrid ? <James Rodríguez ,Bale,Mesut Özil/true,false,false>
 Qui est l'entraineur du Real Madrid ? <Zidane,Rafael Benitez Maudes ,Carlo Ancelotti /true,false,false>
 D'où vient Messi ? < Argentina,Germany,France/true,false,false>

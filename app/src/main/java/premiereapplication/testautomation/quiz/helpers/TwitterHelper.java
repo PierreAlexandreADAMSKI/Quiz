@@ -1,5 +1,5 @@
 
-package premiereapplication.testautomation.quiz.dynamicServer;
+package premiereapplication.testautomation.quiz.helpers;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -24,6 +24,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.application.QuizApplication;
+import premiereapplication.testautomation.quiz.dynamicServer.Constants;
+import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
+import premiereapplication.testautomation.quiz.dynamicServer.TwitterAuthenticated;
+import premiereapplication.testautomation.quiz.dynamicServer.TwitterUser;
 import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.objects.Answer;

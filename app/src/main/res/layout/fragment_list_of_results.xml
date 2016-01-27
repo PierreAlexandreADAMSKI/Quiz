@@ -3,16 +3,38 @@
     android:id="@+id/resultRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#303030">
+    android:background="@color/applicationBackground">
 
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="15dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true"
+        android:layout_alignParentTop="true">
 
+    <EditText
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"/>
+</android.support.v7.widget.CardView>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/resultListView"
-        android:layout_width="wrap_content"
+        android:id="@+id/resultRecyclerView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/categoryTitle"/>
+        android:layout_below="@+id/card_view_result" />
 
 
 

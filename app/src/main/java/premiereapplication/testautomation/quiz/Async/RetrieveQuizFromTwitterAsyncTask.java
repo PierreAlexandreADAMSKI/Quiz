@@ -7,11 +7,9 @@ import java.util.List;
 
 import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.dynamicServer.Tweet;
-import premiereapplication.testautomation.quiz.dynamicServer.TwitterHelper;
+import premiereapplication.testautomation.quiz.helpers.TwitterHelper;
 import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
-import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
-import premiereapplication.testautomation.quiz.objects.Category;
 
 public class RetrieveQuizFromTwitterAsyncTask extends AsyncTask<String, Void, CategoryHelper> {
 

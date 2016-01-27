@@ -1,43 +1,40 @@
 package premiereapplication.testautomation.quiz.adapters;
 
-import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
-import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
+import premiereapplication.testautomation.quiz.objects.Score;
 
+/**
+ * Created by isen on 25/01/2016.
+ */
+public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> {
 
-public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHolder> {
-
-    public final List<QuizHelper> listOfQuiz;
+    public final List<Score> listofScore;
     private LayoutInflater mLayoutInflater;
     private ViewHolder verticalHolder;
     private QuizHomeActivityListener clickListener;
 
 
-
-    public ListQuizAdapter(List<QuizHelper> ListOfQuiz, QuizHomeActivityListener clickListener) {
-        this.listOfQuiz = ListOfQuiz;
+    public ScoreAdapter(List<Score> listofScore, QuizHomeActivityListener clickListener) {
+        this.listofScore = listofScore;
         this.clickListener = clickListener;
         mLayoutInflater = LayoutInflater.from(QuizApplication.getContext());
-
     }
 
-    @SuppressLint("InflateParams")
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View convertView = parent.getChildAt(getItemCount());
         if(null==convertView){
-            convertView = mLayoutInflater.inflate(R.layout.items_of_quizs_recyclerview,null); //adapter layout
+            convertView = mLayoutInflater.inflate(R.layout.items_of_results,null); //adapter layout
             verticalHolder = new ViewHolder(convertView);
             verticalHolder.setListener(this.clickListener);
             convertView.setTag(verticalHolder);
@@ -49,35 +46,31 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        QuizHelper quiz = getItem(position);
-        holder.setQuiz(quiz);
-        //Picasso.with(QuizApplication.getContext()).load(/*Imge uri*/).into(holder.imageQuiz);
+        Score score = getItem(position);
+        holder.setScore(score);
     }
 
-    public QuizHelper getItem(int position) {
-        return null!= listOfQuiz ? listOfQuiz.get(position):null ;
+    public Score getItem(int position) {
+        return null!= listofScore ? listofScore.get(position):null ;
     }
 
     @Override
     public int getItemCount() {
-        return null!= listOfQuiz ? listOfQuiz.size():0 ;
-    }
-
+        return null!= listofScore ? listofScore.size():0 ;    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private QuizHomeActivityListener listener;
-        private QuizHelper quiz;
+        private Score score; //in case of click update
         private TextView quizName;
-        private TextView quizTimer;
-        private ImageView imageQuiz;
+        private TextView scoreValue;
+
 
 
         public ViewHolder(View view){
             super(view);
             quizName = (TextView) view.findViewById(R.id.scoreName);
-            quizTimer = (TextView) view.findViewById(R.id.quizDurationTextView);
-            imageQuiz = (ImageView) view.findViewById(R.id.quizImageView);
+            scoreValue = (TextView) view.findViewById(R.id.scoreValue);
 
             view.setOnClickListener(this);
         }
@@ -86,16 +79,13 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             this.listener = listener;
         }
 
-        public void setQuiz(QuizHelper quiz) {
-            this.quiz = quiz;
-            this.quizName.setText(quiz.getName());
-            this.quizTimer.setText(String.valueOf(quiz.getSec()));
-            if(quiz.getCategory().equals("Cinema")){this.imageQuiz.setImageResource(R.drawable.cinema);}
-            if(quiz.getCategory().equals("Culture Generale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
-            if(quiz.getCategory().equals("Sport")){this.imageQuiz.setImageResource(R.drawable.sport);}
-            if(quiz.getCategory().equals("musique")){this.imageQuiz.setImageResource(R.drawable.musique);}
-            if(quiz.getCategory().equals("Literature")){this.imageQuiz.setImageResource(R.drawable.literature);}
-            if(quiz.getCategory().equals("Divers")){this.imageQuiz.setImageResource(R.drawable.divers);}
+        public void setScore(Score score) {
+            // TODO adapt time to Stars
+            // TODO change star size (not compilling)
+
+            this.score = score;
+            this.quizName.setText(this.score.getName());
+            this.scoreValue.setText(String.valueOf(score.getScore()));
 
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){
@@ -106,11 +96,11 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
 
         @Override
         public void onClick(View v) {
-            if (quiz != null){
-                this.listener.onQuizSelected(this.quiz);
-            }
+            /* It will be used with separated categories
+            if (score != null){
+                this.listener.onResultSelected(this.score);
+            }*/
             //TODO else exception + log
         }
     }
-
 }

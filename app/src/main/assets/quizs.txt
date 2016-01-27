@@ -94,19 +94,19 @@ vide<,/,>
 
 
 Quiz
-Literature//quizLiterature1//35//
+Litterature//quizLiterature1//35//
 vide<,/,>
 
 Quiz
-Literature//quizLiterature2//35//
+Litterature//quizLiterature2//35//
 vide<,/,>
 
 Quiz
-Literature//quizLiterature3//35//
+Litterature//quizLiterature3//35//
 vide<,/,>
 
 Quiz
-Literature//quizLiterature4//35//
+Litterature//quizLiterature4//35//
 vide<,/,>
 
 

@@ -94,12 +94,15 @@ public class HelperFileToListQuiz {
     }
 
 
-    static public QuizHelper quiz(Context context, int position) {
-        return getListOfQuizFromFile(context).get(position);
-    }
-
-
     static public CategoryHelper getCategories(){
+
+        Category CINEMA=Category.CINEMA;
+        Category CULTURE_GENERALE=Category.CULTURE_GENERALE;
+        Category SPORT=Category.SPORT;
+        Category MUSIQUE=Category.MUSIQUE;
+        Category LITTERATURE=Category.LITTERATURE;
+        Category Divers=Category.DIVERS;
+
 
         List<QuizHelper> listOfAllQuizs=getListOfQuizFromFile(QuizApplication.getContext());
         List<QuizHelper> listOfCinemaQuiz=new ArrayList<>();
@@ -110,19 +113,40 @@ public class HelperFileToListQuiz {
         List<QuizHelper> listOfDiversQuiz=new ArrayList<>();
 
 
+
         for(int i=0;i<listOfAllQuizs.size();i++){
-        if(listOfAllQuizs.get(i).getCategory().equals("Cinema")){listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
-        else if (listOfAllQuizs.get(i).getCategory().equals("Culture Generale")){listOfCultureGeneraleQuiz.add(listOfAllQuizs.get(i));}
-        else if (listOfAllQuizs.get(i).getCategory().equals("Sport")){listOfSportQuiz.add(listOfAllQuizs.get(i));}
-        else if (listOfAllQuizs.get(i).getCategory().equals("Musique")){listOfMusiqueQuiz.add(listOfAllQuizs.get(i));}
-        else if (listOfAllQuizs.get(i).getCategory().equals("Literature")){listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
-        else if (listOfAllQuizs.get(i).getCategory().equals("Divers")){listOfDiversQuiz.add(listOfAllQuizs.get(i));}
+            if(listOfAllQuizs.get(i).getCategory().equals(Category.parse(CINEMA)))
+            {listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
+
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(CULTURE_GENERALE)))
+            {listOfCultureGeneraleQuiz.add(listOfAllQuizs.get(i));}
+
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(SPORT)))
+            {listOfSportQuiz.add(listOfAllQuizs.get(i));}
+
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(MUSIQUE)))
+            {listOfMusiqueQuiz.add(listOfAllQuizs.get(i));}
+
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(LITTERATURE)))
+            {listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
+
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(Divers)))
+            {listOfDiversQuiz.add(listOfAllQuizs.get(i));}
         }
-        CategoryHelper categoryHelper= new CategoryHelper(listOfCinemaQuiz,listOfCultureGeneraleQuiz,listOfSportQuiz,
-                listOfMusiqueQuiz,listOfLiteratureQuiz,listOfDiversQuiz);
+
+
+        CINEMA.setList(listOfCinemaQuiz);
+        CULTURE_GENERALE.setList(listOfCultureGeneraleQuiz);
+        SPORT.setList(listOfSportQuiz);
+        MUSIQUE.setList(listOfMusiqueQuiz);
+        LITTERATURE.setList(listOfLiteratureQuiz);
+        Divers.setList(listOfDiversQuiz);
+
+        CategoryHelper categoryHelper= new CategoryHelper(CINEMA,CULTURE_GENERALE,SPORT,MUSIQUE,LITTERATURE,Divers);
 
         return categoryHelper;
     }
+
 
 
 

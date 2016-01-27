@@ -88,7 +88,7 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
         getFragmentManager().beginTransaction().add(R.id.container1, frag).commit();
 
         ListOfQuizFragment frag2 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.GENERAL_KNOWLEDGE), list[1]);
-        getFragmentManager().beginTransaction().add(R.id.container2, frag2).commit();
+        getFragmentManager().beginTransaction().add(R.id.container5, frag2).commit();
 
         ListOfQuizFragment frag3 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.SPORT), list[2]);
         getFragmentManager().beginTransaction().add(R.id.container3, frag3).commit();
@@ -97,7 +97,7 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
         getFragmentManager().beginTransaction().add(R.id.container4, frag4).commit();
 
         ListOfQuizFragment frag5 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.LITERATURE), list[4]);
-        getFragmentManager().beginTransaction().add(R.id.container5, frag5).commit();
+        getFragmentManager().beginTransaction().add(R.id.container2, frag5).commit();
 
         ListOfQuizFragment frag6 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.VARIOUS), list[5]);
         getFragmentManager().beginTransaction().add(R.id.container6, frag6).commit();

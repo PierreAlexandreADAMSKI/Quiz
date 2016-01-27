@@ -21,7 +21,7 @@ Ce super héro est vraiment rapide...
 <HTML5,Flash, Unity/false,true,false>
 
 Quiz
-Cinéma//Bataman//15//
+Cinéma//Batman//15//
 vide<,/,>
 
 Quiz
@@ -31,6 +31,10 @@ vide<,/,>
 Quiz
 Cinéma//Avatar//20//
 vide<,/,>
+
+
+
+
 
 Quiz
 Culture Générale//Capitales//80//
@@ -55,17 +59,11 @@ Quiz
 Culture Générale//quizCG4//30//
 vide<,/,>
 
-Quiz
-Sport//quizSport1//35//
-vide<,/,>
+
+
+
 
 Quiz
-Sport//quizSport2//35//
-vide<,/,>
-
-Quiz
-Sports//quiz3//35//
-vide<,/,>
 Sport//Football//50//
 Qui a gagné le ballon d'or l'année dernière ? <Messi,Ronaldo/false,true>
 Quelle équipe a gagné la Champion's League l'année dernière ? <Barca,Real,Dortmund/true,false,false>
@@ -76,8 +74,6 @@ D'où vient Messi ? < Argentina,Germany,France/true,false,false>
 Qui fait parti de l'équipe de Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
 
 Quiz
-Sports//quiz4//35//
-vide<,/,>
 Sport//Basketball//30//
 Qui a été MVP aux USA l'année dernière ? <Stephen Curry,LeBron James, Kobe Bryant/true,false,false>
 Qui a été champion de la NBA l'année dernière ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors/false,true,true >
@@ -86,18 +82,8 @@ A quel club appartient Kebo ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warr
 Qui est le numéro 23 des Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille /true,false>
 Qu'est ce que les champions obtiennent ? <une bague,un ballon,des chaussures/true,false,false>
 
-Quiz
-Musique//quiz1//35//
-vide<,/,>
-Sport//Baseball//30//
-Dans quel équipe jouait Babe Ruth avant de jouer pour les Red Sox de Boston ? <Boston Braves,New York Yankees,Baltimore Orioles/true,false,false>
-Quelle équipe a déménagé à Washington pour devenir les Washington Nationals en 2005 ? <Brooklyn Dodgers,Tokyo Giants,Montreal Expos/false,true,false>
-
-Quiz
-Musique//quiz2//35//
-vide<,/,>
-Sport//athletics //30//
-Lequel des sports suivant consiste à lancer un boule d'acier ?
+Sport//Athlètes //30//
+Lequel de ces sports consiste à lancer un boule d'acier ?
 <Le 100 mètre,Le lancé de poids,Le lancé de javelot,Le lancé de marteau/false,true,false,false>
 Lequel des hommes suivants est un athlète américain qui détenait le record du monde de saut en longueur de 1968 à 1991 ?
 <Roger Bannister,Bob Beamon,Michael Phelps,Jesse Owens/false,true,false,false>
@@ -105,87 +91,85 @@ Athletics is an umbrella term for a variety of sports including what is commonly
 <True,False/true,false>
 
 Quiz
-Musique//quiz3//35//
+Sport//quiz4//35//
 vide<,/,>
 
-Music//Rock//30//
+
+
+
+
+Quiz
+Musique//Rock//30//
 Rocks that come out of volcanoes form the greater part of the Earth's crust. These rocks are:
 <igneous,rocks,Basalt,metamorphic/false,true,false,false>
 This is the name of the solid rock beneath the soil:
 <extrusive rock,Limestone,Granite/false,false,true>
 
+Quiz
+Musique//Classique//30//
+Quel compositeur a vécu entre 1864 et 1949 ?
+<Richard Strauss,Richard Strauss,Joseph Haydn,Hector Berlioz,Frederic Chopin/false,flse,false,false,true>
+De quelle nationalité était Maurice Ravel ?
+<Suèdois,Belge,Italien,Français/false,false,false,true>
+A quelle période a vecu Robert Schumann ?
+<1810-1856,1860-1911,1685-1759,1756-1791/true,false,flse,false>
+A quelle période a vécu Franz Liszt ?
+<1685-1750,1811-1886,1732-1809,1882-1971/false,true,false,false>
+Qui a composé la pièce "le clair de lune" ?
+<Saint Saens,Hector Berlioz,Claude Debussy,Maurice Ravel/false,false,true,false>
 
 
+Musique//Jazz//40//
+De quelle ville est originaire le jazz ?
+<Memphis,New Orleans,Chicago /false,true,true>
+Comment s'appelle le club de jazz le plus celèbre de Harlem ?
+<The Cotton Club,El Morocco,Studio 54 /true,false,false>
+Au debut du 20ème siècle, le terme de jazz s'est souvent confondu avec ?
+<Swing,Blues,Ragtime /false,false,true>
+Dans les années 30, quel type de jazz le clarinetiste Benny Goodman a aidé à populariser ?
+<Bop,Swing,Afro-Latin /false,true,false>
 
 Quiz
 Musique//quiz4//35//
 vide<,/,>
-<Music//Classical//30//
-Which composer lived between these years ? 1864-1949
-<Richard Strauss,Richard Strauss,Joseph Haydn,Hector Berlioz,Frederic Chopin/false,flse,false,false,true>
-Who composed this piece of classical music ?
-<Le Nozze Di Figaro,Wolfgang Amadeus Mozart,Ludwig van Beethoven,Antonio Vivaldi,Joseph Haydn/false,true,false,false,false>
-What was the nationality of this composer ? Maurice Ravel
-<Swedish,Belgian,Italian,French/false,false,false,true>
-This composer lived between which of these years? Robert Schumann
-<1810-1856,1860-1911,1685-1759,1756-1791/true,false,flse,false>
-This composer lived between which of these years ? Franz Liszt
-<1685-1750,1811-1886,1732-1809,1882-1971/false,true,false,false>
-Who composed this piece of classical music ? Clair De Lune
-<Saint Saens,Hector Berlioz,Claude Debussy,Maurice Ravel/false,false,true,false>
 
 
-Quiz
-Littérature//quiz1//35//
-Music//jazz//40//
-Jazzemerged in what has been called America's most musical city:
-<Memphis,New Orleans,Chicago /false,true,true>
-The most famous jazz nightclub in Harlem was called:
-<The Cotton Club,El Morocco,Studio 54 /true,false,false>
-At the turn of the 20th century, the term "jazz" was used interchangeably with:
-<Swing,Blues,Ragtime /false,false,true>
-In the 1930s, clarinetist Benny Goodman helped popularize what type of jazz ?
-<Bop,Swing,Afro-Latin /false,true,false>
 
 
 
 
 Quiz
-Literature//Poetry //30//
+Littérature//Poésie //30//
 vide<,/,>
 
 Quiz
-Littérature//quiz2//35//
-Literature//Fiction //40//
+Littérature//Fiction //40//
 vide<,/,>
 
 Quiz
-Littérature//quiz3//35//
-Literature//Romance //50//
+Littérature//Romants //50//
 vide<,/,>
 
 Quiz
-Littérature//quiz4//35//
-Literature//Drama //60//
+Littérature//Drames //60//
 vide<,/,>
+
+
+
 
 
 Quiz
 Divers//quiz1//35//
-Various//Coocking//30//
 vide<,/,>
 
 Quiz
 Divers//quiz2//35//
-Various//Games//40//
 vide<,/,>
 
 Quiz
 Divers//quiz3//35//
-Various//Electronic//50//
 vide<,/,>
 
 Quiz
 Divers//quiz4//35//
-Divers//Web//60//
 vide<,/,>

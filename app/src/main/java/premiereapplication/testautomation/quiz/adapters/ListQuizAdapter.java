@@ -94,7 +94,7 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             if(quiz.getCategory().equals("Culture Générale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
             if(quiz.getCategory().equals("Sport")){this.imageQuiz.setImageResource(R.drawable.sport);}
             if(quiz.getCategory().equals("Musique")){this.imageQuiz.setImageResource(R.drawable.musique);}
-            if(quiz.getCategory().equals("Litterature")){this.imageQuiz.setImageResource(R.drawable.literature);}
+            if(quiz.getCategory().equals("Littérature")){this.imageQuiz.setImageResource(R.drawable.literature);}
             if(quiz.getCategory().equals("Divers")){this.imageQuiz.setImageResource(R.drawable.divers);}
 
             /* TODO parse imageUrl

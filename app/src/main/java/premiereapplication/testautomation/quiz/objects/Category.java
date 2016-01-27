@@ -22,10 +22,10 @@ public enum Category implements Serializable {
     public static String parse(Category category){
 
         if (category == CINEMA){
-            return "Cinema";
+            return "Cinéma";
         }
         if (category == CULTURE_GENERALE){
-            return "Culture Generale";
+            return "Culture Générale";
         }
         if (category == SPORT){
             return "Sport";
@@ -34,7 +34,7 @@ public enum Category implements Serializable {
             return "Musique";
         }
         if (category == LITTERATURE){
-            return "Litterature";
+            return "Littérature";
         }
         if (category == DIVERS){
             return "Divers";

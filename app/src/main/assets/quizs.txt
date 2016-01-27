@@ -1,4 +1,4 @@
-Cinema//Personalities//60//
+Cinéma//Personnalités//60//
 Who is the Tony Stark's personnal assistant ?
 <Jarvis,Pepper Pots,Alfred/false,true,false>
 He is red & blue and he is a member of the Justice League
@@ -21,21 +21,21 @@ This super-hero is pretty fast...
 <HTML5,Flash, Unity/false,true,false>
 
 Quiz
-Cinema//quiz2//15//
+Cinéma//Quiz 1//15//
 vide<,/,>
 
 Quiz
-Cinema//quiz3//20//
+Cinéma//Quiz 2//20//
 vide<,/,>
 
 Quiz
-Cinema//quiz4//20//
+Cinéma//Quiz 3//20//
 vide<,/,>
 
 
 
 Quiz
-Culture Generale//Capitales//80//
+Culture Générale//Capitales//80//
 Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
 Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
 Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
@@ -43,87 +43,87 @@ Capital Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
 Capital Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
 
 Quiz
-Culture Generale//Voitures//120//
-marque allemande ? <mercedes,renault/true,false>
-marque americaine ?<opel,renault,audi,ford/false,false,false,true>
-marque Francaise ?<opel,renault,fiat/false,true,false>
-marque Japonaise ?<opel,toyota,fiat/false,true,false>
+Culture Générale//Voitures//120//
+Marque allemande ? <mercedes,renault/true,false>
+Marque americaine ?<opel,renault,audi,ford/false,false,false,true>
+Marque Francaise ?<opel,renault,fiat/false,true,false>
+Marque Japonaise ?<opel,toyota,fiat/false,true,false>
 
 
 Quiz
-Culture Generale//quizCG3//20//
+Culture Générale//quizCG3//20//
 vide<,/,>
 
 Quiz
-Culture Generale//quizCG4//30//
+Culture Générale//quizCG4//30//
 vide<,/,>
 
 
 
 Quiz
-Sport//quizSpor1//35//
+Sports//Quiz 1//35//
 vide<,/,>
 
 Quiz
-Sport//quizSport2//35//
+Sports//Quiz 2//35//
 vide<,/,>
 
 Quiz
-Sport//quizSport3//35//
+Sports//Quiz 3//35//
 vide<,/,>
 
 Quiz
-Sport//quizSport4//35//
+Sports//Quiz 4//35//
 vide<,/,>
 
 Quiz
-Musique//quizMusique1//35//
+Musique//Quiz 1//35//
 vide<,/,>
 
 Quiz
-Musique//quizMusique2//35//
+Musique//Quiz 2//35//
 vide<,/,>
 
 Quiz
-Musique//quizMusique3//35//
+Musique//Quiz 3//35//
 vide<,/,>
 
 Quiz
-Musique//quizMusique4//35//
-vide<,/,>
-
-
-Quiz
-Litterature//quizLiterature1//35//
-vide<,/,>
-
-Quiz
-Litterature//quizLiterature2//35//
-vide<,/,>
-
-Quiz
-Litterature//quizLiterature3//35//
-vide<,/,>
-
-Quiz
-Litterature//quizLiterature4//35//
+Musique//Quiz 4//35//
 vide<,/,>
 
 
 Quiz
-Divers//quizDivers1//35//
+Littérature//Quiz 1//35//
 vide<,/,>
 
 Quiz
-Divers//quizDivers2//35//
+Littérature//Quiz 2//35//
 vide<,/,>
 
 Quiz
-Divers//quizDivers3//35//
+Littérature//Quiz 3//35//
 vide<,/,>
 
 Quiz
-Divers//quizDivers//35//
+Littérature//Quiz 4//35//
+vide<,/,>
+
+
+Quiz
+Divers//Quiz 1//35//
+vide<,/,>
+
+Quiz
+Divers//Quiz 2//35//
+vide<,/,>
+
+Quiz
+Divers//Quiz 3//35//
+vide<,/,>
+
+Quiz
+Divers//Quiz 4//35//
 vide<,/,>
 
 

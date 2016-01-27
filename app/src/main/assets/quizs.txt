@@ -32,11 +32,9 @@ Quiz
 Cinéma//Quiz 3//20//
 vide<,/,>
 
-
-
 Quiz
 Culture Générale//Capitales//80//
-Capital Algerie ? <Oran,Alger,Annaba/false,true,false>
+Capital Algérie ? <Oran,Alger,Annaba/false,true,false>
 Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
 Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
 Capital Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
@@ -49,81 +47,147 @@ Marque americaine ?<opel,renault,audi,ford/false,false,false,true>
 Marque Francaise ?<opel,renault,fiat/false,true,false>
 Marque Japonaise ?<opel,toyota,fiat/false,true,false>
 
-
 Quiz
-Culture Générale//quizCG3//20//
+Culture Generale//quizCG3//20//
 vide<,/,>
 
 Quiz
-Culture Générale//quizCG4//30//
-vide<,/,>
-
-
-
-Quiz
-Sports//Quiz 1//35//
+Culture Generale//quizCG4//30//
 vide<,/,>
 
 Quiz
-Sports//Quiz 2//35//
+Sport//quizSpor1//35//
+vide<,/,>
+
+Quiz
+Sport//quizSport2//35//
 vide<,/,>
 
 Quiz
 Sports//Quiz 3//35//
 vide<,/,>
+Sport//Football//50//
+Who got the Golden Ball last year ? <Messi,Ronaldo/false,true>
+Which team is champion of the champion's league last year? <Barca,Real,Dortmund/true,false,false>
+LOSC belong to which city ? <Paris,Lille,Lyons/false,true,false>
+Who is number 10 in Real Madrid ? <James Rodríguez ,Bale,Mesut Özil/true,false,false>
+Who is the trainer of the Real Madrid ? <Zidane,Rafael Benitez Maudes ,Carlo Ancelotti /true,false,false>
+Messi is from where ? < Argentina,Germany,France/true,false,false>
+Who is in Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
 
 Quiz
 Sports//Quiz 4//35//
 vide<,/,>
+Sport//Basketball//30//
+Who is MVP in USA last year ? <Stephen Curry,LeBron James, Kobe Bryant/true,false,false>
+Who is the champion of the NBA last year ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors/false,true,true >
+Pau Gaso is from where ? <Spain,France,UK/true,false,false>
+Kebo is belong to which club ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors /true,false,false>
+Who is the number 23 in Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille /true,false>
+What will the champion get ? <ring,ball,shoes/true,false,false>
 
 Quiz
 Musique//Quiz 1//35//
 vide<,/,>
+Sport//Baseball//30//
+Whic team did Babe Ruth play for before joining the Boston Red Sox ? <Boston Braves,New York Yankees,Baltimore Orioles/true,false,false>
+Which team moved to D.C. to become the Washington Nationals in 2005 ? <Brooklyn Dodgers,Tokyo Giants,Montreal Expos/false,true,false>
 
 Quiz
 Musique//Quiz 2//35//
 vide<,/,>
+Sport//athletics //30//
+Which of the following options is a modern day Olympic field event that involves hurling a steel ball attached to a wire ?
+<Wrench toss,Chainsaw heave,Ratchet hurl,Hammer throw/false,false,false,true>
+Which of the following men is an American track and field athlete that held the world record long jump from 1968-1991 ?
+<Roger Bannister,Bob Beamon,Michael Phelps,Jesse Owens/false,true,false,false>
+Athletics is an umbrella term for a variety of sports including what is commonly referred to as track and field
+<True,False/true,false>
 
 Quiz
 Musique//Quiz 3//35//
 vide<,/,>
 
+Music//Rock//30//
+Rocks that come out of volcanoes form the greater part of the Earth's crust. These rocks are:
+<igneous,rocks,Basalt,metamorphic/false,true,false,false>
+This is the name of the solid rock beneath the soil:
+<extrusive rock,Limestone,Granite/false,false,true>
+
+
+
+
 Quiz
 Musique//Quiz 4//35//
 vide<,/,>
+<Music//Classical//30//
+Which composer lived between these years ? 1864-1949
+<Richard Strauss,Richard Strauss,Joseph Haydn,Hector Berlioz,Frederic Chopin/false,flse,false,false,true>
+Who composed this piece of classical music ?
+<Le Nozze Di Figaro,Wolfgang Amadeus Mozart,Ludwig van Beethoven,Antonio Vivaldi,Joseph Haydn/false,true,false,false,false>
+What was the nationality of this composer ? Maurice Ravel
+<Swedish,Belgian,Italian,French/false,false,false,true>
+This composer lived between which of these years? Robert Schumann
+<1810-1856,1860-1911,1685-1759,1756-1791/true,false,flse,false>
+This composer lived between which of these years ? Franz Liszt
+<1685-1750,1811-1886,1732-1809,1882-1971/false,true,false,false>
+Who composed this piece of classical music ? Clair De Lune
+<Saint Saens,Hector Berlioz,Claude Debussy,Maurice Ravel/false,false,true,false>
 
 
 Quiz
 Littérature//Quiz 1//35//
+Music//jazz//40//
+Jazzemerged in what has been called America's most musical city:
+<Memphis,New Orleans,Chicago /false,true,true>
+The most famous jazz nightclub in Harlem was called:
+<The Cotton Club,El Morocco,Studio 54 /true,false,false>
+At the turn of the 20th century, the term "jazz" was used interchangeably with:
+<Swing,Blues,Ragtime /false,false,true>
+In the 1930s, clarinetist Benny Goodman helped popularize what type of jazz ?
+<Bop,Swing,Afro-Latin /false,true,false>
+
+
+
+
+Quiz
+Literature//Poetry //30//
 vide<,/,>
 
 Quiz
 Littérature//Quiz 2//35//
+Literature//Fiction //40//
 vide<,/,>
 
 Quiz
 Littérature//Quiz 3//35//
+Literature//Romance //50//
 vide<,/,>
 
 Quiz
 Littérature//Quiz 4//35//
+Literature//Drama //60//
 vide<,/,>
 
 
 Quiz
 Divers//Quiz 1//35//
+Various//Coocking//30//
 vide<,/,>
 
 Quiz
 Divers//Quiz 2//35//
+Various//Games//40//
 vide<,/,>
 
 Quiz
 Divers//Quiz 3//35//
+Various//Electronic//50//
 vide<,/,>
 
 Quiz
 Divers//Quiz 4//35//
+Divers//Web//60//
 vide<,/,>
 
 

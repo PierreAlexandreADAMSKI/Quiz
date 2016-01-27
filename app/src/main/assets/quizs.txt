@@ -97,14 +97,6 @@ vide<,/,>
 
 
 
-
-Quiz
-Musique//Rock//30//
-Rocks that come out of volcanoes form the greater part of the Earth's crust. These rocks are:
-<igneous,rocks,Basalt,metamorphic/false,true,false,false>
-This is the name of the solid rock beneath the soil:
-<extrusive rock,Limestone,Granite/false,false,true>
-
 Quiz
 Musique//Classique//30//
 Quel compositeur a vécu entre 1864 et 1949 ?
@@ -128,6 +120,11 @@ Au debut du 20ème siècle, le terme de jazz s'est souvent confondu avec ?
 <Swing,Blues,Ragtime /false,false,true>
 Dans les années 30, quel type de jazz le clarinetiste Benny Goodman a aidé à populariser ?
 <Bop,Swing,Afro-Latin /false,true,false>
+
+Quiz
+Musique//quiz3//35//
+vide<,/,>
+
 
 Quiz
 Musique//quiz4//35//

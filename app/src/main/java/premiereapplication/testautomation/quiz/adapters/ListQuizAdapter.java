@@ -15,6 +15,7 @@ import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.objects.Category;
+import premiereapplication.testautomation.quiz.utils.DrawableManager;
 
 
 public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHolder> {
@@ -97,7 +98,7 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             if(quiz.getCategory().equals(Category.parse(Category.MUSIC))){this.imageQuiz.setImageResource(R.drawable.musique);}
             if(quiz.getCategory().equals(Category.parse(Category.LITERATURE))){this.imageQuiz.setImageResource(R.drawable.literature);}
             if(quiz.getCategory().equals(Category.parse(Category.VARIOUS))){this.imageQuiz.setImageResource(R.drawable.divers);}
-
+            imageQuiz.setImageResource(DrawableManager.getDrawable(quiz));
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){
                 Picasso.with(QuizApplication.getContext()).load(quiz.getImageUrl()).into(this.imageQuiz);

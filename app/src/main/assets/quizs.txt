@@ -52,19 +52,33 @@ Donnez une marque Francaise <Opel,Renault,Fiat/false,true,false>
 Donnez une marque Japonaise <BMW,Toyota,Ferrari/false,true,false>
 
 Quiz
-Culture Générale//quizCG3//20//
+Culture Générale//Dates//20//
 vide<,/,>
 
 Quiz
-Culture Générale//quizCG4//30//
+Culture Générale//Couleurs//30//
 vide<,/,>
 
 
+Quiz
+Musique//Rock//35//
+vide<,/,>
 
+Quiz
+Musique//Jazz//35//
+vide<,/,>
+
+Quiz
+Musique//Classique//35//
+vide<,/,>
+
+Quiz
+Musique//Rap//35//
+vide<,/,>
 
 
 Quiz
-Sport//Football//50//
+Sports//Football//50//
 Qui a gagné le ballon d'or l'année dernière ? <Messi,Ronaldo/false,true>
 Quelle équipe a gagné la Champion's League l'année dernière ? <Barcelone,Real Madrid,Dortmund/true,false,false>
 A quelle ville appartient le LOSC ? <Paris,Lille,Lyon/false,true,false>
@@ -74,15 +88,16 @@ D'où vient Messi ? < Argentina,Germany,France/true,false,false>
 Qui fait parti de l'équipe de Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
 
 Quiz
-Sport//Basketball//30//
+Sports//Basketball//30//
 Qui a été MVP aux USA l'année dernière ? <Stephen Curry,LeBron James, Kobe Bryant/true,false,false>
 Qui a été champion de la NBA l'année dernière ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors/false,true,true >
-D'où vient Pau Gaso ? <Spain,France,UK/true,false,false>
+D'où vient Pau Gaso ? <Espagne,France,UK/true,false,false>
 A quel club appartient Kebo ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors /true,false,false>
 Qui est le numéro 23 des Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille /true,false>
 Qu'est ce que les champions obtiennent ? <une bague,un ballon,des chaussures/true,false,false>
 
-Sport//Athlètes //30//
+Quiz
+Sports//Athletisme //30//
 Lequel de ces sports consiste à lancer une boule d'acier ?
 <Le 100 mètre,Le lancé de poids,Le lancé de javelot,Le lancé de marteau/false,true,false,false>
 Lequel des hommes suivants est un athlète américain qui détenait le record du monde de saut en longueur de 1968 à 1991 ?
@@ -90,102 +105,35 @@ Lequel des hommes suivants est un athlète américain qui détenait le record du
 L'athletisme est un terme communemément utilisé pour déisgner un sport de piste ou de champ.
 <True,False/true,false>
 
+
 Quiz
-Sport//quiz4//35//
+Littérature//Poésie//35//
 vide<,/,>
 
-
-
+Quiz
+Littérature//Romans//35//
+vide<,/,>
 
 Quiz
-Musique//Classique//30//
-Quel compositeur a vécu entre 1864 et 1949 ?
-<Richard Strauss,Richard Strauss,Joseph Haydn,Hector Berlioz,Frederic Chopin/false,flse,false,false,true>
-De quelle nationalité était Maurice Ravel ?
-<Suèdois,Belge,Italien,Français/false,false,false,true>
-A quelle période a vecu Robert Schumann ?
-<1810-1856,1860-1911,1685-1759,1756-1791/true,false,flse,false>
-A quelle période a vécu Franz Liszt ?
-<1685-1750,1811-1886,1732-1809,1882-1971/false,true,false,false>
-Qui a composé la pièce "le clair de lune" ?
-<Saint Saens,Hector Berlioz,Claude Debussy,Maurice Ravel/false,false,true,false>
-
-
-Musique//Jazz//40//
-De quelle ville est originaire le jazz ?
-<Memphis,New Orleans,Chicago /false,true,true>
-Comment s'appelle le club de jazz le plus celèbre de Harlem ?
-<The Cotton Club,El Morocco,Studio 54 /true,false,false>
-Au debut du 20ème siècle, le terme de jazz s'est souvent confondu avec ?
-<Swing,Blues,Ragtime /false,false,true>
-Dans les années 30, quel type de jazz le clarinetiste Benny Goodman a aidé à populariser ?
-<Bop,Swing,Afro-Latin /false,true,false>
+Littérature//Essais//35//
+vide<,/,>
 
 Quiz
-Musique//quiz3//35//
+Littérature//Polars//35//
 vide<,/,>
 
 
 Quiz
-Musique//quiz4//35//
-vide<,/,>
-
-
-
-
-
-
-Quiz
-Littérature//Poésie //30//
-vide<,/,>
-
-Quiz
-Littérature//Fiction //40//
-vide<,/,>
-
-Quiz
-Littérature//Romants //50//
-vide<,/,>
-
-Quiz
-Littérature//Drames //60//
-vide<,/,>
-
-
-
-
-Quiz
-Jeux vidéos//Call Of Duty//30
-Quand est ce que Call of Duty Black Ops 1 a été sorti ?
-<9 novembre 2010,16 octobre 2011,10 juin 2009/false,true,false>
-
-Quiz
-Divers//quiz2//35//
-vide<,/,>
-
-Quiz
-Divers//quiz3//35//
-vide<,/,>
-
-Quiz
-Divers//quiz4//35//
-vide<,/,>
-
-
-
-
-
-Quiz
-English Questions//Call Of Duty//30//
+Divers//Call Of Duty//30//
 When was BO1 (Black Ops 1) Released?
 <November 9 2010,October 16 2011,January 10 2009/false,true,false>
 When was BO2 (Black Ops 2) Released?
 <November 12 2012,July 11  2012,September 8  2012/true,false,false>
 
 Quiz
-Cinema//Pearl Harbor //20/
+Divers//Pearl Harbor //20//
 Who said: "I think World War II just started."
-<anny Jimmy Doolittle,President Franklin D. Roosevelt,Rafe Admiral Kimmel/false,false,false,true>
+<anny Jimmy Doolittle,President Franklin D. Roosevelt,Rafe Admiral Kimmel/false,false,true>
 
 Who Said:
 "Be careful with the lady folk......they cloud the mind."
@@ -193,16 +141,16 @@ Who Said:
 
 Who said:
 "Why the hell is the US Navy practicing this early on a Sunday morning?"
-<Billy,Gooz,Lieutenant Colonel Doolittle,Danny,Rafe/false,false,false,true>
+<Billy,Gooz,Lieutenant Colonel Doolittle,Danny,Rafe/false,false,false,false,true>
 Who said:
 "I got a girlfriend."
 <Anthony,Red,Gooz,Danny/false,false,false,true>
 Who said?
 "Home of the brave."
-<Young Danny,Gooz,Red,Young Rafe,Lieutenant Colonel Doolittle/true,false,false,false>
+<Young Danny,Gooz,Red,Young Rafe,Lieutenant Colonel Doolittle/true,false,false,false,false>
 Who said:
 "How can I not feel this way? I kind of like it."
-<Rafe,Martha,Danny,Anthony,Evelyn/true,false,false,false>
+<Rafe,Martha,Danny,Anthony,Evelyn/true,false,false,false,false>
 
 Who said?
 "Okay, we're going left right?"
@@ -211,7 +159,4 @@ Who said?
 Who said?
 "That's what I want to come home to, that's what I want to have to think about and dream about.I wanna know that the best part of my life is still ahead of me."
 <Rafe,Danny,Gooz,Evelyn,Red/false,false,false,false,true>
-
-
-
 

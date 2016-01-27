@@ -24,19 +24,19 @@ public enum Category implements Serializable {
         if (category == CINEMA){
             return "Cinéma";
         }
-        if (category == CULTURE_GENERALE){
+        if (category == GENERAL_KNOWLEDGE){
             return "Culture Générale";
         }
         if (category == SPORT){
             return "Sport";
         }
-        if (category == MUSIQUE){
+        if (category == MUSIC){
             return "Musique";
         }
-        if (category == LITTERATURE){
+        if (category == LITERATURE){
             return "Littérature";
         }
-        if (category == DIVERS){
+        if (category == VARIOUS){
             return "Divers";
         }
         return null;

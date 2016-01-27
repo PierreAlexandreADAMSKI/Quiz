@@ -1,115 +1,217 @@
 Cinéma//Personnalités//60//
-Who is the Tony Stark's personnal assistant ?
+Qui est l'assistant personnel de Tony Stark ?
 <Jarvis,Pepper Pots,Alfred/false,true,false>
-He is red & blue and he is a member of the Justice League
+C'est un membre rouge et noir de la Ligue des Justiciers
 <Spiderman,Captain America,Superman/false,false,true>
-What is the type of ray that irradiated Bruce Banner?
-<Gamma ray,X ray,Blue ray/true,false,false>
-What is the other name of Bucky Barnes
-<The Joker, Two-Face,The Winter Soldier/false,false,true>
-Billionaire, Playboy and Engineer?
-<Tony Stark,Your Java2 teacher,Bruce Wayne/true,false,false>
-He appears in a cameo in each Marvel's movie
+Quel est le type de rayon qui a irradié Bruce Banner ?
+<Rayon Gamma,Rayon X,Rayon Bleu/true,false,false>
+Quel est l'ami de Bucky Barnes ?
+<Le Joker,Double Face,Captain America/false,false,true>
+Milliardaire , Playboy et Ingénieur ?
+<Tony Stark,Votre professeur,Bruce Wayne/true,false,false>
+Qui est le scénariste des films Marvel ?
 <Donald Trump,Bruce Lee,Stan Lee/false,false,true>
-Who is Steve Rogers?
+Qui est Steve Rogers ?
 <Captain America,Superman,Batman/true,false,false>
-If you mix Jarvis, an Infinity gem and a robot,what do you get?
-<The Vision,Iron man,Extremis/true,false,false>
-Where is the asylum where Batman's ennemies are sent?
+Si vous mélangez Jarvis et un robot, qui obtenez vous ?
+<Ultron,Iron man,Extremis/true,false,false>
+Quel est l'asile où les ennemis de Batman sont envoyés ?
 <Gotham,NYC,Arkham/false,false,true>
-This super-hero is pretty fast...
+Ce super héro est vraiment rapide...
 <HTML5,Flash, Unity/false,true,false>
 
 Quiz
+Cinéma//Batman//15//
+vide<,/,>
+
+Quiz
+Cinéma//Kill-Bill//20//
+vide<,/,>
+
+Quiz
+Cinéma//Avatar//20//
+vide<,/,>
+
+
+
+
+
+Quiz
 Culture Générale//Capitales//80//
-Capital Algérie ? <Oran,Alger,Annaba/false,true,false>
-Capital Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
-Capital Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
-Capital Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
-Capital Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
+Capitale de l'Algérie ? <Oran,Alger,Annaba/false,true,false>
+Capitale du Maroc ? <Rabat,Casablanca,Marakech,Fes/true,false,false,false>
+Capitale de la Tunisie ? <Sousse,Tunis,Hamamet/false,true,false>
+Capitale de l'Espagne ? <Barcelone,Madrid,Malaga/false,true,false>
+Capitale du Brésil ? <Rio,Brazilia,Sao Paulo/false,true,false>
 
 Quiz
 Culture Générale//Voitures//120//
-Marque allemande ? <mercedes,renault/true,false>
-Marque americaine ?<opel,renault,audi,ford/false,false,false,true>
-Marque Francaise ?<opel,renault,fiat/false,true,false>
-Marque Japonaise ?<opel,toyota,fiat/false,true,false>
+Donnez une marque allemande <Mercedes,Renault,Lamborghini/true,false,false>
+Donnez une marque americaine <Opel,Renault,Audi,Ford/false,false,false,true>
+Donnez une marque Francaise <Opel,Renault,Fiat/false,true,false>
+Donnez une marque Japonaise <BMW,Toyota,Ferrari/false,true,false>
+
+Quiz
+Culture Générale//quizCG3//20//
+vide<,/,>
+
+Quiz
+Culture Générale//quizCG4//30//
+vide<,/,>
+
+
+
 
 
 Quiz
 Sport//Football//50//
-Who got the Golden Ball last year ? <Messi,Ronaldo/false,true>
-Which team is champion of the champion's league last year? <Barca,Real,Dortmund/true,false,false>
-LOSC belong to which city ? <Paris,Lille,Lyons/false,true,false>
-Who is number 10 in Real Madrid ? <James Rodríguez ,Bale,Mesut Özil/true,false,false>
-Who is the trainer of the Real Madrid ? <Zidane,Rafael Benitez Maudes ,Carlo Ancelotti /true,false,false>
-Messi is from where ? < Argentina,Germany,France/true,false,false>
-Who is in Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
+Qui a gagné le ballon d'or l'année dernière ? <Messi,Ronaldo/false,true>
+Quelle équipe a gagné la Champion's League l'année dernière ? <Barcelone,Real Madrid,Dortmund/true,false,false>
+A quelle ville appartient le LOSC ? <Paris,Lille,Lyon/false,true,false>
+Qui est le numéro 10 du Real Madrid ? <James Rodríguez ,Gareth Bale,Mesut Özil/true,false,false>
+Qui est l'entraineur du Real Madrid ? <Zidane,Rafael Benitez Maudes ,Carlo Ancelotti /true,false,false>
+D'où vient Messi ? < Argentina,Germany,France/true,false,false>
+Qui fait parti de l'équipe de Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
 
 Quiz
 Sport//Basketball//30//
-Who is MVP in USA last year ? <Stephen Curry,LeBron James, Kobe Bryant/true,false,false>
-Who is the champion of the NBA last year ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors/false,true,true >
-Pau Gaso is from where ? <Spain,France,UK/true,false,false>
-Kebo is belong to which club ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors /true,false,false>
-Who is the number 23 in Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille /true,false>
-What will the champion get ? <ring,ball,shoes/true,false,false>
+Qui a été MVP aux USA l'année dernière ? <Stephen Curry,LeBron James, Kobe Bryant/true,false,false>
+Qui a été champion de la NBA l'année dernière ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors/false,true,true >
+D'où vient Pau Gaso ? <Spain,France,UK/true,false,false>
+A quel club appartient Kebo ? <L.A. Lakers,Cleveland Cavaliers,Golden State Warriors /true,false,false>
+Qui est le numéro 23 des Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille /true,false>
+Qu'est ce que les champions obtiennent ? <une bague,un ballon,des chaussures/true,false,false>
 
-Quiz
-Sport//Baseball//30//
-Whic team did Babe Ruth play for before joining the Boston Red Sox ? <Boston Braves,New York Yankees,Baltimore Orioles/true,false,false>
-Which team moved to D.C. to become the Washington Nationals in 2005 ? <Brooklyn Dodgers,Tokyo Giants,Montreal Expos/false,true,false>
-
-Quiz
-Sport//athletics //30//
-Which of the following options is a modern day Olympic field event that involves hurling a steel ball attached to a wire ?
-<Wrench toss,Chainsaw heave,Ratchet hurl,Hammer throw/false,false,false,true>
-Which of the following men is an American track and field athlete that held the world record long jump from 1968-1991 ?
+Sport//Athlètes //30//
+Lequel de ces sports consiste à lancer une boule d'acier ?
+<Le 100 mètre,Le lancé de poids,Le lancé de javelot,Le lancé de marteau/false,true,false,false>
+Lequel des hommes suivants est un athlète américain qui détenait le record du monde de saut en longueur de 1968 à 1991 ?
 <Roger Bannister,Bob Beamon,Michael Phelps,Jesse Owens/false,true,false,false>
-Athletics is an umbrella term for a variety of sports including what is commonly referred to as track and field
+L'athletisme est un terme communemément utilisé pour déisgner un sport de piste ou de champ.
 <True,False/true,false>
 
 Quiz
-Musique//Rock//30//
-Rocks that come out of volcanoes form the greater part of the Earth's crust. These rocks are:
-<igneous,rocks,Basalt,metamorphic/false,true,false,false>
-This is the name of the solid rock beneath the soil:
-<extrusive rock,Limestone,Granite/false,false,true>
+Sport//quiz4//35//
+vide<,/,>
 
 
 
 
 Quiz
-Musique//Classical//30//
-Which composer lived between these years ? 1864-1949
+Musique//Classique//30//
+Quel compositeur a vécu entre 1864 et 1949 ?
 <Richard Strauss,Richard Strauss,Joseph Haydn,Hector Berlioz,Frederic Chopin/false,flse,false,false,true>
-Who composed this piece of classical music ?
-<Le Nozze Di Figaro,Wolfgang Amadeus Mozart,Ludwig van Beethoven,Antonio Vivaldi,Joseph Haydn/false,true,false,false,false>
-What was the nationality of this composer ? Maurice Ravel
-<Swedish,Belgian,Italian,French/false,false,false,true>
-This composer lived between which of these years? Robert Schumann
+De quelle nationalité était Maurice Ravel ?
+<Suèdois,Belge,Italien,Français/false,false,false,true>
+A quelle période a vecu Robert Schumann ?
 <1810-1856,1860-1911,1685-1759,1756-1791/true,false,flse,false>
-This composer lived between which of these years ? Franz Liszt
+A quelle période a vécu Franz Liszt ?
 <1685-1750,1811-1886,1732-1809,1882-1971/false,true,false,false>
-Who composed this piece of classical music ? Clair De Lune
+Qui a composé la pièce "le clair de lune" ?
 <Saint Saens,Hector Berlioz,Claude Debussy,Maurice Ravel/false,false,true,false>
 
 
-Quiz
-Musique//jazz//40//
-Jazzemerged in what has been called America's most musical city:
+Musique//Jazz//40//
+De quelle ville est originaire le jazz ?
 <Memphis,New Orleans,Chicago /false,true,true>
-The most famous jazz nightclub in Harlem was called:
+Comment s'appelle le club de jazz le plus celèbre de Harlem ?
 <The Cotton Club,El Morocco,Studio 54 /true,false,false>
-At the turn of the 20th century, the term "jazz" was used interchangeably with:
+Au debut du 20ème siècle, le terme de jazz s'est souvent confondu avec ?
 <Swing,Blues,Ragtime /false,false,true>
-In the 1930s, clarinetist Benny Goodman helped popularize what type of jazz ?
+Dans les années 30, quel type de jazz le clarinetiste Benny Goodman a aidé à populariser ?
 <Bop,Swing,Afro-Latin /false,true,false>
 
 Quiz
-Littérature//Poetry //30//
+Musique//quiz3//35//
+vide<,/,>
+
+
+Quiz
+Musique//quiz4//35//
+vide<,/,>
+
+
+
+
+
+
+Quiz
+Littérature//Poésie //30//
 vide<,/,>
 
 Quiz
-Divers//Mes Couilles//45//
+Littérature//Fiction //40//
 vide<,/,>
+
+Quiz
+Littérature//Romants //50//
+vide<,/,>
+
+Quiz
+Littérature//Drames //60//
+vide<,/,>
+
+
+
+
+Quiz
+Jeux vidéos//Call Of Duty//30
+Quand est ce que Call of Duty Black Ops 1 a été sorti ?
+<9 novembre 2010,16 octobre 2011,10 juin 2009/false,true,false>
+
+Quiz
+Divers//quiz2//35//
+vide<,/,>
+
+Quiz
+Divers//quiz3//35//
+vide<,/,>
+
+Quiz
+Divers//quiz4//35//
+vide<,/,>
+
+
+
+
+
+Quiz
+English Questions//Call Of Duty//30//
+When was BO1 (Black Ops 1) Released?
+<November 9 2010,October 16 2011,January 10 2009/false,true,false>
+When was BO2 (Black Ops 2) Released?
+<November 12 2012,July 11  2012,September 8  2012/true,false,false>
+
+Quiz
+Cinema//Pearl Harbor //20/
+Who said: "I think World War II just started."
+<anny Jimmy Doolittle,President Franklin D. Roosevelt,Rafe Admiral Kimmel/false,false,false,true>
+
+Who Said:
+"Be careful with the lady folk......they cloud the mind."
+<Billy,Gooz,Red,Anthony/true,false,false,false>
+
+Who said:
+"Why the hell is the US Navy practicing this early on a Sunday morning?"
+<Billy,Gooz,Lieutenant Colonel Doolittle,Danny,Rafe/false,false,false,true>
+Who said:
+"I got a girlfriend."
+<Anthony,Red,Gooz,Danny/false,false,false,true>
+Who said?
+"Home of the brave."
+<Young Danny,Gooz,Red,Young Rafe,Lieutenant Colonel Doolittle/true,false,false,false>
+Who said:
+"How can I not feel this way? I kind of like it."
+<Rafe,Martha,Danny,Anthony,Evelyn/true,false,false,false>
+
+Who said?
+"Okay, we're going left right?"
+<Billy,Danny,Red,Gooz,Rafe/false,false,false,true,false>
+
+Who said?
+"That's what I want to come home to, that's what I want to have to think about and dream about.I wanna know that the best part of my life is still ahead of me."
+<Rafe,Danny,Gooz,Evelyn,Red/false,false,false,false,true>
+
+
+
+

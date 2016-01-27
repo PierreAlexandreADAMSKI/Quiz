@@ -25,7 +25,6 @@
         android:inputType="text"
         android:textColor="@color/text"
         android:textStyle="bold"
-        android:layout_below="@+id/logo"
         android:hint="@string/username"
         android:textColorHint="@color/text"
         android:layout_centerHorizontal="true"
@@ -38,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/launcher"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/loginEditText"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -15,10 +15,12 @@ import premiereapplication.testautomation.quiz.objects.Answer;
 import premiereapplication.testautomation.quiz.objects.Category;
 import premiereapplication.testautomation.quiz.objects.Question;
 
+/**
+ *  created by Achraf
+ */
+
 public class HelperFileToListQuiz {
-
-
-    static public String readFile(Context context) {
+    public static String readFile(Context context) {
 
         String contenuFichierEntier = "";
         InputStream input = null;
@@ -48,7 +50,7 @@ public class HelperFileToListQuiz {
     }
 
 
-    static public List<QuizHelper> getListOfQuizFromFile(Context context) {
+    public static List<QuizHelper> getListOfQuizFromFile(Context context) {
 
         String fileContent = readFile(context);
 
@@ -94,59 +96,53 @@ public class HelperFileToListQuiz {
     }
 
 
-    static public CategoryHelper getCategories(){
+    public static CategoryHelper getCategories(){
 
-        Category CINEMA=Category.CINEMA;
-        Category GENRAL_KNOWLEDGE=Category.GENERAL_KNOWLEDGE;
-        Category SPORT=Category.SPORT;
-        Category MUSIC=Category.MUSIC;
-        Category LITERATURE=Category.LITERATURE;
-        Category VARIOUS =Category.VARIOUS;
+        Category CINEMA = Category.CINEMA;
+        Category GENERAL_KNOWLEDGE = Category.GENERAL_KNOWLEDGE;
+        Category SPORT = Category.SPORT;
+        Category MUSIC = Category.MUSIC;
+        Category LITERATURE = Category.LITERATURE;
+        Category VARIOUS = Category.VARIOUS;
 
+        List<QuizHelper> listOfAllQuiz = getListOfQuizFromFile(QuizApplication.getContext());
+        List<QuizHelper> listOfCinemaQuiz = new ArrayList<>();
+        List<QuizHelper> listOfGeneralKnowledgeQuiz = new ArrayList<>();
+        List<QuizHelper> listOfSportQuiz = new ArrayList<>();
+        List<QuizHelper> listOfMusicQuiz = new ArrayList<>();
+        List<QuizHelper> listOfLiteratureQuiz = new ArrayList<>();
+        List<QuizHelper> listOfVariousQuiz = new ArrayList<>();
 
-        List<QuizHelper> listOfAllQuizs=getListOfQuizFromFile(QuizApplication.getContext());
-        List<QuizHelper> listOfCinemaQuiz=new ArrayList<>();
-        List<QuizHelper> listOfGeneralKnowledgeQuiz=new ArrayList<>();
-        List<QuizHelper> listOfSportQuiz=new ArrayList<>();
-        List<QuizHelper> listOfMusicQuiz=new ArrayList<>();
-        List<QuizHelper> listOfLiteratureQuiz=new ArrayList<>();
-        List<QuizHelper> listOfVariousQuiz=new ArrayList<>();
+        for(int i=0;i<listOfAllQuiz.size();i++){
+            if(listOfAllQuiz.get(i).getCategory().equals(Category.parse(CINEMA)))
+            {listOfCinemaQuiz.add(listOfAllQuiz.get(i));}
 
+            else if (listOfAllQuiz.get(i).getCategory().equals(Category.parse(GENERAL_KNOWLEDGE)))
+            {listOfGeneralKnowledgeQuiz.add(listOfAllQuiz.get(i));}
 
+            else if (listOfAllQuiz.get(i).getCategory().equals(Category.parse(SPORT)))
+            {listOfSportQuiz.add(listOfAllQuiz.get(i));}
 
-        for(int i=0;i<listOfAllQuizs.size();i++){
-            if(listOfAllQuizs.get(i).getCategory().equals(Category.parse(CINEMA)))
-            {listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuiz.get(i).getCategory().equals(Category.parse(MUSIC)))
+            {listOfMusicQuiz.add(listOfAllQuiz.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(GENRAL_KNOWLEDGE)))
-            {listOfGeneralKnowledgeQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuiz.get(i).getCategory().equals(Category.parse(LITERATURE)))
+            {listOfLiteratureQuiz.add(listOfAllQuiz.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(SPORT)))
-            {listOfSportQuiz.add(listOfAllQuizs.get(i));}
-
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(MUSIC)))
-            {listOfMusicQuiz.add(listOfAllQuizs.get(i));}
-
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(LITERATURE)))
-            {listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
-
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(VARIOUS)))
-            {listOfVariousQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuiz.get(i).getCategory().equals(Category.parse(VARIOUS)))
+            {listOfVariousQuiz.add(listOfAllQuiz.get(i));}
         }
 
-
         CINEMA.setList(listOfCinemaQuiz);
-        GENRAL_KNOWLEDGE.setList(listOfGeneralKnowledgeQuiz);
+        GENERAL_KNOWLEDGE.setList(listOfGeneralKnowledgeQuiz);
         SPORT.setList(listOfSportQuiz);
         MUSIC.setList(listOfMusicQuiz);
         LITERATURE.setList(listOfLiteratureQuiz);
         VARIOUS.setList(listOfVariousQuiz);
 
-        CategoryHelper categoryHelper= new CategoryHelper(CINEMA,GENRAL_KNOWLEDGE,SPORT,MUSIC,LITERATURE,VARIOUS);
+        CategoryHelper categoryHelper= new CategoryHelper(CINEMA,GENERAL_KNOWLEDGE,SPORT,MUSIC,LITERATURE,VARIOUS);
 
         return categoryHelper;
     }
-
-
 }
 

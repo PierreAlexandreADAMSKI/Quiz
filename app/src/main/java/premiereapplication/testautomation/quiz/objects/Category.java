@@ -17,7 +17,7 @@ public enum Category implements Serializable {
     LITERATURE,
     VARIOUS;
 
-    private List<QuizHelper> list=new ArrayList<QuizHelper>();
+    private List<QuizHelper> list = new ArrayList<>();
 
     public static String parse(Category category){
 

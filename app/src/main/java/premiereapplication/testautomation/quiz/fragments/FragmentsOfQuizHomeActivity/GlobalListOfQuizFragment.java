@@ -1,4 +1,5 @@
 package premiereapplication.testautomation.quiz.fragments.FragmentsOfQuizHomeActivity;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -16,21 +17,22 @@ import premiereapplication.testautomation.quiz.helpers.CategoryHelper;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
 import premiereapplication.testautomation.quiz.interfaces.QuizRetrievedListener;
+import premiereapplication.testautomation.quiz.objects.Category;
 
 public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedListener {
-
     private QuizHomeActivityListener mListener;
     private RetrieveQuizFromTwitterAsyncTask mDynamicQuizAsyncTask;
     private RetrieveQuizFromLocalServerAsyncTask mStaticQuizAsyncTask;
     private boolean isDynamicQuiz;
 
-    public GlobalListOfQuizFragment(){}
+    public GlobalListOfQuizFragment() {
+    }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-        if (activity instanceof QuizHomeActivityListener){
+        if (activity instanceof QuizHomeActivityListener) {
             mListener = (QuizHomeActivityListener) activity;
         }
     }
@@ -40,7 +42,7 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        isDynamicQuiz=getArguments().getBoolean("IsDynamicQuiz");
+        isDynamicQuiz = getArguments().getBoolean("IsDynamicQuiz");
         View rootView = inflater.inflate(R.layout.fragment_global_list_of_quizs, container, false);
 
         return rootView;
@@ -49,71 +51,58 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
 
     public void onStart() {
         super.onStart();
-        if(isDynamicQuiz) {
+        if (isDynamicQuiz) {
             mDynamicQuizAsyncTask = new RetrieveQuizFromTwitterAsyncTask(this);
             mDynamicQuizAsyncTask.execute("@madaniachraf2");
-        }
-        else{
+        } else {
             mStaticQuizAsyncTask = new RetrieveQuizFromLocalServerAsyncTask(this);
             mStaticQuizAsyncTask.execute();
         }
-
-
     }
-
 
 
     @Override
     public void onQuizRetrieved(CategoryHelper categoryHelper) {
-
-        if(categoryHelper !=null) {
-
-            bindContainers(isDynamicQuiz,categoryHelper.CINEMA.getList(),categoryHelper.GENERAL_KNOWLEDGE.getList(),
-                    categoryHelper.SPORT.getList(),categoryHelper.MUSIC.getList(),categoryHelper.LITERATURE.getList(),
-                    categoryHelper.VARIOUS.getList());}
-
-
+        if (categoryHelper != null) {
+            bindContainers(isDynamicQuiz, categoryHelper.CINEMA.getList(), categoryHelper.GENERAL_KNOWLEDGE.getList(),
+                    categoryHelper.SPORT.getList(), categoryHelper.MUSIC.getList(), categoryHelper.LITERATURE.getList(),
+                    categoryHelper.VARIOUS.getList());
+        }
         mDynamicQuizAsyncTask = null;
         mStaticQuizAsyncTask = null;
-
     }
 
-    public static GlobalListOfQuizFragment getInstance(boolean isDynamicQuiz){
+    public static GlobalListOfQuizFragment getInstance(boolean isDynamicQuiz) {
 
         GlobalListOfQuizFragment globalListOfQuizsFragmentquizFragment = new GlobalListOfQuizFragment();
-        Bundle bundle=new Bundle();
-        bundle.putBoolean("IsDynamicQuiz",isDynamicQuiz);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean("IsDynamicQuiz", isDynamicQuiz);
         globalListOfQuizsFragmentquizFragment.setArguments(bundle);
 
         return globalListOfQuizsFragmentquizFragment;
     }
 
-    public void bindContainers(boolean isDynamiqueQuiz,List<QuizHelper>...list){
+    public void bindContainers(boolean isDynamiqueQuiz, List<QuizHelper>... list) {
 
-        ListOfQuizFragment frag= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Cinema",list[0]);
+        ListOfQuizFragment frag = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.CINEMA), list[0]);
         getFragmentManager().beginTransaction().add(R.id.container1, frag).commit();
 
-        ListOfQuizFragment frag2= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Culture Generale",list[1]);
+        ListOfQuizFragment frag2 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.GENERAL_KNOWLEDGE), list[1]);
         getFragmentManager().beginTransaction().add(R.id.container2, frag2).commit();
 
-        ListOfQuizFragment frag3= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Sport",list[2]);
+        ListOfQuizFragment frag3 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.SPORT), list[2]);
         getFragmentManager().beginTransaction().add(R.id.container3, frag3).commit();
 
-        ListOfQuizFragment frag4= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Musique",list[3]);
+        ListOfQuizFragment frag4 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.MUSIC), list[3]);
         getFragmentManager().beginTransaction().add(R.id.container4, frag4).commit();
 
-        ListOfQuizFragment frag5= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Literature",list[4]);
+        ListOfQuizFragment frag5 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.LITERATURE), list[4]);
         getFragmentManager().beginTransaction().add(R.id.container5, frag5).commit();
 
-        ListOfQuizFragment frag6= ListOfQuizFragment.getInstance(isDynamiqueQuiz,"Divers",list[5]);
+        ListOfQuizFragment frag6 = ListOfQuizFragment.getInstance(isDynamiqueQuiz, Category.parse(Category.VARIOUS), list[5]);
         getFragmentManager().beginTransaction().add(R.id.container6, frag6).commit();
 
 
-
-
     }
-
-
-
 }
 

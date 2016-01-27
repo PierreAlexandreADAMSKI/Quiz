@@ -68,9 +68,9 @@ public class GlobalListOfQuizFragment extends Fragment implements QuizRetrievedL
 
         if(categoryHelper !=null) {
 
-            bindContainers(isDynamicQuiz,categoryHelper.CINEMA.getList(),categoryHelper.CULTURE_GENERALE.getList(),
-                    categoryHelper.SPORT.getList(),categoryHelper.MUSIQUE.getList(),categoryHelper.LITERATURE.getList(),
-                    categoryHelper.Divers.getList());}
+            bindContainers(isDynamicQuiz,categoryHelper.CINEMA.getList(),categoryHelper.GENERAL_KNOWLEDGE.getList(),
+                    categoryHelper.SPORT.getList(),categoryHelper.MUSIC.getList(),categoryHelper.LITERATURE.getList(),
+                    categoryHelper.VARIOUS.getList());}
 
 
         mDynamicQuizAsyncTask = null;

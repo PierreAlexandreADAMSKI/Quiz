@@ -155,8 +155,9 @@ vide<,/,>
 
 
 Quiz
-Divers//quiz1//35//
-vide<,/,>
+Jeux vidéos//Call Of Duty//30
+Quand est ce que Call of Duty Black Ops 1 a été sorti ?
+<9 novembre 2010,16 octobre 2011,10 juin 2009/false,true,false>
 
 Quiz
 Divers//quiz2//35//
@@ -169,3 +170,48 @@ vide<,/,>
 Quiz
 Divers//quiz4//35//
 vide<,/,>
+
+
+
+
+
+Quiz
+English Questions//Call Of Duty//30//
+When was BO1 (Black Ops 1) Released?
+<November 9 2010,October 16 2011,January 10 2009/false,true,false>
+When was BO2 (Black Ops 2) Released?
+<November 12 2012,July 11  2012,September 8  2012/true,false,false>
+
+Quiz
+Cinema//Pearl Harbor //20/
+Who said: "I think World War II just started."
+<anny Jimmy Doolittle,President Franklin D. Roosevelt,Rafe Admiral Kimmel/false,false,false,true>
+
+Who Said:
+"Be careful with the lady folk......they cloud the mind."
+<Billy,Gooz,Red,Anthony/true,false,false,false>
+
+Who said:
+"Why the hell is the US Navy practicing this early on a Sunday morning?"
+<Billy,Gooz,Lieutenant Colonel Doolittle,Danny,Rafe/false,false,false,true>
+Who said:
+"I got a girlfriend."
+<Anthony,Red,Gooz,Danny/false,false,false,true>
+Who said?
+"Home of the brave."
+<Young Danny,Gooz,Red,Young Rafe,Lieutenant Colonel Doolittle/true,false,false,false>
+Who said:
+"How can I not feel this way? I kind of like it."
+<Rafe,Martha,Danny,Anthony,Evelyn/true,false,false,false>
+
+Who said?
+"Okay, we're going left right?"
+<Billy,Danny,Red,Gooz,Rafe/false,false,false,true,false>
+
+Who said?
+"That's what I want to come home to, that's what I want to have to think about and dream about.I wanna know that the best part of my life is still ahead of me."
+<Rafe,Danny,Gooz,Evelyn,Red/false,false,false,false,true>
+
+
+
+

@@ -11,4 +11,5 @@
     <string name="online_quiz">Quiz en ligne</string>
     <string name="results">Résultats</string>
     <string name="login">Connexion</string>
+    <string name="logout">Déconnexion</string>
 </resources>

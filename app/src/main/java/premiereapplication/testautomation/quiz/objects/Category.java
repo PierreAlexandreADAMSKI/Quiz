@@ -11,11 +11,11 @@ import premiereapplication.testautomation.quiz.helpers.QuizHelper;
  */
 public enum Category implements Serializable {
     CINEMA,
-    CULTURE_GENERALE,
+    GENERAL_KNOWLEDGE,
     SPORT,
-    MUSIQUE,
-    LITTERATURE,
-    DIVERS;
+    MUSIC,
+    LITERATURE,
+    VARIOUS;
 
     private List<QuizHelper> list=new ArrayList<QuizHelper>();
 
@@ -24,20 +24,20 @@ public enum Category implements Serializable {
         if (category == CINEMA){
             return "Cinema";
         }
-        if (category == CULTURE_GENERALE){
-            return "Culture Generale";
+        if (category == GENERAL_KNOWLEDGE){
+            return "General Knowledge";
         }
         if (category == SPORT){
             return "Sport";
         }
-        if (category == MUSIQUE){
-            return "Musique";
+        if (category == MUSIC){
+            return "Music";
         }
-        if (category == LITTERATURE){
-            return "Litterature";
+        if (category == LITERATURE){
+            return "Literature";
         }
-        if (category == DIVERS){
-            return "Divers";
+        if (category == VARIOUS){
+            return "Various";
         }
         return null;
     }

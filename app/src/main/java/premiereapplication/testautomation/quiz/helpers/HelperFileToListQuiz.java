@@ -89,7 +89,7 @@ public class HelperFileToListQuiz {
             listOfQuiz.add(oq);
         }
 
-          return listOfQuiz;
+        return listOfQuiz;
 
     }
 
@@ -97,20 +97,20 @@ public class HelperFileToListQuiz {
     static public CategoryHelper getCategories(){
 
         Category CINEMA=Category.CINEMA;
-        Category CULTURE_GENERALE=Category.CULTURE_GENERALE;
+        Category GENRAL_KNOWLEDGE=Category.GENERAL_KNOWLEDGE;
         Category SPORT=Category.SPORT;
-        Category MUSIQUE=Category.MUSIQUE;
-        Category LITTERATURE=Category.LITTERATURE;
-        Category Divers=Category.DIVERS;
+        Category MUSIC=Category.MUSIC;
+        Category LITERATURE=Category.LITERATURE;
+        Category VARIOUS =Category.VARIOUS;
 
 
         List<QuizHelper> listOfAllQuizs=getListOfQuizFromFile(QuizApplication.getContext());
         List<QuizHelper> listOfCinemaQuiz=new ArrayList<>();
-        List<QuizHelper> listOfCultureGeneraleQuiz=new ArrayList<>();
+        List<QuizHelper> listOfGeneralKnowledgeQuiz=new ArrayList<>();
         List<QuizHelper> listOfSportQuiz=new ArrayList<>();
-        List<QuizHelper> listOfMusiqueQuiz=new ArrayList<>();
+        List<QuizHelper> listOfMusicQuiz=new ArrayList<>();
         List<QuizHelper> listOfLiteratureQuiz=new ArrayList<>();
-        List<QuizHelper> listOfDiversQuiz=new ArrayList<>();
+        List<QuizHelper> listOfVariousQuiz=new ArrayList<>();
 
 
 
@@ -118,73 +118,35 @@ public class HelperFileToListQuiz {
             if(listOfAllQuizs.get(i).getCategory().equals(Category.parse(CINEMA)))
             {listOfCinemaQuiz.add(listOfAllQuizs.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(CULTURE_GENERALE)))
-            {listOfCultureGeneraleQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(GENRAL_KNOWLEDGE)))
+            {listOfGeneralKnowledgeQuiz.add(listOfAllQuizs.get(i));}
 
             else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(SPORT)))
             {listOfSportQuiz.add(listOfAllQuizs.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(MUSIQUE)))
-            {listOfMusiqueQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(MUSIC)))
+            {listOfMusicQuiz.add(listOfAllQuizs.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(LITTERATURE)))
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(LITERATURE)))
             {listOfLiteratureQuiz.add(listOfAllQuizs.get(i));}
 
-            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(Divers)))
-            {listOfDiversQuiz.add(listOfAllQuizs.get(i));}
+            else if (listOfAllQuizs.get(i).getCategory().equals(Category.parse(VARIOUS)))
+            {listOfVariousQuiz.add(listOfAllQuizs.get(i));}
         }
 
 
         CINEMA.setList(listOfCinemaQuiz);
-        CULTURE_GENERALE.setList(listOfCultureGeneraleQuiz);
+        GENRAL_KNOWLEDGE.setList(listOfGeneralKnowledgeQuiz);
         SPORT.setList(listOfSportQuiz);
-        MUSIQUE.setList(listOfMusiqueQuiz);
-        LITTERATURE.setList(listOfLiteratureQuiz);
-        Divers.setList(listOfDiversQuiz);
+        MUSIC.setList(listOfMusicQuiz);
+        LITERATURE.setList(listOfLiteratureQuiz);
+        VARIOUS.setList(listOfVariousQuiz);
 
-        CategoryHelper categoryHelper= new CategoryHelper(CINEMA,CULTURE_GENERALE,SPORT,MUSIQUE,LITTERATURE,Divers);
+        CategoryHelper categoryHelper= new CategoryHelper(CINEMA,GENRAL_KNOWLEDGE,SPORT,MUSIC,LITERATURE,VARIOUS);
 
         return categoryHelper;
     }
 
 
-
-
-
-
-    static public void display(List <QuizHelper> listOfQuizs) {
-
-        for (int i = 0; i < listOfQuizs.size(); i++) {
-
-            System.out.println("\n\n\nQuiz " + (i + 1));
-
-            String quizCategory = listOfQuizs.get(i).getCategory();
-            String quizName = listOfQuizs.get(i).getName();
-            int quizDuration = listOfQuizs.get(i).getSec();
-            List<Question> listQuestions = listOfQuizs.get(i).getQuestions();
-
-            System.out.println("Categorie du Quiz :" + quizCategory);
-            System.out.println("Nom du Quiz :" + quizName);
-            System.out.println("Duree du Quiz :" + quizDuration + "\n");
-
-
-            for (int j = 0; j < listQuestions.size(); j++) {
-                String enonceQuestion = listQuestions.get(j).getQuestion();
-                List<Answer> listAnsewers = listQuestions.get(j).getAnswers();
-
-                System.out.println("question " + (j + 1) + " : " + enonceQuestion);
-                System.out.println("Propositions :");
-                for (int k = 0; k < listAnsewers.size(); k++) {
-                    System.out.println(listAnsewers.get(k).getText());
-                }
-                System.out.println("Reponses :");
-                System.out.println();
-                for (int k = 0; k < listAnsewers.size(); k++) {
-                    System.out.println(listAnsewers.get(k).isGoodAnswer());
-                }
-            }
-        }
-
-    }
 }
 

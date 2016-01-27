@@ -14,6 +14,7 @@ import premiereapplication.testautomation.quiz.R;
 import premiereapplication.testautomation.quiz.application.QuizApplication;
 import premiereapplication.testautomation.quiz.helpers.QuizHelper;
 import premiereapplication.testautomation.quiz.interfaces.QuizHomeActivityListener;
+import premiereapplication.testautomation.quiz.objects.Category;
 
 
 public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHolder> {
@@ -90,12 +91,12 @@ public class ListQuizAdapter extends RecyclerView.Adapter<ListQuizAdapter.ViewHo
             this.quiz = quiz;
             this.quizName.setText(quiz.getName());
             this.quizTimer.setText(String.valueOf(quiz.getSec()));
-            if(quiz.getCategory().equals("Cinema")){this.imageQuiz.setImageResource(R.drawable.cinema);}
-            if(quiz.getCategory().equals("Culture Generale")){this.imageQuiz.setImageResource(R.drawable.culturegenerale);}
-            if(quiz.getCategory().equals("Sport")){this.imageQuiz.setImageResource(R.drawable.sport);}
-            if(quiz.getCategory().equals("musique")){this.imageQuiz.setImageResource(R.drawable.musique);}
-            if(quiz.getCategory().equals("Literature")){this.imageQuiz.setImageResource(R.drawable.literature);}
-            if(quiz.getCategory().equals("Divers")){this.imageQuiz.setImageResource(R.drawable.divers);}
+            if(quiz.getCategory().equals(Category.parse(Category.CINEMA))){this.imageQuiz.setImageResource(R.drawable.cinema);}
+            if(quiz.getCategory().equals(Category.parse(Category.GENERAL_KNOWLEDGE))){this.imageQuiz.setImageResource(R.drawable.generalknowledge);}
+            if(quiz.getCategory().equals(Category.parse(Category.SPORT))){this.imageQuiz.setImageResource(R.drawable.sport);}
+            if(quiz.getCategory().equals(Category.parse(Category.MUSIC))){this.imageQuiz.setImageResource(R.drawable.music);}
+            if(quiz.getCategory().equals(Category.parse(Category.LITERATURE))){this.imageQuiz.setImageResource(R.drawable.literature);}
+            if(quiz.getCategory().equals(Category.parse(Category.VARIOUS))){this.imageQuiz.setImageResource(R.drawable.various);}
 
             /* TODO parse imageUrl
             if (quiz.getImageUrl() != null){

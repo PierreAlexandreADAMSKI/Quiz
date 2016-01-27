@@ -56,7 +56,7 @@ public class ListOfQuizFragment extends Fragment  {
         categoryTitleTextView=(TextView) rootView.findViewById(R.id.categoryTitle);
         categoryTitleTextView.setText(categoryTitle);
 
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);// change id.quizsListView to <RecyclerView>
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.quizListView);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(QuizApplication.getContext(),LinearLayoutManager.HORIZONTAL,false); //, LinearLayoutManager.HORIZONTAL, false);
         this.recyclerView.setLayoutManager(layoutManager);
 

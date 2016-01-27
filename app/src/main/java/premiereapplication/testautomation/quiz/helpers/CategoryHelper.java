@@ -11,21 +11,21 @@ public class CategoryHelper {
 
 
     public Category CINEMA=Category.CINEMA;
-    public Category CULTURE_GENERALE=Category.CULTURE_GENERALE;
+    public Category GENERAL_KNOWLEDGE =Category.GENERAL_KNOWLEDGE;
     public Category SPORT=Category.SPORT;
-    public Category MUSIQUE=Category.MUSIQUE;
-    public Category LITERATURE=Category.LITTERATURE;
-    public Category Divers=Category.DIVERS;
+    public Category MUSIC=Category.MUSIC;
+    public Category LITERATURE=Category.LITERATURE;
+    public Category VARIOUS=Category.VARIOUS;
 
 
     public CategoryHelper(Category...categories){
 
         this.CINEMA=categories[0];
-        this.CULTURE_GENERALE=categories[1];
+        this.GENERAL_KNOWLEDGE=categories[1];
         this.SPORT=categories[2];
-        this.MUSIQUE=categories[3];
+        this.MUSIC=categories[3];
         this.LITERATURE=categories[4];
-        this.Divers=categories[5];
+        this.VARIOUS=categories[5];
     }
 
 

@@ -6,7 +6,7 @@ C'est un membre rouge et noir de la Ligue des Justiciers
 Quel est le type de rayon qui a irradié Bruce Banner ?
 <Rayon Gamma,Rayon X,Rayon Bleu/true,false,false>
 Quel est l'ami de Bucky Barnes ?
-<Le Joker, Two-Face,Captain America/false,false,true>
+<Le Joker,Double Face,Captain America/false,false,true>
 Milliardaire , Playboy et Ingénieur ?
 <Tony Stark,Votre professeur,Bruce Wayne/true,false,false>
 Qui est le scénariste des films Marvel ?
@@ -66,9 +66,9 @@ vide<,/,>
 Quiz
 Sport//Football//50//
 Qui a gagné le ballon d'or l'année dernière ? <Messi,Ronaldo/false,true>
-Quelle équipe a gagné la Champion's League l'année dernière ? <Barca,Real,Dortmund/true,false,false>
-A quelle ville appartient le LOSC ? <Paris,Lille,Lyons/false,true,false>
-Qui est le numéro 10 du Real Madrid ? <James Rodríguez ,Bale,Mesut Özil/true,false,false>
+Quelle équipe a gagné la Champion's League l'année dernière ? <Barcelone,Real Madrid,Dortmund/true,false,false>
+A quelle ville appartient le LOSC ? <Paris,Lille,Lyon/false,true,false>
+Qui est le numéro 10 du Real Madrid ? <James Rodríguez ,Gareth Bale,Mesut Özil/true,false,false>
 Qui est l'entraineur du Real Madrid ? <Zidane,Rafael Benitez Maudes ,Carlo Ancelotti /true,false,false>
 D'où vient Messi ? < Argentina,Germany,France/true,false,false>
 Qui fait parti de l'équipe de Dortmund ? <Marco Reus ,Robert Lewandowski,Mario Götze /true,false,false>
@@ -83,11 +83,11 @@ Qui est le numéro 23 des Cleveland Cavaliers ? <LeBron Raymone James ,Shaquille
 Qu'est ce que les champions obtiennent ? <une bague,un ballon,des chaussures/true,false,false>
 
 Sport//Athlètes //30//
-Lequel de ces sports consiste à lancer un boule d'acier ?
+Lequel de ces sports consiste à lancer une boule d'acier ?
 <Le 100 mètre,Le lancé de poids,Le lancé de javelot,Le lancé de marteau/false,true,false,false>
 Lequel des hommes suivants est un athlète américain qui détenait le record du monde de saut en longueur de 1968 à 1991 ?
 <Roger Bannister,Bob Beamon,Michael Phelps,Jesse Owens/false,true,false,false>
-Athletics is an umbrella term for a variety of sports including what is commonly referred to as track and field
+L'athletisme est un terme communemément utilisé pour déisgner un sport de piste ou de champ.
 <True,False/true,false>
 
 Quiz
@@ -153,7 +153,6 @@ vide<,/,>
 Quiz
 Littérature//Drames //60//
 vide<,/,>
-
 
 
 
